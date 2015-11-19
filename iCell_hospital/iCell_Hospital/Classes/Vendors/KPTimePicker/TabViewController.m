@@ -32,7 +32,7 @@
             item.imageInsets = UIEdgeInsetsMake(5.0, 0, -5.0, 0);
         }
     }];
-    self.tabBar.tintColor = [UIColor colorWithRed:255.0/255 green:225/255.0 blue:17/255.0 alpha:1.0];
+    self.tabBar.tintColor = [UIColor colorWithRed:0.166 green:0.716 blue:1.000 alpha:1.000];
     self.delegate = self;
     // Do any additional setup after loading the view.
 }

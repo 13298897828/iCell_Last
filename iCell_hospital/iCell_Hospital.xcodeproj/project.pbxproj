@@ -102,7 +102,6 @@
 		14B5CFBC1BF350240019893C /* MedicineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B5CFBA1BF350240019893C /* MedicineCollectionViewCell.xib */; };
 		14C1EC5D1BFC18E0009DEE04 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1EC5C1BFC18E0009DEE04 /* DBManager.m */; };
 		14C1EC5F1BFC1A84009DEE04 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14C1EC5E1BFC1A84009DEE04 /* libsqlite3.tbd */; };
-		14C1EC621BFC89A2009DEE04 /* collectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1EC611BFC89A2009DEE04 /* collectionTableViewController.m */; };
 		14C1EC651BFC90C1009DEE04 /* HospitalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C1EC641BFC90C1009DEE04 /* HospitalDetailViewController.m */; };
 		14D3B2151BF0636200427765 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B2141BF0636200427765 /* main.m */; };
 		14D3B2211BF0636200427765 /* iCell_Hospital.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B21F1BF0636200427765 /* iCell_Hospital.xcdatamodeld */; };
@@ -268,8 +267,6 @@
 		14C1EC5B1BFC18E0009DEE04 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		14C1EC5C1BFC18E0009DEE04 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		14C1EC5E1BFC1A84009DEE04 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		14C1EC601BFC89A2009DEE04 /* collectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionTableViewController.h; sourceTree = "<group>"; };
-		14C1EC611BFC89A2009DEE04 /* collectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionTableViewController.m; sourceTree = "<group>"; };
 		14C1EC631BFC90C1009DEE04 /* HospitalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalDetailViewController.h; sourceTree = "<group>"; };
 		14C1EC641BFC90C1009DEE04 /* HospitalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalDetailViewController.m; sourceTree = "<group>"; };
 		14D3B2101BF0636200427765 /* iCell_Hospital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCell_Hospital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -653,8 +650,6 @@
 				14AF941E1BFAD1A50042F388 /* ChatViewController.m */,
 				14AF94201BFB17DE0042F388 /* FeedbackViewController.h */,
 				14AF94211BFB17DE0042F388 /* FeedbackViewController.m */,
-				14C1EC601BFC89A2009DEE04 /* collectionTableViewController.h */,
-				14C1EC611BFC89A2009DEE04 /* collectionTableViewController.m */,
 			);
 			path = ViewsConroller;
 			sourceTree = "<group>";
@@ -846,7 +841,6 @@
 				14C1EC5D1BFC18E0009DEE04 /* DBManager.m in Sources */,
 				14D3B2151BF0636200427765 /* main.m in Sources */,
 				148ECD481BF5C52A00FDD691 /* ZbarOverlayView.m in Sources */,
-				14C1EC621BFC89A2009DEE04 /* collectionTableViewController.m in Sources */,
 				14AF94671BFB43430042F388 /* ALView+PureLayout.m in Sources */,
 				148ECD2D1BF584EC00FDD691 /* drugstoreViewController.m in Sources */,
 				14E42AD31BF06553002EB1FB /* placeHoderViewController.m in Sources */,
