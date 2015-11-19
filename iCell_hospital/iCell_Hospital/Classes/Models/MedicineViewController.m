@@ -17,6 +17,7 @@
 @property (nonatomic, strong) EFAnimationViewController *viewController;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *DButton;
 
 
 @end
@@ -26,10 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor colorWithRed:58/ 255. green:109/ 255. blue:222 / 255. alpha:1.0];
-     [self.navigationController setNavigationBarHidden:YES animated:YES];
-//    self.hidesBottomBarWhenPushed = YES;
+    
+   
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.tabBarController.hidesBottomBarWhenPushed = NO;
 //    药店界面五个轮播
+
     self.viewController = ({
         EFAnimationViewController *viewController = [[EFAnimationViewController alloc] init];
         [self.view addSubview:viewController.view];
@@ -53,6 +56,8 @@
     
     [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     
+    
+     [self.view bringSubviewToFront:_DButton];
 }
 #pragma mark -跳转客服界面
 -(void)jumpToConsulting{
@@ -102,6 +107,18 @@
     [_MedicineSearchBar endEditing:YES];
     
 }
+
+
+#pragma mark - 3Dtouch进入
+
+- (IBAction)返回:(UIButton *)sender {
+    
+    
+    HosipitalViewController *hospitalVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HosipitalViewController"];
+    [self presentViewController:hospitalVC animated:YES completion:nil];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
