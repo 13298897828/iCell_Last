@@ -41,4 +41,5 @@
 - (BOOL)selectSickness:(Diagnose_Sickness *)sickness;
 - (NSArray *)selectAllSickness;
 - (void)deleteSickness:(Diagnose_Sickness *)sickness;
+
 @end

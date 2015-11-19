@@ -83,8 +83,13 @@
 
 - (IBAction)collectionAction:(UIButton *)sender {
     
+    [_collectionButton setImage:[UIImage imageNamed:@"yishoucang"] forState:UIControlStateNormal];
     
+    [[DBManager sharedManager] openDB];
     
+    [[DBManager sharedManager] insertSickness:_sickness];
+    
+    [[DBManager sharedManager] closeDB];
 }
 
 
