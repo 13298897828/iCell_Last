@@ -85,6 +85,7 @@
 #import "MedicineViewController.h"
 
 //收藏
+#import "CollectionViewController.h"
 #import "HospitalCollectList.h"
 #import "MedicineCollectList.h"
 #import "SicknessCollectList.h"
