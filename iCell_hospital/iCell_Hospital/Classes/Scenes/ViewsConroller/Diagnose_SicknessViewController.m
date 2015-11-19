@@ -7,7 +7,7 @@
 //
 
 #import "Diagnose_SicknessViewController.h"
-
+#import "ChatViewController.h"
 @interface Diagnose_SicknessViewController ()<UISearchBarDelegate>
 @property(nonatomic,strong)Diagnose_SicknessCell *cell;
 @end
@@ -29,6 +29,30 @@
 
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"Diagnose_SicknessCell" bundle:nil] forCellReuseIdentifier:@"sicknessCellId"];
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    button.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 200, 80, 80);
+    [button setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
+    [self.view addSubview:button];
+    [self.view bringSubviewToFront:button];
+    button.tintColor = [UIColor whiteColor];
+    
+    [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
+    
+ 
+}
+#pragma mark -跳转客服界面
+-(void)jumpToConsulting{
+    
+    ChatViewController *chat = [ChatViewController new];
+    
+    
+    // 快速集成第二步，连接融云服务器
+    self.hidesBottomBarWhenPushed = YES;
+    [self showViewController:chat sender:nil];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+    
+    
     
 }
 
