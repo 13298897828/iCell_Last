@@ -180,11 +180,9 @@
     
     if (tap.view.tag == 0) {
 //        收藏
-       
+        CollectionViewController *collectVC = [CollectionViewController new];
+        [self presentViewController:collectVC animated:YES completion:nil];
       
-        
-        
-        
     }
     
     if (tap.view.tag == 1) {
