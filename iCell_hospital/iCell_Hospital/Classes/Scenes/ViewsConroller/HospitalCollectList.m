@@ -20,6 +20,7 @@ static NSString *const cellID = @"cellID";
     [super viewDidLoad];
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
@@ -28,6 +29,7 @@ static NSString *const cellID = @"cellID";
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     [[DBManager sharedManager] findAllHospitalInDataBase];
     [self.tableView reloadData];
 }
@@ -60,11 +62,17 @@ static NSString *const cellID = @"cellID";
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        Hospital *hospital = [DBManager sharedManager].allHospitalArray[indexPath.row];
+        
+        [[DBManager sharedManager] insertHospital:hospital];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+         
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
+#warning 是否需要刷新UI
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

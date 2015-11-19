@@ -234,6 +234,7 @@ static  FMDatabase *db = nil;
     [self openDB];
     if ([self findHospitalInDataBase:hospital]) {
         [db executeUpdate:@"DELETE FROM hospitalTable WHERE name = ?",hospital.name];
+        [self.hospitalArray removeObject:hospital];
         return;
     }
     
