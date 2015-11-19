@@ -90,6 +90,30 @@
 
 
 
+
+//func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+//}
+
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+    
+    if ([shortcutItem.type isEqualToString:@"tag1"]) {
+        
+        MedicineViewController *medicineVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"medicineViewController"];
+        
+        [self.window.rootViewController showDetailViewController:medicineVC sender:nil];
+
+    }
+    if ([shortcutItem.type isEqualToString:@"tag2"]) {
+        
+        SetAlertViewController *setAlertVC = [SetAlertViewController new];
+        
+        [self.window.rootViewController showDetailViewController:setAlertVC sender:nil];
+        
+    }
+}
+
+
+
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
     
     //声音集成器

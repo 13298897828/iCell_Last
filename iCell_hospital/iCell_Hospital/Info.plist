@@ -29,6 +29,33 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>YES</string>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>2</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>搜索医院</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>tag0</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutItemIconLove</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>搜索药品</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>tag1</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>1</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>设置提醒</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>tag2</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

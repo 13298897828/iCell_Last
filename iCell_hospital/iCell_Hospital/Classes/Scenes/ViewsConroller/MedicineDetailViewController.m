@@ -78,12 +78,62 @@
         [[DBManager sharedManager] insertMedicine:_medicine];
         _medicine.flag = !_medicine.flag;
                [_collectionMedicineButton setImage:[UIImage imageNamed:@"yishoucang"] forState:UIControlStateNormal];
-        
+        [self showAnimation];
+
     }
  
     
     
 }
+
+//收藏动画
+- (void)showAnimation {
+    //get the location of label
+    CGPoint lbCenter = CGPointMake(self.view.frame.size.width - 45, 35);
+    //the image which will play the animation soon
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"yishoucang"]];
+    imageView.contentMode = UIViewContentModeScaleToFill;
+    imageView.frame = CGRectMake(0, 0, 20, 20);
+    imageView.hidden = YES;
+    imageView.center = lbCenter;
+    
+    //the container of image view
+    CALayer *layer = [[CALayer alloc]init];
+    layer.contents = imageView.layer.contents;
+    layer.frame = imageView.frame;
+    layer.opacity = 1;
+    [self.view.layer addSublayer:layer];
+    
+    //动画 终点 都以sel.view为参考系
+    CGPoint endpoint = CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height);
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    //动画起点
+    CGPoint startPoint = lbCenter;
+    [path moveToPoint:startPoint];
+    //贝塞尔曲线控制点
+    float sx = startPoint.x;
+    float sy = startPoint.y;
+    float ex = endpoint.x;
+    float ey = endpoint.y;
+    float x = sx + (ex - sx) / 3 ;
+    float y = sy + (ey - sy) * 0.5 - 400;
+    CGPoint centerPoint=CGPointMake(x-100, y);
+    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
+    
+    
+    //key frame animation to show the bezier path animation
+    CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
+    animation.path = path.CGPath;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.duration = 1.5;
+    animation.delegate = self;
+    animation.autoreverses = NO;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    [layer addAnimation:animation forKey:@"buy"];
+}
+
+
 
 
 -(void)viewWillAppear:(BOOL)animated{
