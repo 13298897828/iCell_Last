@@ -114,7 +114,7 @@ static  FMDatabase *db = nil;
     
     FMResultSet *rs = [db executeQuery:@"SELECT * FROM medicineList"];
  
-    
+    [_collectionMedicineArray removeAllObjects];
     
     while ([rs next]) {
 
@@ -130,6 +130,7 @@ static  FMDatabase *db = nil;
         NSString *code = [rs stringForColumn:@"code"];
         NSData *messageArrayData = [rs dataForColumn:@"messageArray"];
         NSArray *messageArray = [NSKeyedUnarchiver unarchiveObjectWithData:messageArrayData];
+
         
         Medicine *collectMedicine = [Medicine new];
         collectMedicine.ID = ID;
@@ -141,8 +142,9 @@ static  FMDatabase *db = nil;
         collectMedicine.tap = tap;
         collectMedicine.price = price;
         collectMedicine.code = code;
-        [collectMedicine.messageArray arrayByAddingObjectsFromArray:messageArray];
-        [_collectionMedicineArray addObject:collectMedicine];
+        [collectMedicine.messageArray addObjectsFromArray:messageArray];
+        [self.collectionMedicineArray addObject:collectMedicine];
+//        NSLog(@"%@",collectMedicine.messageArray);
     }
     [rs close];
     return _collectionMedicineArray;

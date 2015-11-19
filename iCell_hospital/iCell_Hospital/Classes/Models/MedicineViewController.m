@@ -87,23 +87,27 @@
 
 #pragma mark - 跳转到药店
 - (IBAction)drafStore:(UIBarButtonItem *)sender {
+//    
+//    
+//    ContantMedicineViewController *contantVC =  [ContantMedicineViewController new];
+//    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
+//    //    动画效果
+//    CATransition *animation = [CATransition animation];
+//    animation.delegate = self;
+//    animation.duration = .6;
+//    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+//    //    animation.type = @"suckEffect";
+//    //     animation.type = kCATransitionMoveIn;
+//    [UIView commitAnimations];
+//    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:YES];
+//    [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
+//    self.hidesBottomBarWhenPushed = YES;
+//    [self showViewController:contantVC sender:nil];
+//    self.hidesBottomBarWhenPushed = NO;
     
+    MedicineCollectList *listVC= [ MedicineCollectList new];
+    [self showViewController:listVC sender:nil];
     
-    ContantMedicineViewController *contantVC =  [ContantMedicineViewController new];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
-    //    动画效果
-    CATransition *animation = [CATransition animation];
-    animation.delegate = self;
-    animation.duration = .6;
-    animation.timingFunction = UIViewAnimationCurveEaseInOut;
-    //    animation.type = @"suckEffect";
-    //     animation.type = kCATransitionMoveIn;
-    [UIView commitAnimations];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:YES];
-    [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
-    self.hidesBottomBarWhenPushed = YES;
-    [self showViewController:contantVC sender:nil];
-    self.hidesBottomBarWhenPushed = NO;
 }
 
 
