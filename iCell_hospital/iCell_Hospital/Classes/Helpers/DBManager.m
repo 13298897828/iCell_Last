@@ -190,6 +190,7 @@ static  FMDatabase *db = nil;
     }
 }
 
+
 #pragma mark -懒加载
 -(NSMutableArray *)collectionMedicineArray{
     
@@ -203,6 +204,14 @@ static  FMDatabase *db = nil;
     
 }
 
+- (NSMutableArray *)sicknessArr{
+    if (!_sicknessArr) {
+        
+        self.sicknessArr = [NSMutableArray new];
+    }
+    
+    return _sicknessArr;
+}
 
 
 //医院
@@ -251,22 +260,30 @@ static  FMDatabase *db = nil;
 //插入病状
 - (void)insertSickness:(Diagnose_Sickness *)sickness{
     
-    if ([self selectSickness:sickness]) {
-        [db executeUpdate:@"DELETE FROM sicknessTable WHERE name = ?",sickness.name];
+    if (!sickness.name) {
         return;
     }
-    int res = [db executeUpdate:@"INSERT INTO sicknessTable(name,img,desc,causetext,detailtext,drug)VALUES(?,?,?,?,?,?)",sickness.name,sickness.img,sickness.desc,sickness.causetext,sickness.detailtext,sickness.drug];
     
+    [self openDB];
+    
+    if ([self selectSickness:sickness]) {
+        [db executeUpdate:@"DELETE FROM sicknessTable WHERE name = ?",sickness.name];
+    }
+    int res = [db executeUpdate:@"INSERT INTO sicknessTable(desc,causetext,detailtext,drug,img,name)VALUES(?,?,?,?,?,?)",sickness.desc,sickness.causetext,sickness.detailtext,sickness.drug,sickness.img,sickness.name];
+    NSLog(@"%@",sickness.name);
     if (res) {
         
         NSLog(@"插入成功");
     }else{
         NSLog(@"插入失败");
     }
+    
+    [self closeDB];
 }
 
 //是否已经存在
 - (BOOL)selectSickness:(Diagnose_Sickness *)sickness{
+    
     FMResultSet *rs = [db executeQuery:@"SELECT name FROM sicknessTable"];
     
     while ([rs next]) {
@@ -278,11 +295,16 @@ static  FMDatabase *db = nil;
         }
     }
     [rs close];
+    
     return NO;
 }
 
 //查找所有存储的病状
 - (NSArray *)selectAllSickness{
+    
+    [self openDB];
+    [_sicknessArr removeAllObjects];
+    
     FMResultSet *rs = [db executeQuery:@"SELECT * FROM sicknessTable"];
     
     while ([rs next]) {
@@ -306,11 +328,15 @@ static  FMDatabase *db = nil;
         [self.sicknessArr addObject:sickness];
     }
     [rs close];
+    [self closeDB];
+    
     return _sicknessArr;
 }
 
 //删除存储的病状信息
 - (void)deleteSickness:(Diagnose_Sickness *)sickness{
+    
+    [self openDB];
     if ([db executeUpdate:@"delete from sicknessTable where name = ?",sickness.name]) {
         NSLog(@"删除数据成功");
         [_sicknessArr removeObject:sickness];
@@ -318,6 +344,7 @@ static  FMDatabase *db = nil;
         NSLog(@"删除数据失败");
         
     }
+    [self closeDB];
 }
 
 
