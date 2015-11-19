@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xma-qQ-Z8v">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--诊断-->
+        <scene sceneID="FY7-iU-VCM">
+            <objects>
+                <viewController storyboardIdentifier="DiagnoseViewController" id="Ivq-Mf-Rvy" customClass="DiagnoseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fL4-8R-cfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="WfG-gi-OSO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aOj-3t-BPj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pp4-xf-Dkz">
+                                <rect key="frame" x="0.0" y="50" width="600" height="180"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.76598340580000002" green="0.86477148739999998" blue="0.931936553" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="PTQ-Rp-MJF"/>
+                                    <constraint firstAttribute="height" constant="180" id="WfJ-TT-FLD"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor1" translatesAutoresizingMaskIntoConstraints="NO" id="exw-Wf-bdK">
+                                <rect key="frame" x="0.0" y="230" width="600" height="370"/>
+                                <animations/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="T1O-HH-YQS">
+                                <rect key="frame" x="70" y="339" width="100" height="165"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-zW-PWk">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="HeU-Gi-odi"/>
+                                        </constraints>
+                                        <state key="normal" title="病状信息"/>
+                                        <connections>
+                                            <action selector="sicknessInfoAction:" destination="Ivq-Mf-Rvy" eventType="touchUpInside" id="iv9-7F-t9h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qd-UW-Mie">
+                                        <rect key="frame" x="0.0" y="45" width="100" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="aHa-1Y-TDH"/>
+                                        </constraints>
+                                        <state key="normal" title="检查项目"/>
+                                        <connections>
+                                            <action selector="checkAction:" destination="Ivq-Mf-Rvy" eventType="touchUpInside" id="kRs-RD-onT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-Br-88i">
+                                        <rect key="frame" x="0.0" y="90" width="100" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="PFZ-ds-GXR"/>
+                                        </constraints>
+                                        <state key="normal" title="手术项目"/>
+                                        <connections>
+                                            <action selector="operationAction:" destination="Ivq-Mf-Rvy" eventType="touchUpInside" id="G6l-Xi-vhY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8e-hn-6yR">
+                                        <rect key="frame" x="0.0" y="135" width="100" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="GbZ-HT-Sh1"/>
+                                        </constraints>
+                                        <state key="normal" title="健康食品"/>
+                                        <connections>
+                                            <action selector="healthAction:" destination="Ivq-Mf-Rvy" eventType="touchUpInside" id="EXt-a6-OBB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pp4-xf-Dkz" firstAttribute="leading" secondItem="aOj-3t-BPj" secondAttribute="leading" id="2jn-fV-HKO"/>
+                            <constraint firstItem="exw-Wf-bdK" firstAttribute="top" secondItem="Pp4-xf-Dkz" secondAttribute="bottom" id="Aar-Cd-e76"/>
+                            <constraint firstAttribute="trailing" secondItem="exw-Wf-bdK" secondAttribute="trailing" id="CkV-B8-KvC"/>
+                            <constraint firstItem="T1O-HH-YQS" firstAttribute="top" secondItem="Pp4-xf-Dkz" secondAttribute="bottom" constant="109" id="Gy1-iI-a39"/>
+                            <constraint firstItem="exw-Wf-bdK" firstAttribute="top" secondItem="Pp4-xf-Dkz" secondAttribute="bottom" id="PSb-a6-Q2h"/>
+                            <constraint firstItem="exw-Wf-bdK" firstAttribute="leading" secondItem="aOj-3t-BPj" secondAttribute="leading" id="Pwa-3e-hCh"/>
+                            <constraint firstItem="Pp4-xf-Dkz" firstAttribute="top" secondItem="aOj-3t-BPj" secondAttribute="top" constant="50" id="Zsh-6s-IvL"/>
+                            <constraint firstItem="T1O-HH-YQS" firstAttribute="leading" secondItem="aOj-3t-BPj" secondAttribute="leadingMargin" constant="50" id="c8E-bB-qde"/>
+                            <constraint firstItem="WfG-gi-OSO" firstAttribute="top" secondItem="exw-Wf-bdK" secondAttribute="bottom" id="dEu-Q4-bfn"/>
+                            <constraint firstAttribute="trailing" secondItem="Pp4-xf-Dkz" secondAttribute="trailing" id="g0S-vD-FfL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="诊断" id="ZKY-Pz-2ir"/>
+                    <connections>
+                        <outlet property="cycleView" destination="Pp4-xf-Dkz" id="vUQ-4m-rq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnw-Tf-hCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-925"/>
+        </scene>
+        <!--Diagnose Info View Controller-->
+        <scene sceneID="S9e-g6-YsD">
+            <objects>
+                <tableViewController id="cxT-eL-QS0" customClass="DiagnoseInfoViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZFV-UE-mrw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nKh-NM-l40">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nKh-NM-l40" id="0PP-zz-XIt">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cxT-eL-QS0" id="etU-0l-8lA"/>
+                            <outlet property="delegate" destination="cxT-eL-QS0" id="l6J-Ta-pPS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2F-H8-pJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="-925"/>
+        </scene>
+        <!--病状信息-->
+        <scene sceneID="LEB-DI-8lA">
+            <objects>
+                <viewController id="mdi-pE-tcb" sceneMemberID="viewController">
+                    <searchBar key="view" contentMode="redraw" searchBarStyle="minimal" placeholder="请输入查询病状" id="52k-As-Gc0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                    <navigationItem key="navigationItem" title="病状信息" id="9q0-2t-JRX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Al4-ri-0o3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="-270"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k2S-mL-O4v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xma-qQ-Z8v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mkf-O5-PzH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ivq-Mf-Rvy" kind="relationship" relationship="rootViewController" id="4Ut-Cu-2py"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aro-Ub-EdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="-925"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QE6-Kz-VWg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PC4-gN-Q1h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wUY-UG-kyr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mdi-pE-tcb" kind="relationship" relationship="rootViewController" id="6AY-2Q-Fgj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xx8-bb-HqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="-270"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doctor1" width="1000" height="699"/>
+    </resources>
+</document>

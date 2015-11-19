@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="438" id="KGk-i7-Jjw" customClass="Diagnose_CheckItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="438"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="437"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CT检查" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urR-U3-nD7">
+                        <rect key="frame" x="15" y="99" width="206" height="23"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检查部位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEB-az-bvC">
+                        <rect key="frame" x="18" y="142" width="203" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="关节,骨髓,骨,肾,胰腺,胃,脾,肝,肠,腹部,心脏,气管,甲状腺,口,耳,鼻" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaU-d2-stJ">
+                        <rect key="frame" x="23" y="173" width="198" height="22"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="症状" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="293-dU-PZY">
+                        <rect key="frame" x="15" y="275" width="344" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="738" text="结核性脓胸,缺血缺氧性脑病,动脉瘤,肺性脑病,间歇性眼球突出症,新生儿缺氧缺血性脑病,血管瘤,胸降主动脉动脉瘤,胸主动脉夹层动脉瘤,先天性主动脉瓣窦动脉瘤破裂" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7q-YY-6Nc">
+                        <rect key="frame" x="15" y="306" width="344" height="0.0"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xg-aI-vX9">
+                        <rect key="frame" x="15" y="326" width="344" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CT检查检查过程：(一)平扫 是指不用造影增强或造影的普通扫描。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCH-lK-Uol">
+                        <rect key="frame" x="15" y="357" width="344" height="41"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="请输入检查项目名称" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4d-cS-Hqc">
+                        <rect key="frame" x="20" y="30" width="334" height="44"/>
+                        <animations/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="akE-IF-vxp">
+                        <rect key="frame" x="129" y="79" width="240" height="280"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="280" id="67u-19-ebX"/>
+                            <constraint firstAttribute="width" constant="240" id="zTu-Xg-raU"/>
+                        </constraints>
+                        <color key="sectionIndexBackgroundColor" red="0.76598340580000002" green="0.86477148739999998" blue="0.931936553" alpha="1" colorSpace="calibratedRGB"/>
+                    </tableView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="232" image="check-1" translatesAutoresizingMaskIntoConstraints="NO" id="1JH-uw-1At">
+                        <rect key="frame" x="236" y="83" width="130" height="170"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="TeG-5v-pC8"/>
+                            <constraint firstAttribute="width" constant="130" id="b5R-Zi-Fbx"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="dCH-lK-Uol" secondAttribute="bottom" constant="31" id="70m-C8-8Kd"/>
+                    <constraint firstItem="293-dU-PZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="9sJ-NL-Epb"/>
+                    <constraint firstItem="akE-IF-vxp" firstAttribute="top" secondItem="t4d-cS-Hqc" secondAttribute="bottom" constant="5" id="DT2-Ds-16s"/>
+                    <constraint firstItem="4Xg-aI-vX9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="FNJ-60-2JD"/>
+                    <constraint firstItem="293-dU-PZY" firstAttribute="top" secondItem="yaU-d2-stJ" secondAttribute="bottom" constant="80" id="G3g-7g-0CD"/>
+                    <constraint firstItem="HEB-az-bvC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="GpH-uQ-GoL"/>
+                    <constraint firstItem="t4d-cS-Hqc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QGs-OR-LXu"/>
+                    <constraint firstAttribute="trailing" secondItem="dCH-lK-Uol" secondAttribute="trailing" constant="15" id="Si0-1h-Epa"/>
+                    <constraint firstAttribute="trailing" secondItem="t4d-cS-Hqc" secondAttribute="trailing" constant="20" id="VtP-dJ-MAv"/>
+                    <constraint firstItem="dCH-lK-Uol" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Vts-mu-j38"/>
+                    <constraint firstAttribute="trailing" secondItem="4Xg-aI-vX9" secondAttribute="trailing" constant="15" id="VzP-UM-JqA"/>
+                    <constraint firstItem="1JH-uw-1At" firstAttribute="leading" secondItem="yaU-d2-stJ" secondAttribute="trailing" constant="15" id="WeC-8S-lIx"/>
+                    <constraint firstItem="urR-U3-nD7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Xkv-mN-6Py"/>
+                    <constraint firstItem="Y7q-YY-6Nc" firstAttribute="top" secondItem="293-dU-PZY" secondAttribute="bottom" constant="10" id="d05-l8-Fd4"/>
+                    <constraint firstItem="1JH-uw-1At" firstAttribute="leading" secondItem="urR-U3-nD7" secondAttribute="trailing" constant="15" id="dnv-yq-v3b"/>
+                    <constraint firstItem="Y7q-YY-6Nc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="e3R-6j-jhe"/>
+                    <constraint firstItem="1JH-uw-1At" firstAttribute="top" secondItem="t4d-cS-Hqc" secondAttribute="bottom" constant="9" id="gs2-c6-AmS"/>
+                    <constraint firstItem="yaU-d2-stJ" firstAttribute="top" secondItem="HEB-az-bvC" secondAttribute="bottom" constant="10" id="hoP-Qg-kLt"/>
+                    <constraint firstItem="yaU-d2-stJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="isF-Oq-CHM"/>
+                    <constraint firstItem="dCH-lK-Uol" firstAttribute="top" secondItem="4Xg-aI-vX9" secondAttribute="bottom" constant="10" id="ndv-s2-SwT"/>
+                    <constraint firstItem="1JH-uw-1At" firstAttribute="leading" secondItem="HEB-az-bvC" secondAttribute="trailing" constant="15" id="ojc-OX-ssJ"/>
+                    <constraint firstAttribute="trailing" secondItem="293-dU-PZY" secondAttribute="trailing" constant="15" id="qYy-es-1E8"/>
+                    <constraint firstAttribute="trailing" secondItem="akE-IF-vxp" secondAttribute="trailing" constant="5" id="s8Q-uQ-CzC"/>
+                    <constraint firstAttribute="trailing" secondItem="Y7q-YY-6Nc" secondAttribute="trailing" constant="15" id="tvG-CO-zhE"/>
+                    <constraint firstItem="urR-U3-nD7" firstAttribute="top" secondItem="t4d-cS-Hqc" secondAttribute="bottom" constant="25" id="wEa-30-Ib7"/>
+                    <constraint firstItem="HEB-az-bvC" firstAttribute="top" secondItem="urR-U3-nD7" secondAttribute="bottom" constant="20" id="x2A-bL-aLB"/>
+                    <constraint firstItem="t4d-cS-Hqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="xhe-xj-8be"/>
+                    <constraint firstItem="4Xg-aI-vX9" firstAttribute="top" secondItem="Y7q-YY-6Nc" secondAttribute="bottom" constant="20" id="yM2-9y-16B"/>
+                    <constraint firstItem="1JH-uw-1At" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="zQ0-rf-2oq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.76598340580000002" green="0.86477148739999998" blue="0.931936553" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="imgView" destination="1JH-uw-1At" id="q4X-KD-fSf"/>
+                <outlet property="messageLabel" destination="dCH-lK-Uol" id="2va-ry-Zmt"/>
+                <outlet property="nameLabel" destination="urR-U3-nD7" id="vIV-y8-Ma4"/>
+                <outlet property="placeLabel" destination="yaU-d2-stJ" id="AJn-Ej-F6s"/>
+                <outlet property="searchbar" destination="t4d-cS-Hqc" id="ecN-EF-KDw"/>
+                <outlet property="symptomLabel" destination="Y7q-YY-6Nc" id="qcH-sI-Nmg"/>
+                <outlet property="table" destination="akE-IF-vxp" id="naQ-1n-B2B"/>
+            </connections>
+            <point key="canvasLocation" x="226" y="386"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check-1" width="1300" height="957"/>
+    </resources>
+</document>

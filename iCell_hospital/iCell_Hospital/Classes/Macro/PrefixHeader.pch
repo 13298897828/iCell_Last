@@ -1,0 +1,88 @@
+//
+//  PrefixHeader.pch
+//  iCell_Hospital
+//
+//  Created by 张天琦 on 15/11/9.
+//  Copyright © 2015年 张天琦. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#pragma mark - 三方
+#import "Header.h"
+#import <MAMapKit/MAMapKit.h>
+#import <UIImageView+WebCache.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#pragma mark - Hosptial
+//controller
+#import "WeatherViewController.h"
+#import "HosipitalViewController.h"
+#import "HospitalDetailViewController.h"
+#import "HospitalMapViewController.h"
+#import "HospitalCity&ProvinceViewController.h"
+#import "HospitalSearchViewController.h"
+//module
+#import "Hospital.h"
+#import "HospitalCity&Province.h"
+//自定义cell
+#import "HospitalCollectionViewCell.h"
+#import "HospitalTableViewCell.h"
+#import "HospitalSecondTableViewCell.h"
+#import "HospitalSearchTableViewCell.h"
+//helper
+#import "HospitalHelper.h"
+#import "PureLayout.h"
+//View
+#import "HospitalMapView.h"
+#import "HYWeatherForcastView.h"
+#import "HYWeatherLiveView.h"
+
+#pragma mark - diagnostics(诊断)
+
+#import "AppDelegate.h"
+
+#import "DiagnoseInfoDetail.h"
+#import "Diagnose_SicknessCell.h"
+#import "Diagnose_CheckItemCell.h"
+#import "Diagnose_OperationCell.h"
+#import "Diagnose_FoodCell.h"
+
+
+#import "DiagnoseManager.h"
+
+#import "DiagnoseInfoViewController.h"
+#import "Diagnose_InterestViewController.h"
+#import "Diagnose_SicknessViewController.h"
+#import "Diagnose_CheckItemViewController.h"
+#import "Diagnose_OperationViewController.h"
+#import "Diagnose_FoodViewController.h"
+
+#import "Diagnose_Info.h"
+#import "Diagnose_Sickness.h"
+#import "Diagnose_CheckItem.h"
+#import "Diagnose_Operation.h"
+#import "Diagnose_Food.h"
+
+#import "KPTimePicker.h"
+#import "Categories.h"
+#import "TimeManager.h"
+#import "SetAlertViewController.h"
+#import "TimeList.h"
+
+
+#pragma mark - Medicine import
+#import "DBManager.h"
+#import "Medicine.h"
+#import "MedicineHelper.h"
+//#import "MedicineViewController.h"
+#import "MedicineSearchResultViewController.h"
+#import "MedicineDetailViewController.h"
+#import "DrugMapViewController.h"
+#import "drugstoreViewController.h"
+#import "ContantMedicineViewController.h"
+#import "MedicineViewController.h"
+
+
+
+
+#endif /* PrefixHeader_pch */

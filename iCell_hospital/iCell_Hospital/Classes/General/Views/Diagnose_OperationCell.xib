@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="397" id="KGk-i7-Jjw" customClass="Diagnose_OperationCell">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="397"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="369" height="396"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <searchBar contentMode="redraw" searchBarStyle="minimal" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2o-0Q-Lub">
+                        <rect key="frame" x="15" y="25" width="339" height="44"/>
+                        <animations/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="NLs-D3-5k7">
+                        <rect key="frame" x="57" y="69" width="232" height="170"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="ebe-LQ-sfN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心脏搭桥手术" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ5-eB-Vjg">
+                        <rect key="frame" x="23" y="247" width="331" height="23"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xx-aN-ltL">
+                        <rect key="frame" x="23" y="280" width="331" height="42"/>
+                        <animations/>
+                        <string key="text">俗称冠脉搭桥术，是国际上公认的治疗冠心病最有效的方法.冠心病的冠状动脉狭窄多呈节段性分布。且主要位于冠状动脉的近中段，远段大多正常。冠状动脉搭桥术就是在冠状动脉狭窄的近端和远端之间建立一条通道，使血液绕过狭中位而到达远端，如一座桥梁使公路跨过山壑江河一样畅通无阻。心脏日夜不停地泵出血液，将营养成分输送到全身各器官组织中去。但是，作为泵的心脏自身的肌肉组织也需要氧气和养料，这是由冠状动脉系统来提供。如果冠状血管粥样硬化造成管腔狭窄或闭塞，就会导致这段冠状动脉供应的心肌缺血，严重的发生心肌梗死</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l1d-3w-TDs">
+                        <rect key="frame" x="114" y="69" width="240" height="243"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="RpN-c0-0Nn"/>
+                            <constraint firstAttribute="height" constant="243" id="fm2-uO-Cf7"/>
+                        </constraints>
+                    </tableView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ati-65-YaI">
+                        <rect key="frame" x="23" y="341" width="323" height="0.0"/>
+                        <animations/>
+                        <string key="text">心脏搭桥手术手术过程文图    第1步：医生需要给患者进行全身麻醉。  第2步：气管内插管后使用呼吸机控制患者的呼吸。  第3步：麻醉阶段完成后，医生就要分组开始准备建桥的材料，也就是即将用来“搭桥”的新的血管。这些血管都来自患者自己的身体，所以手术后不会有任何排斥反应。医生一般从胸部、腿部或手臂内取下几段血管，根据病变的不同，需要的血管数量也不同。  第4步：手术不需要切除患者的肋骨，只是在胸部正中切开一个切口，然后就可以看到心脏（不需要把心脏取出来）。  第5步：通过手术前的冠状动脉造影检查和手术当中的检查，医生可以确定需要搭桥的“罪犯血管”，在高倍放大镜的辅助下，通过非常精细的外科操作，用比头发还纤细很多的缝线，将这些桥血管与病变两端正常的的血管分别缝合在一起，这样心脏上的桥梁就建好了。  第6步：一般需要架设4根桥甚至更多的桥，血液通过这些新架设的“桥梁”就能顺利的绕过狭窄或者堵塞的部位，到达心脏的各个部位，我们的心脏恢复了正常的“交通状态”。</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="l1d-3w-TDs" firstAttribute="top" secondItem="F2o-0Q-Lub" secondAttribute="bottom" id="1QA-m7-gEC"/>
+                    <constraint firstItem="5Xx-aN-ltL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="7jE-T1-j2d"/>
+                    <constraint firstItem="F2o-0Q-Lub" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="7wg-Ns-0DX"/>
+                    <constraint firstItem="NLs-D3-5k7" firstAttribute="top" secondItem="F2o-0Q-Lub" secondAttribute="bottom" id="8jb-av-lHr"/>
+                    <constraint firstItem="F2o-0Q-Lub" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Gbn-rP-hSd"/>
+                    <constraint firstItem="5Xx-aN-ltL" firstAttribute="top" secondItem="DJ5-eB-Vjg" secondAttribute="bottom" constant="10" id="MQl-Vo-LIn"/>
+                    <constraint firstItem="ati-65-YaI" firstAttribute="top" secondItem="5Xx-aN-ltL" secondAttribute="bottom" constant="19" id="NMX-ZY-U9N"/>
+                    <constraint firstItem="DJ5-eB-Vjg" firstAttribute="top" secondItem="NLs-D3-5k7" secondAttribute="bottom" constant="8" id="NxC-52-77G"/>
+                    <constraint firstAttribute="trailing" secondItem="F2o-0Q-Lub" secondAttribute="trailing" constant="15" id="Piz-NH-pFx"/>
+                    <constraint firstAttribute="trailing" secondItem="DJ5-eB-Vjg" secondAttribute="trailing" constant="15" id="Xao-xF-e4V"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ati-65-YaI" secondAttribute="trailing" constant="15" id="esP-pK-BDS"/>
+                    <constraint firstItem="DJ5-eB-Vjg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="f9d-On-jG2"/>
+                    <constraint firstItem="NLs-D3-5k7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="49" id="fUC-0m-6Ut"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="l1d-3w-TDs" secondAttribute="trailing" constant="7" id="hCR-zE-5Kj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NLs-D3-5k7" secondAttribute="trailing" constant="72" id="n5M-Wu-QFs"/>
+                    <constraint firstItem="ati-65-YaI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="u0L-xv-yYX"/>
+                    <constraint firstAttribute="trailing" secondItem="5Xx-aN-ltL" secondAttribute="trailing" constant="15" id="v7M-yQ-Ft8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ati-65-YaI" secondAttribute="bottom" constant="47" id="yqB-Ye-5dy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.76598340580000002" green="0.86477148739999998" blue="0.931936553" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="descLabel" destination="5Xx-aN-ltL" id="fKg-At-9Sc"/>
+                <outlet property="imgView" destination="NLs-D3-5k7" id="cIf-hA-hS7"/>
+                <outlet property="messageLabel" destination="ati-65-YaI" id="Ajv-5V-xKd"/>
+                <outlet property="nameLabel" destination="DJ5-eB-Vjg" id="4WU-lj-CSp"/>
+                <outlet property="searchBar" destination="F2o-0Q-Lub" id="ia0-LI-CI2"/>
+                <outlet property="table" destination="l1d-3w-TDs" id="jeS-jn-bwU"/>
+            </connections>
+            <point key="canvasLocation" x="344.5" y="367.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" width="619" height="449"/>
+    </resources>
+</document>

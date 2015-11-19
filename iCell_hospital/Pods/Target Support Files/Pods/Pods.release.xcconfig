@@ -1,0 +1,10 @@
+ARCHS = $(ARCHS_STANDARD)
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*][arch=*] = ZBarReaderViewImpl_Simulator.m
+EXCLUDED_SOURCE_FILE_NAMES[sdk=iphonesimulator*][arch=*] = ZBarReaderViewImpl_Capture.m ZBarCaptureReader.m
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AMap2DMap" "${PODS_ROOT}/RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable" "${PODS_ROOT}/RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 NDEBUG=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AMap2DMap" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/RongCloudIMKit" "${PODS_ROOT}/Headers/Public/SDCycleScrollView" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/ZBarSDK" "${PODS_ROOT}/Headers/Public/pop"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AMap2DMap" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/RongCloudIMKit" -isystem "${PODS_ROOT}/Headers/Public/SDCycleScrollView" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage" -isystem "${PODS_ROOT}/Headers/Public/ZBarSDK" -isystem "${PODS_ROOT}/Headers/Public/pop"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"FMDB" -l"SDCycleScrollView" -l"SDWebImage" -l"ZBarSDK" -l"c++" -l"c++abi" -l"iconv" -l"opencore-amrnb" -l"pop" -l"sqlite3" -l"stdc++" -l"stdc++.6.0.9" -l"xml2" -l"z" -framework "AVFoundation" -framework "AssetsLibrary" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreAudio" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreMedia" -framework "CoreTelephony" -framework "CoreVideo" -framework "ImageIO" -framework "MAMapKit" -framework "MapKit" -framework "OpenGLES" -framework "QuartzCore" -framework "RongIMKit" -framework "RongIMLib" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+PODS_ROOT = ${SRCROOT}/Pods
