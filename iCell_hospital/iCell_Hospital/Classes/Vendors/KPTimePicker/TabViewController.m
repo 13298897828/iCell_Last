@@ -91,23 +91,23 @@
         [self.view addSubview:containview];
         [self.menuviewsArray addObject:containview];
         containview.tag = index;
-        [UIView animateWithDuration:0.15
-                              delay:delay
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             containview.center = CGPointMake(centerx, centery - 20);
-                         }
-                         completion:^(BOOL finished) {
-                             [UIView animateWithDuration:0.05
-                                                   delay:0
-                                                 options:UIViewAnimationOptionCurveEaseInOut
-                                              animations:^{
-                                                  containview.center = CGPointMake(centerx, centery);
-                                              }
-                                              completion:^(BOOL finished) {
-                                                  
-                                              }];
-                         }];
+    [UIView animateWithDuration:0.15
+                          delay:delay
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         containview.center = CGPointMake(centerx, centery - 20);
+                     }
+                     completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.05
+                                               delay:0
+                                             options:UIViewAnimationOptionCurveEaseInOut
+                                          animations:^{
+                                              containview.center = CGPointMake(centerx, centery);
+                                          }
+                                          completion:^(BOOL finished) {
+                                              
+                                          }];
+                     }];
     }
     UIView * bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 49, self.view.frame.size.width, 49)];
     bottomView.backgroundColor = [UIColor whiteColor];
@@ -191,8 +191,6 @@
     if (tap.view.tag == 1) {
 //        天气
         WeatherViewController *weather =[WeatherViewController new];
-//        UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:weather];
-        
         [self showViewController:weather sender:nil];
       
     }

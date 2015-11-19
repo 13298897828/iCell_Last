@@ -10,6 +10,7 @@
 
 @interface collectionTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic,strong)NSMutableDictionary *dataDictionary;
 @end
 
 @implementation collectionTableViewController
@@ -19,7 +20,19 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"collectionCell"];
- 
+    [[DBManager sharedManager] openDB];
+    [[DBManager sharedManager] selectAllMedicine];
+    [[DBManager sharedManager] selectAllSickness];
+    
+    [_dataDictionary setObject:[DBManager sharedManager].collectionMedicineArray forKey:@"M"];
+    [_dataDictionary setObject:[DBManager sharedManager].sicknessArr forKey:@"S"];
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    [[DBManager sharedManager] closeDB];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,8 +44,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return 3;
 }
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    if (section == 0) {
+        
+        return @"收藏的医院";
+        
+    }if (section == 1) {
+        
+        return @"收藏的诊断";
+    }
+    
+    return @"收藏的药品";
+}
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -47,27 +76,56 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"collectionCell" forIndexPath:indexPath];
+//    if (indexPath.row == 0) {
+//        
+//        cell.imageView.image = [UIImage imageNamed:@"hospital"];
+//        cell.textLabel.text = @"收藏的医院";
+//    }
+//        
+//        
+//    if (indexPath.row == 1) {
+//        
+//        cell.imageView.image = [UIImage imageNamed:@"zhenduan"];
+//        cell.textLabel.text = @"收藏的诊断";
+//    }
+//    
+//    if (indexPath.row == 2) {
+//        
+//        cell.imageView.image = [UIImage imageNamed:@"tongrentang"];
+//        cell.textLabel.text = @"收藏的药品";
+//    }
     
+    NSString *key = self.dataDictionary.allKeys[indexPath.section];
+    NSArray *array = _dataDictionary[key];
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         
-        cell.imageView.image = [UIImage imageNamed:@"hospital"];
-        cell.textLabel.text = @"收藏的医院";
+        Hospital *hospital = [Hospital new];
+        hospital = array[indexPath.row];
+        cell.textLabel.text = hospital.name;
     }
+    if (indexPath.section == 1) {
         
+        Diagnose_Sickness *diagnose = [Diagnose_Sickness new];
+        diagnose = array[indexPath.row];
+        cell.textLabel.text =diagnose.name;
         
-    if (indexPath.row == 1) {
-        
-        cell.imageView.image = [UIImage imageNamed:@"zhenduan"];
-        cell.textLabel.text = @"收藏的诊断";
     }
     
-    if (indexPath.row == 2) {
+    if (indexPath.section == 2) {
         
-        cell.imageView.image = [UIImage imageNamed:@"tongrentang"];
-        cell.textLabel.text = @"收藏的药品";
+        Medicine *medicine = [Medicine new];
+        medicine = array[indexPath.row];
+        cell.textLabel.text = medicine.name;
     }
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+    
     
     return cell;
 }
@@ -120,5 +178,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(NSMutableDictionary *)dataDictionary{
+    
+    if (!_dataDictionary) {
+        
+        self.dataDictionary = [NSMutableDictionary new];
+        
+    }
+    
+    return _dataDictionary;
+    
+}
 
 @end
