@@ -21,6 +21,7 @@
 #import "HospitalMapViewController.h"
 #import "HospitalCity&ProvinceViewController.h"
 #import "HospitalSearchViewController.h"
+#import "HospitalCollectList.h"
 //module
 #import "Hospital.h"
 #import "HospitalCity&Province.h"

@@ -61,9 +61,7 @@ static NSString *const cellID = @"CellID";
     self.hosLevelLabel.text = self.hospital.level;
     self.hosMtype.text = self.hospital.mtype;
     self.messageLabel.text = @"";
-//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//        [self requestData];
-//    });
+
     [[DBManager sharedManager] openDB];
     self.hospital.isFavourit=[[DBManager sharedManager] findHospitalInDataBase:self.hospital];
     if (self.hospital.isFavourit) {
@@ -140,7 +138,10 @@ static NSString *const cellID = @"CellID";
          [self showAnimation];
     }
     [[DBManager sharedManager] insertHospital:self.hospital];
-    
+
+//   TEST==== 取得数据库中的所有模型
+//    [[DBManager sharedManager] findAllHospitalInDataBase];
+//    NSLog(@"allHospital====%@",[DBManager sharedManager].allHospitalArray);
     
     
 }
@@ -148,14 +149,13 @@ static NSString *const cellID = @"CellID";
 
 //收藏动画
 - (void)showAnimation {
-    //get the location of label
-    CGPoint lbCenter = CGPointMake(self.view.frame.size.width-20, 0);
+
     //the image which will play the animation soon
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"yishoucang"]];
     imageView.contentMode = UIViewContentModeScaleToFill;
     imageView.frame = CGRectMake(0, 0, 20, 20);
     imageView.hidden = YES;
-    imageView.center = lbCenter;
+    imageView.center = CGPointMake(self.view.frame.size.width-20, 100);
     
     //the container of image view
     CALayer *layer = [[CALayer alloc]init];
@@ -166,9 +166,10 @@ static NSString *const cellID = @"CellID";
     
     //动画 终点 都以sel.view为参考系
     CGPoint endpoint = CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height);
-    UIBezierPath *path = [UIBezierPath bezierPath];
+
     //动画起点
-    CGPoint startPoint = lbCenter;
+    CGPoint startPoint = CGPointMake(self.view.bounds.size.width-50, 60);
+    UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:startPoint];
     //贝塞尔曲线控制点
     float sx = startPoint.x;
@@ -177,16 +178,16 @@ static NSString *const cellID = @"CellID";
     float ey = endpoint.y;
     float x = sx + (ex - sx) / 3 ;
     float y = sy + (ey - sy) * 0.5 - 400;
-    CGPoint centerPoint=CGPointMake(x-100, y);
-    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
-    
+    CGPoint centerPoint=CGPointMake(x, y);
+//    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
+    [path addCurveToPoint:endpoint controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(centerPoint.x -50, centerPoint.y -50)];
     
     //key frame animation to show the bezier path animation
     CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
     animation.path = path.CGPath;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    animation.duration = 1.5;
+    animation.duration = 2.0;
     animation.delegate = self;
     animation.autoreverses = NO;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
