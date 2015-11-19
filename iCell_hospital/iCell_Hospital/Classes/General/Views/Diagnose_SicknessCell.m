@@ -17,6 +17,8 @@
 
 - (void)setSickness:(Diagnose_Sickness *)sickness{
     
+    _sickness = sickness;
+    
     NSString *cause = [self filterHTML:sickness.causetext];
     NSString *detail = [self filterHTML:sickness.detailtext];
 
@@ -87,13 +89,9 @@
     
     [self showAnimation];
     
-    [[DBManager sharedManager] openDB];
-    
     [[DBManager sharedManager] insertSickness:_sickness];
-    
-    [[DBManager sharedManager] closeDB];
+    NSLog(@"%@",_sickness.name);
 }
-
 
 //收藏动画
 - (void)showAnimation {
