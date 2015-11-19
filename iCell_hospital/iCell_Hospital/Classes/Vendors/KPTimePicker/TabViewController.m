@@ -10,7 +10,7 @@
 #import "FeedbackViewController.h"
 #import "SetAlertViewController.h"
 #import "WeatherViewController.h"
-#import "collectionTableViewController.h"
+
 @interface TabViewController ()<UITabBarControllerDelegate>
 
 @property (weak,nonatomic)UIVisualEffectView * backgroundview;
@@ -180,9 +180,8 @@
     
     if (tap.view.tag == 0) {
 //        收藏
-        collectionTableViewController *collection = [collectionTableViewController new];
-        
-        [self showViewController:collection sender:nil];
+       
+      
         
         
         
