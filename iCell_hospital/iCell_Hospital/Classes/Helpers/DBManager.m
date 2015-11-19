@@ -23,9 +23,7 @@
     dispatch_once(&onceToken, ^{
         
         manager = [DBManager new];
-        if (db) {
-            return ;
-        }
+
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         
@@ -38,29 +36,20 @@
         if (![db open]) {
             
             NSLog(@"Could not open db.");
-            
-            
-            
+
         }
+        //        医院表
+           [db executeUpdate:@"CREATE TABLE  if not exists hospitalTable('address' TEXT, 'area' TEXT, 'count' TEXT, 'fax' TEXT, 'fcount' TEXT, 'gobus' TEXT, '_id' TEXT, 'img' TEXT, 'level' TEXT, 'mail' TEXT, 'mtype' TEXT, 'name' TEXT, 'nature' TEXT, 'rcount' TEXT, 'tel' TEXT, 'url' TEXT, 'x' TEXT, 'y' TEXT, 'zipcode' TEXT, 'message' TEXT,'isFavourit' BOOLEAN);"];
+        
+//        诊断表
+             [db executeUpdate:@"CREATE TABLE if not exists 'sicknessTable' ('desc' TEXT, 'causetext' TEXT, 'detailtext' TEXT, 'drug' TEXT, 'img' TEXT, 'name' TEXT);"];
+        
         if (db) {
             return ;
         }
-        
-               db = [FMDatabase databaseWithPath:dbPath] ;
-        
-        if (![db open]) {
-            NSLog(@"Could not open db.");
-        }
-        
-     
-        //        医院表
-        [db executeUpdate:@"CREATE TABLE  if not exists hospitalTable('address' TEXT, 'area' TEXT, 'count' TEXT, 'fax' TEXT, 'fcount' TEXT, 'gobus' TEXT, '_id' TEXT, 'img' TEXT, 'level' TEXT, 'mail' TEXT, 'mtype' TEXT, 'name' TEXT, 'nature' TEXT, 'rcount' TEXT, 'tel' TEXT, 'url' TEXT, 'x' TEXT, 'y' TEXT, 'zipcode' TEXT, 'message' TEXT,'isFavourit' BOOLEAN);"];
-        
-//        诊断表
-        [db executeUpdate:@"CREATE TABLE if not exists 'sicknessTable' ('desc' TEXT, 'causetext' TEXT, 'detailtext' TEXT, 'drug' TEXT, 'img' TEXT, 'name' TEXT);"];
-        
-    });
     
+
+    });
     return manager;
 }
 
@@ -99,27 +88,9 @@ static  FMDatabase *db = nil;
 }
 
 
--(instancetype)init{
-    
-    if (self = [super init]) {
-        [self openDB];
-        
 
-//        医院表
-     [db executeUpdate:@"CREATE TABLE if not exists 'hospitalTable'('address' TEXT, 'area' TEXT, 'count' TEXT, 'fax' TEXT, 'fcount' TEXT, 'gobus' TEXT, '_id' TEXT, 'img' TEXT, 'level' TEXT, 'mail' TEXT, 'mtype' TEXT, 'name' TEXT, 'nature' TEXT, 'rcount' TEXT, 'tel' TEXT, 'url' TEXT, 'x' TEXT, 'y' TEXT, 'zipcode' TEXT, 'message' TEXT);"];
-     [db executeUpdate:@"CREATE TABLE if not exists 'sicknessTable' ('desc' TEXT, 'causetext' TEXT, 'detailtext' TEXT, 'drug' TEXT, 'img' TEXT, 'name' TEXT);"];
-        
-        [self closeDB];
-    }
-    
-    
-    return self;
-}
 -(void)insertMedicine:(Medicine *)medicine{
-    
-    
-    
-    
+
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:medicine.messageArray];
 
 //    NSArray *arr2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
@@ -240,6 +211,9 @@ static  FMDatabase *db = nil;
     
     FMResultSet *rs = [db executeQuery:@"SELECT name FROM hospitalTable"];
     
+    if (hospital) {
+        
+    }
     while ([rs next]) {
         
         NSString *name = [rs stringForColumn:@"name"];
@@ -248,7 +222,7 @@ static  FMDatabase *db = nil;
             return YES;
         }
     }
-    [rs close];
+
     return NO;
     
 }
@@ -265,7 +239,6 @@ static  FMDatabase *db = nil;
     
     [self closeDB];
 }
-
 
 
 
