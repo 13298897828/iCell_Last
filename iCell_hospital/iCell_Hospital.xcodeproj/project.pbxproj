@@ -719,6 +719,7 @@
 				TargetAttributes = {
 					14D3B20F1BF0636200427765 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 5833L3MQTV;
 					};
 				};
 			};
