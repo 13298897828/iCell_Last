@@ -83,7 +83,7 @@
 #import "drugstoreViewController.h"
 #import "ContantMedicineViewController.h"
 #import "MedicineViewController.h"
-
+#import "ChatViewController.h"
 //收藏
 #import "HospitalCollectList.h"
 #import "MedicineCollectList.h"

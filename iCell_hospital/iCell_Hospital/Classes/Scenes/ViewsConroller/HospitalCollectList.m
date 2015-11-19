@@ -29,7 +29,7 @@ static NSString *const cellID = @"cellID";
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [[DBManager sharedManager] findAllHospitalInDataBase];
+//    [[DBManager sharedManager] findAllHospitalInDataBase];
     [self.tableView reloadData];
 }
 
