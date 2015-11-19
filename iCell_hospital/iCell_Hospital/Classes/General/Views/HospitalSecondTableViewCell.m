@@ -8,10 +8,7 @@
 
 #import "HospitalSecondTableViewCell.h"
 @interface HospitalSecondTableViewCell ()<MAMapViewDelegate,CLLocationManagerDelegate>
-//{
-//    CLLocationManager *_locationManager;
-//    MAMapView *_mapView;
-//}
+
 
 @property (strong, nonatomic) IBOutlet UIImageView *hosIMageView;
 @property (strong, nonatomic) IBOutlet UILabel *hosNameLabel;
@@ -21,10 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *yibaoImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *levelImageView;
 
-
 @property(nonatomic,strong)HospitalMapView *map;
-
-
 
 @end
 
@@ -102,7 +96,7 @@
         self.yibaoImageView.image =[UIImage imageNamed:@"feiyibao"];
        
         self.hosMtypeLabel.hidden = YES;
-//        self.hosMtypeLabel.text = @"非医保";
+
     }
     self.hosMtypeLabel.text = hospital.mtype;
     
@@ -110,7 +104,12 @@
     
     MAMapPoint point2 =[HospitalHelper sharedHospitalHelper].myPoint;
  
-    self.hosDistanceLabel.text = [NSString stringWithFormat:@"距离您%.1fkm",MAMetersBetweenMapPoints(point1, point2)*0.001];
+    if (MAMetersBetweenMapPoints(point1, point2)*0.001 >99) {
+        self.hosDistanceLabel.text = @"距离您99+km";
+    }else{
+        self.hosDistanceLabel.text = [NSString stringWithFormat:@"距离您%.1fkm",MAMetersBetweenMapPoints(point1, point2)*0.001];
+    }
+
     
 }
 

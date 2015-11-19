@@ -85,7 +85,66 @@
     [task resume];
     
     
+    UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"imageName"];
+    UIMutableApplicationShortcutItem *item = [[UIMutableApplicationShortcutItem alloc] initWithType:@"yiyuan" localizedTitle:@"搜索医院" localizedSubtitle:@"记录此刻" icon:icon userInfo:@{@"key": @"value"}];
+    
+    
+    
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"imageName"];
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc] initWithType:@"yaopin" localizedTitle:@"搜索药品" localizedSubtitle:@"添加提醒" icon:icon1 userInfo:@{@"key": @"value"}];
+    
+    
+    
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"imageName"];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc] initWithType:@"tixing" localizedTitle:@"添加提醒" localizedSubtitle:@"添加提醒" icon:icon2 userInfo:@{@"key": @"value"}];
+    
+    
+    [UIApplication sharedApplication].shortcutItems = @[item,item1,item2];
+    
+    
     return YES;
+}
+
+
+
+
+
+
+
+
+//func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+//}
+
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+    
+    
+    if ([shortcutItem.type isEqualToString:@"yiyuan"]) {
+        
+        HosipitalViewController *hospitalVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HosipitalViewController"];
+        
+//        [self.window.rootViewController showViewController:hospitalVC sender:nil];
+        
+        [self.window setRootViewController:hospitalVC];
+    }
+    
+    if ([shortcutItem.type isEqualToString:@"yaopin"]) {
+        
+        MedicineViewController *medicineVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"medicineViewController"];
+        
+        [self.window setRootViewController:medicineVC];
+//        [self.window.rootViewController showViewController:medicineVC sender:nil];
+
+    }
+    if ([shortcutItem.type isEqualToString:@"tixing"]) {
+        
+        SetAlertViewController *setAlertVC = [SetAlertViewController new];
+        
+        [self.window setRootViewController:setAlertVC];
+//        [self.window.rootViewController showViewController:setAlertVC sender:nil];
+        
+    }
+    
+  
 }
 
 

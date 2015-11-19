@@ -111,11 +111,11 @@
 		14E42AD31BF06553002EB1FB /* placeHoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AD21BF06553002EB1FB /* placeHoderViewController.m */; };
 		14E42ADB1BF06EBA002EB1FB /* Medicine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42ADA1BF06EBA002EB1FB /* Medicine.m */; };
 		14E42AE91BF06FAE002EB1FB /* MedicineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AE81BF06FAE002EB1FB /* MedicineView.m */; };
-		C28FB9CD1BFDBFF5003669E0 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9CB1BFDBFF5003669E0 /* CollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C28FB9CE1BFDBFF5003669E0 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28FB9CC1BFDBFF5003669E0 /* CollectionViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C28FB9D11BFDC76C003669E0 /* HospitalCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D01BFDC76C003669E0 /* HospitalCollectList.m */; settings = {ASSET_TAGS = (); }; };
-		C28FB9D71BFDC896003669E0 /* MedicineCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D61BFDC896003669E0 /* MedicineCollectList.m */; settings = {ASSET_TAGS = (); }; };
-		C28FB9DA1BFDC8B6003669E0 /* SicknessCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D91BFDC8B6003669E0 /* SicknessCollectList.m */; settings = {ASSET_TAGS = (); }; };
+		C28FB9CD1BFDBFF5003669E0 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9CB1BFDBFF5003669E0 /* CollectionViewController.m */; };
+		C28FB9CE1BFDBFF5003669E0 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28FB9CC1BFDBFF5003669E0 /* CollectionViewController.xib */; };
+		C28FB9D11BFDC76C003669E0 /* HospitalCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D01BFDC76C003669E0 /* HospitalCollectList.m */; };
+		C28FB9D71BFDC896003669E0 /* MedicineCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D61BFDC896003669E0 /* MedicineCollectList.m */; };
+		C28FB9DA1BFDC8B6003669E0 /* SicknessCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D91BFDC8B6003669E0 /* SicknessCollectList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -719,6 +719,7 @@
 				TargetAttributes = {
 					14D3B20F1BF0636200427765 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 5833L3MQTV;
 					};
 				};
 			};
@@ -1025,7 +1026,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1052,7 +1053,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -139,6 +139,15 @@
     [self show:YES timePickerAnimated:YES];
 }
 
+- (IBAction)backAction:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+- (IBAction)backAction1:(UIButton *)sender {
+    
+       [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

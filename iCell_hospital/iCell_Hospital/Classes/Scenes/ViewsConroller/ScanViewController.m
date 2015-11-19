@@ -32,7 +32,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-        [UIApplication sharedApplication].keyWindow.subviews[1].hidden = YES;
+//        [UIApplication sharedApplication].keyWindow.subviews[1].hidden = YES;
     [super viewWillAppear:animated];
      [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
@@ -44,7 +44,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [UIApplication sharedApplication].keyWindow.subviews[1].hidden = NO;
+//    [UIApplication sharedApplication].keyWindow.subviews[1].hidden = NO;
     [super viewWillDisappear:animated];
      [self.navigationController setNavigationBarHidden:YES animated:YES];
 }

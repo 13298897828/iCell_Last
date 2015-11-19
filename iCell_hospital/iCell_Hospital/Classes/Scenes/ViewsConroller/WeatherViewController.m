@@ -117,9 +117,19 @@
     [self searchLiveWeather];
     [self searchForecastWeather];
     
-
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    button.frame = CGRectMake(10, 20, 40, 30);
+    button.tintColor = [UIColor whiteColor];
+    [button setTitle:@"返回" forState:(UIControlStateNormal)];
+    
+    [button addTarget:self action:@selector(backAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:button];
 }
-
+-(void)backAction{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 
 @end

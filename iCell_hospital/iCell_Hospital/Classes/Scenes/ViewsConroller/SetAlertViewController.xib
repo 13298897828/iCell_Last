@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -18,13 +18,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-HY-iUc">
-                    <rect key="frame" x="20" y="100" width="560" height="70"/>
+                    <rect key="frame" x="20" y="100" width="560" height="69.5"/>
+                    <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="58"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRT-ih-74P">
-                    <rect key="frame" x="20" y="220" width="560" height="30"/>
+                    <rect key="frame" x="20" y="219" width="560" height="30"/>
+                    <animations/>
                     <state key="normal" title="设置时间">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -32,12 +34,25 @@
                         <action selector="setTime:" destination="-1" eventType="touchUpInside" id="7fB-Ql-x8e"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOT-Fy-lB3">
+                    <rect key="frame" x="20" y="29" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="返回">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction1:" destination="-1" eventType="touchUpInside" id="18a-3h-vFw"/>
+                    </connections>
+                </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="4fy-HY-iUc" secondAttribute="trailing" constant="20" id="1V7-hL-cHo"/>
                 <constraint firstItem="xRT-ih-74P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9AM-Ci-GPg"/>
+                <constraint firstItem="KOT-Fy-lB3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="MuO-Fs-6SZ"/>
                 <constraint firstItem="xRT-ih-74P" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z3e-vu-RNG"/>
+                <constraint firstItem="KOT-Fy-lB3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ekX-dh-z2w"/>
                 <constraint firstItem="4fy-HY-iUc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="j7f-jz-tqk"/>
                 <constraint firstAttribute="trailing" secondItem="xRT-ih-74P" secondAttribute="trailing" constant="20" id="nc7-bH-xx7"/>
                 <constraint firstItem="xRT-ih-74P" firstAttribute="top" secondItem="4fy-HY-iUc" secondAttribute="bottom" constant="50" id="r1d-XI-0tz"/>
@@ -52,6 +67,7 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZP-ZO-fqt">
                     <rect key="frame" x="20" y="157" width="560" height="60"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="RYI-rg-Ovu"/>
                     </constraints>
@@ -61,11 +77,23 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBe-X4-qCc">
                     <rect key="frame" x="20" y="259" width="560" height="30"/>
+                    <animations/>
                     <state key="normal" title="设置时间">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlA-Ut-o6q">
+                    <rect key="frame" x="20" y="20" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="返回">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="Ndj-A9-EB3"/>
+                    </connections>
+                </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="YZP-ZO-fqt" firstAttribute="centerX" secondItem="Rlq-Oh-hbQ" secondAttribute="centerX" id="Kjo-bM-5Pk"/>
@@ -77,13 +105,15 @@
                 <constraint firstItem="YZP-ZO-fqt" firstAttribute="leading" secondItem="Rlq-Oh-hbQ" secondAttribute="leadingMargin" id="mn4-Qv-l5a"/>
                 <constraint firstItem="YZP-ZO-fqt" firstAttribute="top" secondItem="Rlq-Oh-hbQ" secondAttribute="top" constant="157" id="oaw-Bd-f4Y"/>
                 <constraint firstAttribute="trailingMargin" secondItem="YZP-ZO-fqt" secondAttribute="trailing" id="pT0-uz-FTK"/>
+                <constraint firstItem="jlA-Ut-o6q" firstAttribute="leading" secondItem="Rlq-Oh-hbQ" secondAttribute="leading" constant="20" id="u0b-4J-rTI"/>
+                <constraint firstItem="jlA-Ut-o6q" firstAttribute="top" secondItem="Rlq-Oh-hbQ" secondAttribute="top" constant="20" id="yz4-Yo-gAZ"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="mn4-Qv-l5a"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="454" y="-250"/>
+            <point key="canvasLocation" x="328" y="-263"/>
         </view>
     </objects>
 </document>
