@@ -33,6 +33,11 @@
 //医院数据库
 - (void)insertHospital:(Hospital *)hospital;
 - (BOOL)findHospitalInDataBase:(Hospital *)hospital;
+- (void)findAllHospitalInDataBase;
+@property(nonatomic,strong)NSArray *allHospitalArray;
+
+
+
 
 
 

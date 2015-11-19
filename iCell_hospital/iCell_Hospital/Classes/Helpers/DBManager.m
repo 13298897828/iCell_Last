@@ -11,7 +11,10 @@
 
 @interface DBManager ()
 
+@property(nonatomic,strong)NSMutableArray *hospitalArray;
+
 @end
+
 @implementation DBManager
 
 
@@ -208,17 +211,14 @@ static  FMDatabase *db = nil;
 //医院
 
 - (BOOL)findHospitalInDataBase:(Hospital *)hospital{
-    
     FMResultSet *rs = [db executeQuery:@"SELECT name FROM hospitalTable"];
     
-    if (hospital) {
-        
-    }
     while ([rs next]) {
         
         NSString *name = [rs stringForColumn:@"name"];
         
         if ([hospital.name isEqualToString:name]) {
+    
             return YES;
         }
     }
@@ -240,10 +240,35 @@ static  FMDatabase *db = nil;
     [self closeDB];
 }
 
+- (void)findAllHospitalInDataBase{
+    
+    
+    [self openDB];
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM hospitalTable"];
+    [self.hospitalArray removeAllObjects];
+    while ([rs next]) {
+        Hospital *hospital =[Hospital new];
+        hospital.name =[rs stringForColumn:@"name"];
+        hospital._id = [rs stringForColumn:@"_id"];
+        hospital.mtype = [rs stringForColumn:@"mtype"];
+        hospital.level = [rs stringForColumn:@"level"];
+        hospital.img = [rs stringForColumn:@"img"];
+        hospital.address =[rs stringForColumn:@"address"];
+        hospital.x = [rs stringForColumn:@"x"];
+        hospital.y = [rs stringForColumn:@"y"];
+        hospital.isFavourit = [rs stringForColumn:@"isFavourit"];
+        hospital.gobus = [rs stringForColumn:@"gobus"];
+        [self.hospitalArray addObject:hospital];
+    }
+
+    [self closeDB];
+    
+}
 
 
-
-
+- (NSArray *)allHospitalArray{
+    return [self.hospitalArray copy];
+}
 
 
 
@@ -318,6 +343,15 @@ static  FMDatabase *db = nil;
         NSLog(@"删除数据失败");
         
     }
+}
+
+
+- (NSMutableArray *)hospitalArray{
+    if (_hospitalArray == nil) {
+        _hospitalArray = [NSMutableArray arrayWithCapacity:6];
+        
+    }
+    return _hospitalArray;
 }
 
 
