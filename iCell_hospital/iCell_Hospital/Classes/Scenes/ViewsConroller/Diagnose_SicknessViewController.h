@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface Diagnose_SicknessViewController : UITableViewController
-
+@property(nonatomic,strong)Diagnose_SicknessCell *cell;
 @end

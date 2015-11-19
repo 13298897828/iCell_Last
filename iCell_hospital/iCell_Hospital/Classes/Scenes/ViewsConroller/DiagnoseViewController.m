@@ -136,14 +136,10 @@
 
 
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)toSetTime:(UIBarButtonItem *)sender {
-    
-    SetAlertViewController *alertVC = [SetAlertViewController new];
-    UINavigationController *n = [[UINavigationController alloc] initWithRootViewController:alertVC];
-    [self presentViewController:n animated:YES completion:nil];
-}
+
 @end

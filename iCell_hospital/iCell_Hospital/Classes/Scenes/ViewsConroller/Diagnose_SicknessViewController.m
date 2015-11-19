@@ -9,7 +9,7 @@
 #import "Diagnose_SicknessViewController.h"
 
 @interface Diagnose_SicknessViewController ()<UISearchBarDelegate>
-@property(nonatomic,strong)Diagnose_SicknessCell *cell;
+
 @end
 
 @implementation Diagnose_SicknessViewController
