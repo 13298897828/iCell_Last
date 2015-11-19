@@ -23,8 +23,7 @@ static NSString *const cellID = @"cellID";
     
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-    self.navigationController.navigationBar.translucent = YES;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -71,7 +70,7 @@ static NSString *const cellID = @"cellID";
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
-#warning 是否需要刷新UI
+
 
 }
 

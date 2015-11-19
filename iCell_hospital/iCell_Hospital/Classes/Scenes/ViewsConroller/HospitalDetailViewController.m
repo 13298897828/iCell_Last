@@ -139,9 +139,9 @@ static NSString *const cellID = @"CellID";
     }
     [[DBManager sharedManager] insertHospital:self.hospital];
 
-//    取得数据库中的所有模型
-    [[DBManager sharedManager] findAllHospitalInDataBase];
-    NSLog(@"allHospital====%@",[DBManager sharedManager].allHospitalArray);
+//   TEST==== 取得数据库中的所有模型
+//    [[DBManager sharedManager] findAllHospitalInDataBase];
+//    NSLog(@"allHospital====%@",[DBManager sharedManager].allHospitalArray);
     
     
 }
