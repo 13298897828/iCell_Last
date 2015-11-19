@@ -211,7 +211,7 @@
     
     
     if (tap.view.tag == 4) {
-        
+//        关于我们
         
         FeedbackViewController *feedback = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FeedbackViewController"];
         [self showViewController:feedback sender:nil];

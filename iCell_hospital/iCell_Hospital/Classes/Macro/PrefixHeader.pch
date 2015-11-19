@@ -37,6 +37,7 @@
 #import "HYWeatherForcastView.h"
 #import "HYWeatherLiveView.h"
 
+
 #pragma mark - diagnostics(诊断)
 
 #import "AppDelegate.h"
@@ -82,7 +83,10 @@
 #import "ContantMedicineViewController.h"
 #import "MedicineViewController.h"
 
-
+//收藏
+#import "HospitalCollectList.h"
+#import "MedicineCollectList.h"
+#import "SicknessCollectList.h"
 
 
 #endif /* PrefixHeader_pch */
