@@ -73,7 +73,7 @@
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             NSArray *arr = dict[@"tngou"];
             
-            for (int i = 6; i < 15; i ++) {
+            for (int i = 6; i < 14; i ++) {
                 Diagnose_Info *digInfo = [Diagnose_Info new];
                 [digInfo setValuesForKeysWithDictionary:arr[i]];
                 if (![digInfo.tit isEqualToString:@
