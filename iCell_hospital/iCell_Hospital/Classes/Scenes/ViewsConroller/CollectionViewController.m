@@ -60,8 +60,7 @@
         v2.view.nightBackgroundColor = UIColorFromRGB(0x343434);
         v3.view.normalBackgroundColor = [UIColor whiteColor];
         v3.view.nightBackgroundColor = UIColorFromRGB(0x343434);
- 
-    
+        
     }];
 
 }
