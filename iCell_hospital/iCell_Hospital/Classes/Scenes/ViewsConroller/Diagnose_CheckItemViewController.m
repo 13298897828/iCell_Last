@@ -51,6 +51,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     _cell.table.hidden = YES;
+    [_cell.searchbar endEditing:YES];
 }
 
 -(void)request: (NSString*)httpUrl withHttpArg: (NSString*)HttpArg  {
@@ -77,7 +78,7 @@
 //设置cell的出现动画
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    cell.layer.transform = CATransform3DMakeScale(1.0, 0, 1);
+    cell.layer.transform = CATransform3DMakeScale(0.4, 0.9, 1);
     [UIView animateWithDuration:.5 animations:^{
         cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
     }];

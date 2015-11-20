@@ -72,7 +72,7 @@
 //设置cell的出现动画
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    cell.layer.transform = CATransform3DMakeScale(0.8, 0.3, 1);
+    cell.layer.transform = CATransform3DMakeScale(0.8, 0.7, 1);
     [UIView animateWithDuration:.5 animations:^{
         cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
     }];

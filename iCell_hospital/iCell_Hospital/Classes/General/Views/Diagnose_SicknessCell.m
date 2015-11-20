@@ -90,19 +90,18 @@
     [self showAnimation];
     
     [[DBManager sharedManager] insertSickness:_sickness];
-    NSLog(@"%@",_sickness.name);
+    NSLog(@"%@ %@",_sickness.name,_sickness.causetext);
 }
 
 //收藏动画
 - (void)showAnimation {
-    //get the location of label
-    CGPoint lbCenter = CGPointMake(self.frame.size.width - 45, 35);
+    
     //the image which will play the animation soon
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"yishoucang"]];
     imageView.contentMode = UIViewContentModeScaleToFill;
     imageView.frame = CGRectMake(0, 0, 20, 20);
     imageView.hidden = YES;
-    imageView.center = lbCenter;
+    imageView.center = CGPointMake(self.frame.size.width-20, 100);
     
     //the container of image view
     CALayer *layer = [[CALayer alloc]init];
@@ -113,9 +112,10 @@
     
     //动画 终点 都以sel.view为参考系
     CGPoint endpoint = CGPointMake(self.frame.size.width*0.5, self.frame.size.height);
-    UIBezierPath *path = [UIBezierPath bezierPath];
+    
     //动画起点
-    CGPoint startPoint = lbCenter;
+    CGPoint startPoint = CGPointMake(self.bounds.size.width-50, 60);
+    UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:startPoint];
     //贝塞尔曲线控制点
     float sx = startPoint.x;
@@ -124,9 +124,15 @@
     float ey = endpoint.y;
     float x = sx + (ex - sx) / 3 ;
     float y = sy + (ey - sy) * 0.5 - 400;
-    CGPoint centerPoint=CGPointMake(x-100, y);
-    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
+    CGPoint centerPoint=CGPointMake(x, y);
     
+    
+    //    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
+    [path addCurveToPoint:CGPointMake(300,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
+    
+    [path moveToPoint:CGPointMake(300, 340)];
+    
+    [path addCurveToPoint:CGPointMake(self.frame.size.width*0.5,self.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
     
     //key frame animation to show the bezier path animation
     CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
@@ -140,12 +146,22 @@
     [layer addAnimation:animation forKey:@"buy"];
 }
 
-
 //xib会走此方法
 - (void)awakeFromNib {
 
     self.searchBar.delegate = self;
+    
+    // 使得点击本身后不会变色
+    self.selectedBackgroundView = ({
+        
+        UIView *view = [UIView new];
+        view.backgroundColor = [UIColor colorWithRed:183/255. green:213/255. blue:233/255. alpha:0.8];
+        view;
+        
+    });
+
 }
+
 
 
 

@@ -14,6 +14,7 @@ typedef void(^setData)();
 @interface Diagnose_CheckItemCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 
 @property(nonatomic,strong)Diagnose_CheckItem *item;
 //用来刷新数据

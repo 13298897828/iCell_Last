@@ -47,6 +47,7 @@
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
+
         _v1.view.normalBackgroundColor = [UIColor whiteColor];
         _v1.view.nightBackgroundColor = UIColorFromRGB(0x343434);
         _v2.view.normalBackgroundColor = [UIColor whiteColor];
@@ -55,6 +56,7 @@
         _v3.view.nightBackgroundColor = UIColorFromRGB(0x343434);
  
     
+
     }];
 
 }
