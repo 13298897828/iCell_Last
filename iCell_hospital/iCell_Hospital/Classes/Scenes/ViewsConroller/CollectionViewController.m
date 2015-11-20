@@ -46,6 +46,24 @@
     
     //
     
+
+
+    [self.view addSubview:v1.view];
+    
+    
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        v1.view.normalBackgroundColor = [UIColor whiteColor];
+        v1.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        v2.view.normalBackgroundColor = [UIColor whiteColor];
+        v2.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        v3.view.normalBackgroundColor = [UIColor whiteColor];
+        v3.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+ 
+    
+    }];
+
 }
 
 -(void)tapAction:(UISegmentedControl *)sender{
