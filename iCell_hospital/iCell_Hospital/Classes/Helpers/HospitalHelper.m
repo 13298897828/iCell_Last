@@ -11,6 +11,20 @@
 @implementation HospitalHelper
 
 + (instancetype)sharedHospitalHelper{
+//    //    判断网络状态
+//    Reachability *reach = [Reachability reachabilityForInternetConnection];
+//    switch ([reach currentReachabilityStatus]) {
+//        case NotReachable:
+//            NSLog(@"wu网络");
+//            break;
+//        case ReachableViaWiFi:
+//            NSLog(@"WIFI");
+//            break;
+//        default:
+//            NSLog(@"3g");
+//            break;
+//    }
+
     static HospitalHelper *hospitalHP = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -19,7 +33,10 @@
     return hospitalHP;
 }
 
+
 -(void)requestHttpUrl: (NSString*)httpUrl withHttpArg: (NSString*)HttpArg success:(void (^)(id data) )success{
+
+    
     NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, HttpArg];
     NSURL *url = [NSURL URLWithString: urlStr];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];

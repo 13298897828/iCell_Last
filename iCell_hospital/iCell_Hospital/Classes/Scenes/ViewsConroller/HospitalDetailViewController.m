@@ -8,6 +8,7 @@
 
 #import "HospitalDetailViewController.h"
 
+
 @interface HospitalDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSString *_message;
@@ -47,7 +48,12 @@ static NSString *const cellID = @"CellID";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+    
+    
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -139,9 +145,8 @@ static NSString *const cellID = @"CellID";
     }
     [[DBManager sharedManager] insertHospital:self.hospital];
 
-//   TEST==== 取得数据库中的所有模型
-//    [[DBManager sharedManager] findAllHospitalInDataBase];
-//    NSLog(@"allHospital====%@",[DBManager sharedManager].allHospitalArray);
+//   取得数据库中的所有模型 ,实时更新数据库中的存储模型的数组
+    [[DBManager sharedManager] findAllHospitalInDataBase];
     
     
 }
@@ -179,15 +184,21 @@ static NSString *const cellID = @"CellID";
     float x = sx + (ex - sx) / 3 ;
     float y = sy + (ey - sy) * 0.5 - 400;
     CGPoint centerPoint=CGPointMake(x, y);
+   
+
 //    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
-    [path addCurveToPoint:endpoint controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(centerPoint.x -50, centerPoint.y -50)];
+    [path addCurveToPoint:CGPointMake(300,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
+    
+    [path moveToPoint:CGPointMake(300, 340)];
+
+    [path addCurveToPoint:CGPointMake(self.view.frame.size.width*0.5,self.view.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
     
     //key frame animation to show the bezier path animation
     CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
     animation.path = path.CGPath;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    animation.duration = 2.0;
+    animation.duration = 1.5;
     animation.delegate = self;
     animation.autoreverses = NO;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
