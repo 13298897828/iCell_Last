@@ -13,11 +13,10 @@
 
 @property(nonatomic,strong)NSString *currentCityName;
 
-
-
-
 + (instancetype)sharedHospitalHelper;
 
 - (void)requestHttpUrl: (NSString*)httpUrl withHttpArg: (NSString*)HttpArg success:(void (^)(id data) )success;
+
++ (BOOL)isExistenceNetwork;
 
 @end

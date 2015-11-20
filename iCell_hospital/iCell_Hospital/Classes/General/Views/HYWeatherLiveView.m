@@ -74,6 +74,15 @@
         _temperature.font            = [UIFont systemFontOfSize:100];
         _temperature.backgroundColor = [UIColor clearColor];
         
+        NSDictionary *dic=[[DBManager sharedManager] findLiveWeatherInformationInDatabase];
+        
+        if (![HospitalHelper isExistenceNetwork]) {
+            self.city.text = dic[@"cityName"];
+            self.weather.text = dic[@"weather"];
+            self.temperature.text = dic[@"temperature"];
+            self.wind.text = [NSString stringWithFormat:@"%@风 %@级  湿度%@%%",dic[@"windDirection" ],dic[@"windPower"],dic[@"humidity"]];
+        }
+        
     }
     return self;
 }

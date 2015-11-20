@@ -18,13 +18,10 @@
 
 @implementation WeatherViewController
 
-- (void)reachabilityChanged:(NSNotification *)notification{
-    NSLog(@"检测到网络变化");
-}
+
 
 - (void)onWeatherSearchDone:(AMapWeatherSearchRequest *)request response:(AMapWeatherSearchResponse *)response
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
     
     if (request.type == AMapWeatherTypeLive)
     {
@@ -36,6 +33,9 @@
         AMapLocalWeatherLive *liveWeather = [response.lives firstObject];
         if (liveWeather != nil)
         {
+//            将天气信息存储进数据库或更新
+            [[DBManager sharedManager] insertLiveWeather:liveWeather];
+            
             [self.weatherLiveView updateWeatherWithInfo:liveWeather];
         }
     }
@@ -50,6 +50,9 @@
         
         if (forecast != nil)
         {
+//            将天气信息存储进数据库或更新
+            [[DBManager sharedManager] insertForcastWeather:forecast];
+            
             [self.weatherForecastView updateWeatherWithInfo:forecast];
         }
     }
@@ -60,7 +63,7 @@
 - (void)searchLiveWeather
 {
     AMapWeatherSearchRequest *request = [[AMapWeatherSearchRequest alloc] init];
-    if ([[HospitalHelper sharedHospitalHelper].currentCityName isEqualToString:@""]) {
+    if ([HospitalHelper sharedHospitalHelper].currentCityName) {
         request.city                      =   [HospitalHelper sharedHospitalHelper].currentCityName;
     }else{
         request.city                      =  @"上海";
@@ -75,7 +78,7 @@
 - (void)searchForecastWeather
 {
     AMapWeatherSearchRequest *request = [[AMapWeatherSearchRequest alloc] init];
-    if ([[HospitalHelper sharedHospitalHelper].currentCityName isEqualToString:@""]) {
+    if ([HospitalHelper sharedHospitalHelper].currentCityName ) {
         request.city                      =   [HospitalHelper sharedHospitalHelper].currentCityName;
     }else{
         request.city                      =  @"上海";
@@ -84,6 +87,8 @@
     request.type                      = AMapWeatherTypeForecast;
     
     [self.search AMapWeatherSearch:request];
+    
+    
 }
 
 #pragma mark - Initialization
@@ -125,7 +130,7 @@
     
     [self initWeatherLiveView];
     [self initWeatherForecastView];
-    
+   
     [self searchLiveWeather];
     [self searchForecastWeather];
     

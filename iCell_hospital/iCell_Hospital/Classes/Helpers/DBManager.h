@@ -36,10 +36,11 @@
 - (void)findAllHospitalInDataBase;
 @property(nonatomic,strong)NSArray *allHospitalArray;
 
-
-
-
-
+//天气
+- (void)insertForcastWeather:(AMapLocalWeatherForecast *)forecast;
+- (NSMutableArray *)findForcastWeatherInDatabase;
+- (void)insertLiveWeather:(AMapLocalWeatherLive *)liveInfo;
+- (NSDictionary *)findLiveWeatherInformationInDatabase;
 
 #pragma mark - 诊断
 - (void)insertSickness:(Diagnose_Sickness *)sickness;

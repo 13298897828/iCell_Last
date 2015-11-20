@@ -22,9 +22,6 @@
 - (void)updateWeatherWithInfo:(AMapLocalWeatherForecast *)forecastInfo{
     _forecastArray = [NSArray arrayWithArray:forecastInfo.casts];
     
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    [userDefault setObject:_forecastArray forKey:@"forcastWeatherArray"];
-    
     if (_forecastArray !=nil)
     {
         [_tableview reloadData];
@@ -87,10 +84,21 @@
     
     AMapLocalDayWeatherForecast *dayForecast = [_forecastArray objectAtIndex:indexPath.row];
     NSString *title = [dayForecast.date substringFromIndex:5];
-    title = [title stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
-    cell.textLabel.text = [title stringByAppendingString:_weekDict[dayForecast.week]];
-    
     NSString *subTitle = [NSString stringWithFormat:@"%@/%@",dayForecast.dayTemp ?:@"",dayForecast.nightTemp?:@""];
+    
+//    判断网络状态
+    if (![HospitalHelper isExistenceNetwork]) {
+      NSDictionary* dic=[[DBManager sharedManager] findForcastWeatherInDatabase][indexPath.row];
+        title = [[dic[@"date"] substringFromIndex:5]stringByAppendingString:_weekDict[dic[@"week"]]];
+        
+        subTitle = [NSString stringWithFormat:@"%@/%@",dic[@"dayTemp"] ?:@"",dic[@"nightTemp"]?:@""];
+    }
+    else{
+        title =[title stringByAppendingString:_weekDict[dayForecast.week]];
+    }
+    
+    title = [title stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
+    cell.textLabel.text = title;
     cell.detailTextLabel.text = subTitle;
     
     return cell;
