@@ -282,15 +282,6 @@ static  FMDatabase *db = nil;
     return [self.hospitalArray copy];
 }
 
-//存储天气
-
-- (void)insertWeatherInformation:(NSArray *)forecastArray{
-    
-}
-
-
-
-
 #pragma mark - 诊断
 //插入病状
 - (void)insertSickness:(Diagnose_Sickness *)sickness{

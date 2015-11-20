@@ -18,9 +18,14 @@
 
 @implementation WeatherViewController
 
+- (void)reachabilityChanged:(NSNotification *)notification{
+    NSLog(@"检测到网络变化");
+}
 
 - (void)onWeatherSearchDone:(AMapWeatherSearchRequest *)request response:(AMapWeatherSearchResponse *)response
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
     if (request.type == AMapWeatherTypeLive)
     {
         if (response.lives.count == 0)

@@ -22,6 +22,9 @@
 - (void)updateWeatherWithInfo:(AMapLocalWeatherForecast *)forecastInfo{
     _forecastArray = [NSArray arrayWithArray:forecastInfo.casts];
     
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:_forecastArray forKey:@"forcastWeatherArray"];
+    
     if (_forecastArray !=nil)
     {
         [_tableview reloadData];
