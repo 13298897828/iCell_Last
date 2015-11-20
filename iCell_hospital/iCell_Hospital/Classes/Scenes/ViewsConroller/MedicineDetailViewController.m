@@ -68,17 +68,20 @@
     
     [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     
-    
+    UIView *view = [[UIView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
     
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
-        self.contantView.normalBackgroundColor = [UIColor whiteColor];
-        self.contantView.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:.7];
-        self.view.normalBackgroundColor = [UIColor whiteColor];
-        self.view.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1];
-        button.normalTitleColor = [UIColor blueColor];
-        button.nightTitleColor = [UIColor whiteColor];
+  
+  
+//        self.contantView.normalBackgroundColor = [UIColor whiteColor];
+//        self.contantView.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:.7];
+         view.normalBackgroundColor = [UIColor clearColor];
+         view.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:.3];
+        view.userInteractionEnabled = NO;
+
  
     }];
     

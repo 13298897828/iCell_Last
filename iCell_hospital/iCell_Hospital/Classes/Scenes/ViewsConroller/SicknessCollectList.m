@@ -7,7 +7,7 @@
 //
 
 #import "SicknessCollectList.h"
-
+#import "collectionDignoseView.h"
 @interface SicknessCollectList ()
 
 @end
@@ -32,21 +32,33 @@
     
     Diagnose_Sickness *sickness = [[DBManager sharedManager] selectAllSickness][indexPath.row];
     cell.textLabel.text = sickness.name;
+ 
     
+
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    Diagnose_SicknessViewController *sicknessVC = [Diagnose_SicknessViewController new];
-    sicknessVC.cell.sickness = [[DBManager sharedManager] selectAllSickness][indexPath.row];
+
+    collectionDignoseView *dignose = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"dignose"];
+    
+    dignose.view.backgroundColor = [UIColor whiteColor];
+    Diagnose_Sickness *sick = [[DBManager sharedManager] selectAllSickness][indexPath.row];
+
+
+    dignose.sickness = sick;
+
     
     //轻拍返回
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
-    [sicknessVC.view addGestureRecognizer:tap];
+    [dignose.view addGestureRecognizer:tap];
     
-    [self showViewController:sicknessVC sender:nil];
+    [self showViewController:dignose sender:nil];
 }
+
+
+
 //轻拍返回
 - (void)back{
     [self dismissViewControllerAnimated:YES completion:nil];

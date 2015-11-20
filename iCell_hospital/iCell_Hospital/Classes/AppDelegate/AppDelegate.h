@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <EAIntroView/EAIntroView.h>
 #define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,EAIntroDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

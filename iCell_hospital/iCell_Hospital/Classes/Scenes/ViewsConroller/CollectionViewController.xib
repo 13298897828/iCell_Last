@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionViewController">
@@ -17,6 +17,7 @@
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="xXC-BG-iGe">
                     <rect key="frame" x="50" y="30" width="500" height="29"/>
+                    <animations/>
                     <segments>
                         <segment title="医院"/>
                         <segment title="药品"/>
@@ -24,7 +25,8 @@
                     </segments>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEk-LE-zUE">
-                    <rect key="frame" x="8" y="10" width="29" height="30"/>
+                    <rect key="frame" x="8" y="30" width="29" height="30"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="29" id="dWY-xN-39U"/>
                         <constraint firstAttribute="height" constant="30" id="k8o-EH-17R"/>
@@ -35,9 +37,10 @@
                     </connections>
                 </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="tEk-LE-zUE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="S6d-m2-cmY"/>
+                <constraint firstItem="tEk-LE-zUE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="S6d-m2-cmY"/>
                 <constraint firstItem="xXC-BG-iGe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="aMu-MI-RqL"/>
                 <constraint firstAttribute="trailing" secondItem="xXC-BG-iGe" secondAttribute="trailing" constant="50" id="gvL-AU-uFc"/>
                 <constraint firstItem="tEk-LE-zUE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qoS-cg-5Wl"/>

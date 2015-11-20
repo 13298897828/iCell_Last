@@ -78,9 +78,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     _cell = [tableView dequeueReusableCellWithIdentifier:@"sicknessCellId" forIndexPath:indexPath];
     
-    _cell.del = ^(){
-        [tableView reloadData];
-    };
     
     return _cell;
 }
