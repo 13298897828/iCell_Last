@@ -13,6 +13,7 @@
 #import <MAMapKit/MAMapKit.h>
 #import <UIImageView+WebCache.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "Reachability.h"
 #pragma mark - Hosptial
 //controller
 #import "WeatherViewController.h"

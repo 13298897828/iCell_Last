@@ -47,7 +47,7 @@ static NSString *const searchTableID = @"searchTableID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.hidesBarsOnSwipe = YES;
+
     
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSearchTableViewCell" bundle:nil] forCellReuseIdentifier:searchTableID];

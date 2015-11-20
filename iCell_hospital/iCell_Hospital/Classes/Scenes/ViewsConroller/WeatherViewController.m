@@ -55,7 +55,7 @@
 - (void)searchLiveWeather
 {
     AMapWeatherSearchRequest *request = [[AMapWeatherSearchRequest alloc] init];
-    if ([HospitalHelper sharedHospitalHelper].currentCityName) {
+    if ([[HospitalHelper sharedHospitalHelper].currentCityName isEqualToString:@""]) {
         request.city                      =   [HospitalHelper sharedHospitalHelper].currentCityName;
     }else{
         request.city                      =  @"上海";
@@ -70,7 +70,7 @@
 - (void)searchForecastWeather
 {
     AMapWeatherSearchRequest *request = [[AMapWeatherSearchRequest alloc] init];
-    if ([HospitalHelper sharedHospitalHelper].currentCityName) {
+    if ([[HospitalHelper sharedHospitalHelper].currentCityName isEqualToString:@""]) {
         request.city                      =   [HospitalHelper sharedHospitalHelper].currentCityName;
     }else{
         request.city                      =  @"上海";

@@ -48,33 +48,10 @@ static NSString *const cellID = @"CellID";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    button.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 200, 80, 80);
-    [button setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
-    [self.view addSubview:button];
-    [self.view bringSubviewToFront:button];
-    button.tintColor = [UIColor whiteColor];
-    
-    [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
-    
-    
-}
-#pragma mark -跳转客服界面
--(void)jumpToConsulting{
-    
-    ChatViewController *chat = [ChatViewController new];
-    
-    
-    // 快速集成第二步，连接融云服务器
-    self.hidesBottomBarWhenPushed = YES;
-    [self showViewController:chat sender:nil];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
-    
-    
-    
-}
 
+    
+    
+}
 
 
 
@@ -208,12 +185,12 @@ static NSString *const cellID = @"CellID";
     float y = sy + (ey - sy) * 0.5 - 400;
     CGPoint centerPoint=CGPointMake(x, y);
    
-    NSLog(@"%@",NSStringFromCGPoint(centerPoint));
+
 //    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
-    [path addCurveToPoint:CGPointMake(250,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
+    [path addCurveToPoint:CGPointMake(300,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
     
-//    [path moveToPoint:CGPointMake(250, 320)];
-//    [path addCurveToPoint:CGPointMake(self.view.frame.size.width*0.5,self.view.frame.size.height) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
+    [path moveToPoint:CGPointMake(300, 340)];
+
     [path addCurveToPoint:CGPointMake(self.view.frame.size.width*0.5,self.view.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
     
     //key frame animation to show the bezier path animation
@@ -221,7 +198,7 @@ static NSString *const cellID = @"CellID";
     animation.path = path.CGPath;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    animation.duration = 2.0;
+    animation.duration = 1.5;
     animation.delegate = self;
     animation.autoreverses = NO;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];

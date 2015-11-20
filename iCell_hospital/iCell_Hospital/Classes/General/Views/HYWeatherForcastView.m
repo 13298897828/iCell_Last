@@ -21,6 +21,7 @@
 
 - (void)updateWeatherWithInfo:(AMapLocalWeatherForecast *)forecastInfo{
     _forecastArray = [NSArray arrayWithArray:forecastInfo.casts];
+    
     if (_forecastArray !=nil)
     {
         [_tableview reloadData];
