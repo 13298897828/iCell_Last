@@ -26,12 +26,16 @@
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEk-LE-zUE">
                     <rect key="frame" x="8" y="30" width="29" height="30"/>
+
                     <animations/>
+
+ 
                     <constraints>
                         <constraint firstAttribute="width" constant="29" id="dWY-xN-39U"/>
                         <constraint firstAttribute="height" constant="30" id="k8o-EH-17R"/>
                     </constraints>
-                    <state key="normal" title="Button" image="back"/>
+                    <color key="tintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button" image="goBack"/>
                     <connections>
                         <action selector="goBack:" destination="-1" eventType="touchUpInside" id="YMk-Au-DHU"/>
                     </connections>
@@ -50,6 +54,6 @@
         </view>
     </objects>
     <resources>
-        <image name="back" width="30" height="30"/>
+        <image name="goBack" width="65" height="65"/>
     </resources>
 </document>

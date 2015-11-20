@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *symptomLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
-@property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
+
 
 
 

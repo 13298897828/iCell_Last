@@ -22,10 +22,7 @@
     self.tableView.estimatedRowHeight = 100;
 
     
-    NSString *httpUrl = @"http://apis.baidu.com/tngou/symptom/name";
-    NSString *typeString = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)@"发烧",NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
-    NSString *httpArg = [NSString stringWithFormat:@"name=%@",typeString];
-    [self request: httpUrl withHttpArg: httpArg];
+
 
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"Diagnose_SicknessCell" bundle:nil] forCellReuseIdentifier:@"sicknessCellId"];
@@ -63,8 +60,6 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.hidesBottomBarWhenPushed = NO;
     
-    
-    
 }
 
 
@@ -82,32 +77,18 @@
     return _cell;
 }
 
-
--(void)request: (NSString*)httpUrl withHttpArg: (NSString*)HttpArg  {
-    NSString *urlString = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, HttpArg];
-    NSURL *url = [NSURL URLWithString: urlString];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
-    [request setHTTPMethod: @"GET"];
-    [request addValue: @"3d3dfb25a74f419547bfef42d666d2b6" forHTTPHeaderField: @"apikey"];
-    [NSURLConnection sendAsynchronousRequest: request queue: [NSOperationQueue mainQueue] completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
-        if (error) {
-            NSLog(@"Httperror: %@%ld", error.localizedDescription, error.code);
-        } else {
-            
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            Diagnose_Sickness *sick = [Diagnose_Sickness new];
-            [sick setValuesForKeysWithDictionary:dic];
-            _cell.sickness = sick;
-        }
-        
-    }];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [_cell.searchBar endEditing:YES];
 }
+
+
+
 
 
 //设置cell的出现动画
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    cell.layer.transform = CATransform3DMakeScale(0.2, 1, 1);
+    cell.layer.transform = CATransform3DMakeScale(0.6, 0.8, 1);
     [UIView animateWithDuration:.5 animations:^{
         cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
     }];
