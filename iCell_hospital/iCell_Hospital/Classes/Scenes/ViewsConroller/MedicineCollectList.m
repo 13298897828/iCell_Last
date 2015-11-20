@@ -66,7 +66,7 @@
 
     Medicine *medicine = _array[indexPath.row];
     
-    NSLog(@"%@%@%d",medicine.name,medicine.descript,medicine.price);
+
     
     MedicineDetailViewController *medicineDetail = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"medicineDetailViewController"];
     

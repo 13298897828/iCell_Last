@@ -45,8 +45,6 @@
             
             [self setOper:oper];
             
-            
-            
             //收回键盘
             [_searchBar endEditing:YES];
             return;
@@ -130,7 +128,7 @@
     [_table reloadData];
     
     //关闭cell的可选择性，避免影响其他的操作
-    self.selected = NO;
+    //self.selected = NO;
     
     self.table.hidden = YES;
     self.searchBar.delegate = self;
@@ -147,9 +145,17 @@
         
     });
     
-    
-}
+    //轻拍返回
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [self addGestureRecognizer:tap];
 
+}
+- (void)back{
+    //收回键盘
+    [_searchBar endEditing:YES];
+    
+    _table.hidden = YES;
+}
 
 
 

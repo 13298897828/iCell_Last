@@ -24,6 +24,7 @@ typedef void(^setData)();
 
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 
 @property(nonatomic,strong) setData del;
 

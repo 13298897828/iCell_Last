@@ -133,6 +133,7 @@
             <color key="backgroundColor" red="0.76598340580000002" green="0.86477148739999998" blue="0.931936553" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="causeLabel" destination="yMM-fy-mCi" id="xmI-TQ-0zc"/>
+                <outlet property="collectBtn" destination="MjM-fU-aZD" id="xWt-kW-5xH"/>
                 <outlet property="collectionButton" destination="MjM-fU-aZD" id="7Xe-cd-iFi"/>
                 <outlet property="descLabel" destination="qXW-i0-Dib" id="dFr-td-eEW"/>
                 <outlet property="detailLabel" destination="Ri6-4L-NZg" id="e3A-bk-Yfy"/>

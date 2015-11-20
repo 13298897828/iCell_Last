@@ -90,7 +90,7 @@
     [self showAnimation];
     
     [[DBManager sharedManager] insertSickness:_sickness];
-    NSLog(@"%@",_sickness.name);
+    NSLog(@"%@ %@",_sickness.name,_sickness.causetext);
 }
 
 //收藏动画
@@ -150,7 +150,18 @@
 - (void)awakeFromNib {
 
     self.searchBar.delegate = self;
+    
+    // 使得点击本身后不会变色
+    self.selectedBackgroundView = ({
+        
+        UIView *view = [UIView new];
+        view.backgroundColor = [UIColor colorWithRed:183/255. green:213/255. blue:233/255. alpha:0.8];
+        view;
+        
+    });
+
 }
+
 
 
 

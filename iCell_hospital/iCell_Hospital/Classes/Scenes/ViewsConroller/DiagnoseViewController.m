@@ -49,7 +49,7 @@
     [DiagnoseManager sharedDiagnoseManager].digResult1 = ^(){
         [self reloadViews];
     };
- 
+    
 }
 
 //获取所有的titles和imgs

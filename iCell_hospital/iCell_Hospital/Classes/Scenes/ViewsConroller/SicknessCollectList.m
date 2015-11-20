@@ -39,7 +39,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     Diagnose_SicknessViewController *sicknessVC = [Diagnose_SicknessViewController new];
-    sicknessVC.cell.sickness = [[DBManager sharedManager] selectAllSickness][indexPath.row];
+    NSArray *arr = [[DBManager sharedManager] selectAllSickness];
+    sicknessVC.cell.sickness = arr[indexPath.row];
+    NSLog(@"%@",arr[indexPath.row]);
+    
+    //隐藏部分
+//    sicknessVC.cell.searchBar.hidden = YES;
+//    sicknessVC.cell.collectBtn.hidden = YES;
     
     //轻拍返回
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];

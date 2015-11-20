@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptLabel;
 
 
-@property(nonatomic,strong)UIImageView *imView;
 
 @end
 
@@ -94,34 +93,26 @@
     
     self.searchBar.delegate = self;
     
-    //初始化显示图片信息的imgView
-    CGRect rect = CGRectMake(10, 10, self.window.frame.size.width - 20, self.window.frame.size.height - 20);
-    self.imView = [[UIImageView alloc] init];
-    self.imView.frame = rect;
-    _imView.contentMode = UIViewContentModeScaleAspectFit;
-    [_imView sd_setImageWithURL:[NSURL URLWithString:_food.img]];
+    //轻拍返回
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [self addGestureRecognizer:tap];
     
-    [self.window addSubview:_imView];
-    //打开imView的用户交互
-    _imView.userInteractionEnabled = YES;
-    _imgView.userInteractionEnabled = YES;
+    // 使得点击本身后不会变色
+    self.selectedBackgroundView = ({
+        
+        UIView *view = [UIView new];
+        view.backgroundColor = [UIColor colorWithRed:183/255. green:213/255. blue:233/255. alpha:0.8];
+        view;
+        
+    });
+
+}
+- (void)back{
+    //收回键盘
+    [_searchBar endEditing:YES];
     
-    //先把它放到window的最后面
-    [self.window sendSubviewToBack:_imView];
-    
-    //给图片添加手势
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-    [_imgView addGestureRecognizer:tap];
 }
-- (void)tapAction{
-    //把放大的图片提到前面
-    [self.window bringSubviewToFront:_imView];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackAction)];
-    [_imView addGestureRecognizer:tap];
-}
-- (void)tapBackAction{
-    [self.window bringSubviewToFront:_imView];
-}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
