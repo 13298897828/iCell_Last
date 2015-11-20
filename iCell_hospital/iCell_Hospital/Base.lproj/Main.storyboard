@@ -438,7 +438,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="DetailScrollView" destination="n0o-A9-vFP" id="5cn-QG-DSL"/>
                         <outlet property="collectionMedicineButton" destination="lkS-pa-ytO" id="QtB-DQ-7nq"/>
+                        <outlet property="contantView" destination="mfs-ho-f8z" id="Ksh-4Y-eqF"/>
                         <outlet property="imgView" destination="Zm1-uW-rxv" id="Duv-Iy-Vpg"/>
                         <outlet property="introduceLabel1" destination="WmT-wr-NT8" id="OaA-Pm-bzj"/>
                         <outlet property="introduceLabel2" destination="RaM-4o-VWQ" id="ZSt-XZ-J54"/>

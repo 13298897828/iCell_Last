@@ -58,6 +58,8 @@ static  NSString  * const headerReuseId = @"aaa";
 //    imgView.contentMode = UIViewContentModeScaleAspectFit;
     imgView.frame = CGRectMake(0, 0, header.frame.size.width, header.frame.size.height);
     
+    
+    
 //    [self.view addSubview:imgView];
 //    imgView.backgroundColor = [UIColor blackColor];
     [header addSubview:imgView];
@@ -113,9 +115,6 @@ static  NSString  * const headerReuseId = @"aaa";
         [cell.medicineImg sd_setImageWithURL:[NSURL URLWithString:medicine.img]];
     cell.medicineName.textColor = [UIColor colorWithWhite:0.498 alpha:1.000];
         cell.medicineName.text = medicine.name;
-    
-  
-    
     return cell;
 }
 
