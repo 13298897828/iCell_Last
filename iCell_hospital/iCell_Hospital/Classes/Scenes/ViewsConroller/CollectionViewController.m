@@ -43,23 +43,16 @@
     [self addChildViewController:_v3];
     
     [self.view addSubview:_v1.view];
-    
-    //
-    
 
-
-    [self.view addSubview:v1.view];
-    
-    
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
-        v1.view.normalBackgroundColor = [UIColor whiteColor];
-        v1.view.nightBackgroundColor = UIColorFromRGB(0x343434);
-        v2.view.normalBackgroundColor = [UIColor whiteColor];
-        v2.view.nightBackgroundColor = UIColorFromRGB(0x343434);
-        v3.view.normalBackgroundColor = [UIColor whiteColor];
-        v3.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        _v1.view.normalBackgroundColor = [UIColor whiteColor];
+        _v1.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        _v2.view.normalBackgroundColor = [UIColor whiteColor];
+        _v2.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        _v3.view.normalBackgroundColor = [UIColor whiteColor];
+        _v3.view.nightBackgroundColor = UIColorFromRGB(0x343434);
  
     
     }];
