@@ -76,9 +76,18 @@ static NSString *const cellID = @"cellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         [HospitalDetailViewController sharedHospitalDetalVC].hospital = [DBManager sharedManager].allHospitalArray[indexPath.row];
-    [self.navigationController pushViewController:[HospitalDetailViewController sharedHospitalDetalVC] animated:YES];
+
+    //轻拍返回
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [[HospitalDetailViewController sharedHospitalDetalVC].view addGestureRecognizer:tap];
+    
+    [self showViewController:[HospitalDetailViewController sharedHospitalDetalVC] sender:nil];
 }
 
+//轻拍返回
+- (void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 @end

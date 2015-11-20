@@ -96,7 +96,7 @@
 //收藏动画
 - (void)showAnimation {
     //get the location of label
-    CGPoint lbCenter = CGPointMake(self.frame.size.width-45, 35);
+    CGPoint lbCenter = CGPointMake(self.frame.size.width - 45, 35);
     //the image which will play the animation soon
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"yishoucang"]];
     imageView.contentMode = UIViewContentModeScaleToFill;

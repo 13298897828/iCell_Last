@@ -37,10 +37,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     Diagnose_SicknessViewController *sicknessVC = [Diagnose_SicknessViewController new];
     sicknessVC.cell.sickness = [[DBManager sharedManager] selectAllSickness][indexPath.row];
-    [self.navigationController pushViewController:sicknessVC animated:YES];
+    
+    //轻拍返回
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [sicknessVC.view addGestureRecognizer:tap];
+    
+    [self showViewController:sicknessVC sender:nil];
 }
+//轻拍返回
+- (void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
@@ -49,9 +61,6 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-        //从数组中删除
-        //[[DBManager sharedManager].sicknessArr :[DBManager sharedManager].sicknessArr[indexPath.row]];
         
         //从数据库中删除
         [[DBManager sharedManager] deleteSickness:[DBManager sharedManager].sicknessArr[indexPath.row]];
