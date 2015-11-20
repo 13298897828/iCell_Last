@@ -8,6 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		0DF45B3631317F2B1FBC210A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED8326586D56D9C8DF6C476 /* libPods.a */; };
+		140C7EF21BFEBCB0009E4B12 /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EB91BFEBCB0009E4B12 /* DKNightVersionManager.m */; };
+		140C7EF31BFEBCB0009E4B12 /* NSObject+Night.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EBB1BFEBCB0009E4B12 /* NSObject+Night.m */; };
+		140C7EF41BFEBCB0009E4B12 /* UINavigationBar+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EBF1BFEBCB0009E4B12 /* UINavigationBar+Animation.m */; };
+		140C7EF51BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EC31BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.m */; };
+		140C7EF61BFEBCB0009E4B12 /* UIButton+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EC61BFEBCB0009E4B12 /* UIButton+TitleColor.m */; };
+		140C7EF71BFEBCB0009E4B12 /* UILabel+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EC91BFEBCB0009E4B12 /* UILabel+TextColor.m */; };
+		140C7EF81BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7ECC1BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.m */; };
+		140C7EF91BFEBCB0009E4B12 /* UINavigationBar+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7ECE1BFEBCB0009E4B12 /* UINavigationBar+TintColor.m */; };
+		140C7EFA1BFEBCB0009E4B12 /* UITabBar+BarTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7ED11BFEBCB0009E4B12 /* UITabBar+BarTintColor.m */; };
+		140C7EFB1BFEBCB0009E4B12 /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7ED41BFEBCB0009E4B12 /* UITableView+SeparatorColor.m */; };
+		140C7EFC1BFEBCB0009E4B12 /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 140C7ED71BFEBCB0009E4B12 /* UIView+BackgroundColor.m */; };
+		140C7EFD1BFEBCB0009E4B12 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 140C7ED81BFEBCB0009E4B12 /* Gemfile */; };
+		140C7EFE1BFEBCB0009E4B12 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 140C7ED91BFEBCB0009E4B12 /* Gemfile.lock */; };
+		140C7EFF1BFEBCB0009E4B12 /* method.json in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EDE1BFEBCB0009E4B12 /* method.json */; };
+		140C7F001BFEBCB0009E4B12 /* project.json in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EDF1BFEBCB0009E4B12 /* project.json */; };
+		140C7F011BFEBCB0009E4B12 /* superklass.json in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE01BFEBCB0009E4B12 /* superklass.json */; };
+		140C7F021BFEBCB0009E4B12 /* objc_class.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE21BFEBCB0009E4B12 /* objc_class.rb */; };
+		140C7F031BFEBCB0009E4B12 /* objc_property.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE31BFEBCB0009E4B12 /* objc_property.rb */; };
+		140C7F041BFEBCB0009E4B12 /* parser.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE41BFEBCB0009E4B12 /* parser.rb */; };
+		140C7F051BFEBCB0009E4B12 /* project.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE51BFEBCB0009E4B12 /* project.rb */; };
+		140C7F061BFEBCB0009E4B12 /* render.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE61BFEBCB0009E4B12 /* render.rb */; };
+		140C7F071BFEBCB0009E4B12 /* color.h.erb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE81BFEBCB0009E4B12 /* color.h.erb */; };
+		140C7F081BFEBCB0009E4B12 /* color.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EE91BFEBCB0009E4B12 /* color.m.erb */; };
+		140C7F091BFEBCB0009E4B12 /* nightversion.h.erb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EEA1BFEBCB0009E4B12 /* nightversion.h.erb */; };
+		140C7F0A1BFEBCB0009E4B12 /* nightversion.m.erb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EEB1BFEBCB0009E4B12 /* nightversion.m.erb */; };
+		140C7F0B1BFEBCB0009E4B12 /* xcodeproj.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EEC1BFEBCB0009E4B12 /* xcodeproj.rb */; };
+		140C7F0C1BFEBCB0009E4B12 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EED1BFEBCB0009E4B12 /* generator.rb */; };
+		140C7F0D1BFEBCB0009E4B12 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EEE1BFEBCB0009E4B12 /* LICENSE */; };
+		140C7F0E1BFEBCB0009E4B12 /* property.json in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EEF1BFEBCB0009E4B12 /* property.json */; };
+		140C7F0F1BFEBCB0009E4B12 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 140C7EF01BFEBCB0009E4B12 /* Rakefile */; };
+		140C7F101BFEBCB0009E4B12 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 140C7EF11BFEBCB0009E4B12 /* README.md */; };
 		1414CF041BF177CF0071E2D8 /* MedicineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1414CF031BF177CF0071E2D8 /* MedicineViewController.m */; };
 		1414CF091BF19F010071E2D8 /* MedicineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1414CF081BF19F010071E2D8 /* MedicineDetailViewController.m */; };
 		141F42AE1BF9D9570063A185 /* WX.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141F42AD1BF9D9570063A185 /* WX.storyboard */; };
@@ -119,6 +150,49 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140C7EB81BFEBCB0009E4B12 /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
+		140C7EB91BFEBCB0009E4B12 /* DKNightVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightVersionManager.m; sourceTree = "<group>"; };
+		140C7EBA1BFEBCB0009E4B12 /* NSObject+Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Night.h"; sourceTree = "<group>"; };
+		140C7EBB1BFEBCB0009E4B12 /* NSObject+Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Night.m"; sourceTree = "<group>"; };
+		140C7EBC1BFEBCB0009E4B12 /* DKNightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersion.h; sourceTree = "<group>"; };
+		140C7EBE1BFEBCB0009E4B12 /* UINavigationBar+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Animation.h"; sourceTree = "<group>"; };
+		140C7EBF1BFEBCB0009E4B12 /* UINavigationBar+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Animation.m"; sourceTree = "<group>"; };
+		140C7EC21BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TintColor.h"; sourceTree = "<group>"; };
+		140C7EC31BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TintColor.m"; sourceTree = "<group>"; };
+		140C7EC51BFEBCB0009E4B12 /* UIButton+TitleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TitleColor.h"; sourceTree = "<group>"; };
+		140C7EC61BFEBCB0009E4B12 /* UIButton+TitleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TitleColor.m"; sourceTree = "<group>"; };
+		140C7EC81BFEBCB0009E4B12 /* UILabel+TextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextColor.h"; sourceTree = "<group>"; };
+		140C7EC91BFEBCB0009E4B12 /* UILabel+TextColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextColor.m"; sourceTree = "<group>"; };
+		140C7ECB1BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+BarTintColor.h"; sourceTree = "<group>"; };
+		140C7ECC1BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BarTintColor.m"; sourceTree = "<group>"; };
+		140C7ECD1BFEBCB0009E4B12 /* UINavigationBar+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TintColor.h"; sourceTree = "<group>"; };
+		140C7ECE1BFEBCB0009E4B12 /* UINavigationBar+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TintColor.m"; sourceTree = "<group>"; };
+		140C7ED01BFEBCB0009E4B12 /* UITabBar+BarTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+BarTintColor.h"; sourceTree = "<group>"; };
+		140C7ED11BFEBCB0009E4B12 /* UITabBar+BarTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+BarTintColor.m"; sourceTree = "<group>"; };
+		140C7ED31BFEBCB0009E4B12 /* UITableView+SeparatorColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SeparatorColor.h"; sourceTree = "<group>"; };
+		140C7ED41BFEBCB0009E4B12 /* UITableView+SeparatorColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SeparatorColor.m"; sourceTree = "<group>"; };
+		140C7ED61BFEBCB0009E4B12 /* UIView+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BackgroundColor.h"; sourceTree = "<group>"; };
+		140C7ED71BFEBCB0009E4B12 /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackgroundColor.m"; sourceTree = "<group>"; };
+		140C7ED81BFEBCB0009E4B12 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		140C7ED91BFEBCB0009E4B12 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		140C7EDE1BFEBCB0009E4B12 /* method.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = method.json; sourceTree = "<group>"; };
+		140C7EDF1BFEBCB0009E4B12 /* project.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
+		140C7EE01BFEBCB0009E4B12 /* superklass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superklass.json; sourceTree = "<group>"; };
+		140C7EE21BFEBCB0009E4B12 /* objc_class.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objc_class.rb; sourceTree = "<group>"; };
+		140C7EE31BFEBCB0009E4B12 /* objc_property.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objc_property.rb; sourceTree = "<group>"; };
+		140C7EE41BFEBCB0009E4B12 /* parser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = parser.rb; sourceTree = "<group>"; };
+		140C7EE51BFEBCB0009E4B12 /* project.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = project.rb; sourceTree = "<group>"; };
+		140C7EE61BFEBCB0009E4B12 /* render.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = render.rb; sourceTree = "<group>"; };
+		140C7EE81BFEBCB0009E4B12 /* color.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.h.erb; sourceTree = "<group>"; };
+		140C7EE91BFEBCB0009E4B12 /* color.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.m.erb; sourceTree = "<group>"; };
+		140C7EEA1BFEBCB0009E4B12 /* nightversion.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.h.erb; sourceTree = "<group>"; };
+		140C7EEB1BFEBCB0009E4B12 /* nightversion.m.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nightversion.m.erb; sourceTree = "<group>"; };
+		140C7EEC1BFEBCB0009E4B12 /* xcodeproj.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = xcodeproj.rb; sourceTree = "<group>"; };
+		140C7EED1BFEBCB0009E4B12 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
+		140C7EEE1BFEBCB0009E4B12 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		140C7EEF1BFEBCB0009E4B12 /* property.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = property.json; sourceTree = "<group>"; };
+		140C7EF01BFEBCB0009E4B12 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		140C7EF11BFEBCB0009E4B12 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1414CF021BF177CF0071E2D8 /* MedicineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicineViewController.h; path = ../../Models/MedicineViewController.h; sourceTree = "<group>"; };
 		1414CF031BF177CF0071E2D8 /* MedicineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicineViewController.m; path = ../../Models/MedicineViewController.m; sourceTree = "<group>"; };
 		1414CF071BF19F010071E2D8 /* MedicineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicineDetailViewController.h; sourceTree = "<group>"; };
@@ -354,6 +428,192 @@
 				35D929B67A2593ED9B3CFF79 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		140C7EB51BFEBCB0009E4B12 /* DKNightVersion */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EB61BFEBCB0009E4B12 /* Classes */,
+				140C7ED81BFEBCB0009E4B12 /* Gemfile */,
+				140C7ED91BFEBCB0009E4B12 /* Gemfile.lock */,
+				140C7EDA1BFEBCB0009E4B12 /* generator */,
+				140C7EEE1BFEBCB0009E4B12 /* LICENSE */,
+				140C7EEF1BFEBCB0009E4B12 /* property.json */,
+				140C7EF01BFEBCB0009E4B12 /* Rakefile */,
+				140C7EF11BFEBCB0009E4B12 /* README.md */,
+			);
+			path = DKNightVersion;
+			sourceTree = "<group>";
+		};
+		140C7EB61BFEBCB0009E4B12 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EB71BFEBCB0009E4B12 /* Core */,
+				140C7EBC1BFEBCB0009E4B12 /* DKNightVersion.h */,
+				140C7EBD1BFEBCB0009E4B12 /* Helper */,
+				140C7EC01BFEBCB0009E4B12 /* UIKit */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		140C7EB71BFEBCB0009E4B12 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EB81BFEBCB0009E4B12 /* DKNightVersionManager.h */,
+				140C7EB91BFEBCB0009E4B12 /* DKNightVersionManager.m */,
+				140C7EBA1BFEBCB0009E4B12 /* NSObject+Night.h */,
+				140C7EBB1BFEBCB0009E4B12 /* NSObject+Night.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		140C7EBD1BFEBCB0009E4B12 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EBE1BFEBCB0009E4B12 /* UINavigationBar+Animation.h */,
+				140C7EBF1BFEBCB0009E4B12 /* UINavigationBar+Animation.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		140C7EC01BFEBCB0009E4B12 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EC11BFEBCB0009E4B12 /* UIBarButtonItem */,
+				140C7EC41BFEBCB0009E4B12 /* UIButton */,
+				140C7EC71BFEBCB0009E4B12 /* UILabel */,
+				140C7ECA1BFEBCB0009E4B12 /* UINavigationBar */,
+				140C7ECF1BFEBCB0009E4B12 /* UITabBar */,
+				140C7ED21BFEBCB0009E4B12 /* UITableView */,
+				140C7ED51BFEBCB0009E4B12 /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		140C7EC11BFEBCB0009E4B12 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EC21BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.h */,
+				140C7EC31BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		140C7EC41BFEBCB0009E4B12 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EC51BFEBCB0009E4B12 /* UIButton+TitleColor.h */,
+				140C7EC61BFEBCB0009E4B12 /* UIButton+TitleColor.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		140C7EC71BFEBCB0009E4B12 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EC81BFEBCB0009E4B12 /* UILabel+TextColor.h */,
+				140C7EC91BFEBCB0009E4B12 /* UILabel+TextColor.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		140C7ECA1BFEBCB0009E4B12 /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				140C7ECB1BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.h */,
+				140C7ECC1BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.m */,
+				140C7ECD1BFEBCB0009E4B12 /* UINavigationBar+TintColor.h */,
+				140C7ECE1BFEBCB0009E4B12 /* UINavigationBar+TintColor.m */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		140C7ECF1BFEBCB0009E4B12 /* UITabBar */ = {
+			isa = PBXGroup;
+			children = (
+				140C7ED01BFEBCB0009E4B12 /* UITabBar+BarTintColor.h */,
+				140C7ED11BFEBCB0009E4B12 /* UITabBar+BarTintColor.m */,
+			);
+			path = UITabBar;
+			sourceTree = "<group>";
+		};
+		140C7ED21BFEBCB0009E4B12 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				140C7ED31BFEBCB0009E4B12 /* UITableView+SeparatorColor.h */,
+				140C7ED41BFEBCB0009E4B12 /* UITableView+SeparatorColor.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		140C7ED51BFEBCB0009E4B12 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				140C7ED61BFEBCB0009E4B12 /* UIView+BackgroundColor.h */,
+				140C7ED71BFEBCB0009E4B12 /* UIView+BackgroundColor.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		140C7EDA1BFEBCB0009E4B12 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EDB1BFEBCB0009E4B12 /* lib */,
+			);
+			path = generator;
+			sourceTree = "<group>";
+		};
+		140C7EDB1BFEBCB0009E4B12 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EDC1BFEBCB0009E4B12 /* generator */,
+				140C7EED1BFEBCB0009E4B12 /* generator.rb */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		140C7EDC1BFEBCB0009E4B12 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EDD1BFEBCB0009E4B12 /* json */,
+				140C7EE11BFEBCB0009E4B12 /* model */,
+				140C7EE41BFEBCB0009E4B12 /* parser.rb */,
+				140C7EE51BFEBCB0009E4B12 /* project.rb */,
+				140C7EE61BFEBCB0009E4B12 /* render.rb */,
+				140C7EE71BFEBCB0009E4B12 /* template */,
+				140C7EEC1BFEBCB0009E4B12 /* xcodeproj.rb */,
+			);
+			path = generator;
+			sourceTree = "<group>";
+		};
+		140C7EDD1BFEBCB0009E4B12 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EDE1BFEBCB0009E4B12 /* method.json */,
+				140C7EDF1BFEBCB0009E4B12 /* project.json */,
+				140C7EE01BFEBCB0009E4B12 /* superklass.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		140C7EE11BFEBCB0009E4B12 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EE21BFEBCB0009E4B12 /* objc_class.rb */,
+				140C7EE31BFEBCB0009E4B12 /* objc_property.rb */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		140C7EE71BFEBCB0009E4B12 /* template */ = {
+			isa = PBXGroup;
+			children = (
+				140C7EE81BFEBCB0009E4B12 /* color.h.erb */,
+				140C7EE91BFEBCB0009E4B12 /* color.m.erb */,
+				140C7EEA1BFEBCB0009E4B12 /* nightversion.h.erb */,
+				140C7EEB1BFEBCB0009E4B12 /* nightversion.m.erb */,
+			);
+			path = template;
 			sourceTree = "<group>";
 		};
 		14406EAB1BFCBB5700C558C2 /* KPTimePicker */ = {
@@ -682,6 +942,7 @@
 		C2FB83401BF0C9A300C0561C /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				140C7EB51BFEBCB0009E4B12 /* DKNightVersion */,
 				14406EAB1BFCBB5700C558C2 /* KPTimePicker */,
 			);
 			path = Vendors;
@@ -748,9 +1009,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140C7F051BFEBCB0009E4B12 /* project.rb in Resources */,
 				14D3B2261BF0636200427765 /* LaunchScreen.storyboard in Resources */,
 				14AF94561BFB431F0042F388 /* HospitalSearchTableViewCell.xib in Resources */,
 				14406EC51BFCBB5700C558C2 /* round_backarrow_big-high@2x.png in Resources */,
+				140C7F071BFEBCB0009E4B12 /* color.h.erb in Resources */,
 				14406EC41BFCBB5700C558C2 /* round_backarrow_big-high.png in Resources */,
 				14406EC11BFCBB5700C558C2 /* picker_wheel@2x.png in Resources */,
 				14B5CFBC1BF350240019893C /* MedicineCollectionViewCell.xib in Resources */,
@@ -758,14 +1021,23 @@
 				14AF945A1BFB431F0042F388 /* HospitalTableViewCell.xib in Resources */,
 				14AF94241BFB42560042F388 /* HZJStoryboard.storyboard in Resources */,
 				14406EBF1BFCBB5700C558C2 /* checkmark_icon_white.png in Resources */,
+				140C7F0A1BFEBCB0009E4B12 /* nightversion.m.erb in Resources */,
 				14406EC31BFCBB5700C558C2 /* picker_wheel_ip4@2x.png in Resources */,
 				14406E781BFCB93700C558C2 /* DiagnoseInfoDetail.xib in Resources */,
 				14406EC01BFCBB5700C558C2 /* checkmark_icon_white@2x.png in Resources */,
 				14406EC21BFCBB5700C558C2 /* picker_wheel_ip4.png in Resources */,
+				140C7F011BFEBCB0009E4B12 /* superklass.json in Resources */,
+				140C7F091BFEBCB0009E4B12 /* nightversion.h.erb in Resources */,
 				14AF94581BFB431F0042F388 /* HospitalSecondTableViewCell.xib in Resources */,
 				14406E701BFCB93700C558C2 /* Diagnose_CheckItemCell.xib in Resources */,
+				140C7F031BFEBCB0009E4B12 /* objc_property.rb in Resources */,
 				14406E721BFCB93700C558C2 /* Diagnose_FoodCell.xib in Resources */,
+				140C7F021BFEBCB0009E4B12 /* objc_class.rb in Resources */,
 				14406E761BFCB93700C558C2 /* Diagnose_SicknessCell.xib in Resources */,
+				140C7EFF1BFEBCB0009E4B12 /* method.json in Resources */,
+				140C7F0E1BFEBCB0009E4B12 /* property.json in Resources */,
+				140C7F0F1BFEBCB0009E4B12 /* Rakefile in Resources */,
+				140C7EFD1BFEBCB0009E4B12 /* Gemfile in Resources */,
 				14AF94541BFB431F0042F388 /* HospitalCollectionViewCell.xib in Resources */,
 				142EA4AC1BF1DABF00AC3607 /* Main.storyboard in Resources */,
 				14406EC81BFCBB5700C558C2 /* schedule_image_moon-high.png in Resources */,
@@ -773,9 +1045,17 @@
 				14D3B2231BF0636200427765 /* Assets.xcassets in Resources */,
 				14406ECB1BFCBB5700C558C2 /* schedule_image_sun-high@2x.png in Resources */,
 				14406E741BFCB93700C558C2 /* Diagnose_OperationCell.xib in Resources */,
+				140C7F001BFEBCB0009E4B12 /* project.json in Resources */,
 				14406EC71BFCBB5700C558C2 /* round_backarrow_big@2x.png in Resources */,
+				140C7F0D1BFEBCB0009E4B12 /* LICENSE in Resources */,
+				140C7F041BFEBCB0009E4B12 /* parser.rb in Resources */,
+				140C7F0B1BFEBCB0009E4B12 /* xcodeproj.rb in Resources */,
 				14406EA71BFCB99000C558C2 /* SetAlertViewController.xib in Resources */,
+				140C7F081BFEBCB0009E4B12 /* color.m.erb in Resources */,
+				140C7F061BFEBCB0009E4B12 /* render.rb in Resources */,
+				140C7EFE1BFEBCB0009E4B12 /* Gemfile.lock in Resources */,
 				14406EC61BFCBB5700C558C2 /* round_backarrow_big.png in Resources */,
+				140C7F0C1BFEBCB0009E4B12 /* generator.rb in Resources */,
 				141F42AE1BF9D9570063A185 /* WX.storyboard in Resources */,
 				14406ECA1BFCBB5700C558C2 /* schedule_image_sun-high.png in Resources */,
 			);
@@ -846,12 +1126,15 @@
 				148ECD2A1BF584AB00FDD691 /* DrugMapViewController.m in Sources */,
 				14AF943B1BFB42F10042F388 /* HospitalMapViewController.m in Sources */,
 				14406E9F1BFCB98200C558C2 /* Diagnose_OperationViewController.m in Sources */,
+				140C7EFA1BFEBCB0009E4B12 /* UITabBar+BarTintColor.m in Sources */,
 				C28FB9DA1BFDC8B6003669E0 /* SicknessCollectList.m in Sources */,
 				14AF943C1BFB42F10042F388 /* HospitalSearchViewController.m in Sources */,
 				14406EAA1BFCBAA000C558C2 /* TimeList.m in Sources */,
+				140C7EF31BFEBCB0009E4B12 /* NSObject+Night.m in Sources */,
 				14406E8B1BFCB96900C558C2 /* Diagnose_Info.m in Sources */,
 				14406E9E1BFCB98200C558C2 /* Diagnose_InterestViewController.m in Sources */,
 				1414CF041BF177CF0071E2D8 /* MedicineViewController.m in Sources */,
+				140C7EFB1BFEBCB0009E4B12 /* UITableView+SeparatorColor.m in Sources */,
 				14AF946F1BFB54C10042F388 /* HosipitalViewController.m in Sources */,
 				14AF941F1BFAD1A50042F388 /* ChatViewController.m in Sources */,
 				14E42ACA1BF064F2002EB1FB /* AppDelegate.m in Sources */,
@@ -862,9 +1145,11 @@
 				14AF94551BFB431F0042F388 /* HospitalSearchTableViewCell.m in Sources */,
 				14AF94291BFB427A0042F388 /* Hospital.m in Sources */,
 				14406E8A1BFCB96900C558C2 /* Diagnose_Food.m in Sources */,
+				140C7F101BFEBCB0009E4B12 /* README.md in Sources */,
 				14AF94571BFB431F0042F388 /* HospitalSecondTableViewCell.m in Sources */,
 				14406EA61BFCB99000C558C2 /* SetAlertViewController.m in Sources */,
 				14406EA01BFCB98200C558C2 /* Diagnose_SicknessViewController.m in Sources */,
+				140C7EF81BFEBCB0009E4B12 /* UINavigationBar+BarTintColor.m in Sources */,
 				14406EBE1BFCBB5700C558C2 /* Categories.m in Sources */,
 				14AF94221BFB17DE0042F388 /* FeedbackViewController.m in Sources */,
 				148ECD441BF5BE0E00FDD691 /* ScanViewController.m in Sources */,
@@ -878,22 +1163,29 @@
 				14406EA21BFCB98200C558C2 /* DiagnoseViewController.m in Sources */,
 				14C1EC651BFC90C1009DEE04 /* HospitalDetailViewController.m in Sources */,
 				14AF94691BFB43430042F388 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				140C7EFC1BFEBCB0009E4B12 /* UIView+BackgroundColor.m in Sources */,
 				C28FB9D11BFDC76C003669E0 /* HospitalCollectList.m in Sources */,
 				14AF943F1BFB42FA0042F388 /* WeatherViewController.m in Sources */,
 				14406E6F1BFCB93700C558C2 /* Diagnose_CheckItemCell.m in Sources */,
 				14406E7E1BFCB95400C558C2 /* TimeManager.m in Sources */,
 				14406E8D1BFCB96900C558C2 /* Diagnose_Sickness.m in Sources */,
+				140C7EF51BFEBCB0009E4B12 /* UIBarButtonItem+TintColor.m in Sources */,
+				140C7EF71BFEBCB0009E4B12 /* UILabel+TextColor.m in Sources */,
 				14406E9D1BFCB98200C558C2 /* Diagnose_FoodViewController.m in Sources */,
 				14AF94531BFB431F0042F388 /* HospitalCollectionViewCell.m in Sources */,
+				140C7EF91BFEBCB0009E4B12 /* UINavigationBar+TintColor.m in Sources */,
 				14AF94681BFB43430042F388 /* NSArray+PureLayout.m in Sources */,
 				14406E7B1BFCB94B00C558C2 /* DiagnoseManager.m in Sources */,
 				14AF942D1BFB428C0042F388 /* HospitalHelper.m in Sources */,
+				140C7EF61BFEBCB0009E4B12 /* UIButton+TitleColor.m in Sources */,
+				140C7EF21BFEBCB0009E4B12 /* DKNightVersionManager.m in Sources */,
 				14406E751BFCB93700C558C2 /* Diagnose_SicknessCell.m in Sources */,
 				14406E891BFCB96900C558C2 /* Diagnose_CheckItem.m in Sources */,
 				1414CF091BF19F010071E2D8 /* MedicineDetailViewController.m in Sources */,
 				14406ECC1BFCBB5700C558C2 /* KPTimePicker.m in Sources */,
 				142EA4AF1BF1F34800AC3607 /* MedicineHelper.m in Sources */,
 				14AF945B1BFB431F0042F388 /* HYWeatherForcastView.m in Sources */,
+				140C7EF41BFEBCB0009E4B12 /* UINavigationBar+Animation.m in Sources */,
 				14406E771BFCB93700C558C2 /* DiagnoseInfoDetail.m in Sources */,
 				14D3B2211BF0636200427765 /* iCell_Hospital.xcdatamodeld in Sources */,
 				14E42ADB1BF06EBA002EB1FB /* Medicine.m in Sources */,

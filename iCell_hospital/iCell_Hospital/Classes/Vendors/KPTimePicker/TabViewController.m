@@ -64,7 +64,7 @@
     //动画
 
     //菜单动画
-    NSArray * imagesNameArray = @[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6"];
+    NSArray * imagesNameArray = @[@"shoucang-1",@"tianqi",@"naozhong",@"yejian",@"us",@"image6"];
     NSArray * labelsArray = @[@"收藏",@"天气",@"吃药提醒",@"夜间模式",@"关于我们",@""];
     CGFloat width = self.view.frame.size.width;
     CGFloat itemWidth = width/3;
@@ -176,15 +176,13 @@
     return containview;
 }
 -(void)catchMenuTap:(UITapGestureRecognizer *)tap{
-    NSLog(@"Catch tap:%ld",(long)tap.view.tag);
+//    NSLog(@"Catch tap:%ld",(long)tap.view.tag);
     
     if (tap.view.tag == 0) {
 //        收藏
-       
+        CollectionViewController *collectVC = [CollectionViewController new];
+        [self presentViewController:collectVC animated:YES completion:nil];
       
-        
-        
-        
     }
     
     if (tap.view.tag == 1) {
@@ -205,7 +203,12 @@
         
 //        夜间模式
 
-        
+        if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
+            [DKNightVersionManager nightFalling];
+        } else {
+            [DKNightVersionManager dawnComing];
+        }
+     
         
     }
     

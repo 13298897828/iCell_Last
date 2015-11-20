@@ -1280,7 +1280,7 @@
         <!--药品-->
         <scene sceneID="weD-5b-STz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dHY-mq-3tk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="na" automaticallyAdjustsScrollViewInsets="NO" id="dHY-mq-3tk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="药品" id="3Pc-Ar-Mfv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ks-yf-bOW">

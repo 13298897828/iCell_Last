@@ -95,7 +95,8 @@ CATransform3D rotationTransform1[PHOTONUM];
             [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
             
             self.hidesBottomBarWhenPushed = YES;
-            [self showViewController:search sender:nil];
+            [self.navigationController pushViewController:search animated:NO];
+           // [self showViewController:search sender:nil];
             self.hidesBottomBarWhenPushed = NO;
             return;
         }
@@ -120,7 +121,7 @@ CATransform3D rotationTransform1[PHOTONUM];
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
             [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
             self.hidesBottomBarWhenPushed = YES;
-            [self showViewController:search sender:nil];
+            [self.navigationController pushViewController:search animated:NO];
             self.hidesBottomBarWhenPushed = NO;
             return;
             
@@ -144,7 +145,7 @@ CATransform3D rotationTransform1[PHOTONUM];
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
             [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
             self.hidesBottomBarWhenPushed = YES;
-            [self showViewController:search sender:nil];
+          [self.navigationController pushViewController:search animated:NO];
             self.hidesBottomBarWhenPushed = NO;
             
             return;
@@ -168,7 +169,7 @@ CATransform3D rotationTransform1[PHOTONUM];
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
             [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
             self.hidesBottomBarWhenPushed = YES;
-            [self showViewController:search sender:nil];
+         [self.navigationController pushViewController:search animated:NO];
             self.hidesBottomBarWhenPushed = NO;
             return;
         }
@@ -191,7 +192,7 @@ CATransform3D rotationTransform1[PHOTONUM];
             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:YES];
             [[self.navigationController.view layer] addAnimation:animation forKey:@"animation"];
             self.hidesBottomBarWhenPushed = YES;
-            [self showViewController:search sender:nil];
+            [self.navigationController pushViewController:search animated:NO];
             self.hidesBottomBarWhenPushed = NO;
             
             return;

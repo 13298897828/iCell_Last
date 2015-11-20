@@ -58,6 +58,7 @@
     
     
      [self.view bringSubviewToFront:_DButton];
+
 }
 #pragma mark -跳转客服界面
 -(void)jumpToConsulting{

@@ -86,9 +86,15 @@
 #import "MedicineViewController.h"
 #import "ChatViewController.h"
 //收藏
+#import "CollectionViewController.h"
 #import "HospitalCollectList.h"
 #import "MedicineCollectList.h"
 #import "SicknessCollectList.h"
 
+
+
+//夜间模式
+#import "DKNightVersionManager.h"
+#import "DKNightVersion.h"
 
 #endif /* PrefixHeader_pch */
