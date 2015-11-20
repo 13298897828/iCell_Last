@@ -73,12 +73,18 @@
     medicineDetail.view.backgroundColor = [UIColor whiteColor];
     medicineDetail.medicine = medicine;
     
+    //轻拍返回
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [medicineDetail.view addGestureRecognizer:tap];
+    
     [self showViewController:medicineDetail sender:nil];
 
     
-    
 }
-
+//轻拍返回
+- (void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     

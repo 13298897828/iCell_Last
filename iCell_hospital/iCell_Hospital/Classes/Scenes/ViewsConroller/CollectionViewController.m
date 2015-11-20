@@ -12,38 +12,62 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
+
+@property (strong, nonatomic) HospitalCollectList *v1;
+@property (strong, nonatomic) MedicineCollectList *v2;
+@property (strong, nonatomic) SicknessCollectList *v3;
+
 @end
 
 @implementation CollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[DBManager sharedManager] openDB];
+    
     _segment.selectedSegmentIndex = 0;
     [_segment addTarget:self action:@selector(tapAction:) forControlEvents:(UIControlEventValueChanged)];
     
-    HospitalCollectList *v1 = [HospitalCollectList new];
-    v1.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
+    _v1 = [HospitalCollectList new];
+    _v1.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
     
-    MedicineCollectList *v2 = [MedicineCollectList new];
-    v2.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
+    _v2 = [MedicineCollectList new];
+    _v2.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
     
-    SicknessCollectList *v3 = [SicknessCollectList new];
-    v3.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
+    _v3 = [SicknessCollectList new];
+    _v3.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
     
-    [self addChildViewController:v3];
-    [self addChildViewController:v2];
-    [self addChildViewController:v1];
+    [self addChildViewController:_v1];
+    [self addChildViewController:_v2];
+    [self addChildViewController:_v3];
     
-    [self.view addSubview:v1.view];
+    [self.view addSubview:_v1.view];
+    
+    //
+    
 }
 
 -(void)tapAction:(UISegmentedControl *)sender{
     
-    [self.view.subviews[0] removeFromSuperview];
+    NSLog(@"%@",self.view.subviews);
+        [[DBManager sharedManager] openDB];
     UIViewController * vc = self.childViewControllers[sender.selectedSegmentIndex];
-    [self.view insertSubview:vc.view atIndex:0];
+    [[self.view.subviews lastObject] removeFromSuperview];
+    [self.view addSubview:vc.view];
+    
+    
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [[DBManager sharedManager] closeDB];
+}
+
+//返回
+- (IBAction)goBack:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 
