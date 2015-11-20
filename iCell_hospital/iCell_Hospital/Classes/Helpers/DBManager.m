@@ -10,7 +10,9 @@
 
 
 @interface DBManager ()
-
+{
+    NSInteger _count;
+}
 @property(nonatomic,strong)NSMutableArray *hospitalArray;
 
 @end
@@ -43,9 +45,12 @@
         }
         //        医院表
            [db executeUpdate:@"CREATE TABLE  if not exists hospitalTable('address' TEXT, 'area' TEXT, 'count' TEXT, 'fax' TEXT, 'fcount' TEXT, 'gobus' TEXT, '_id' TEXT, 'img' TEXT, 'level' TEXT, 'mail' TEXT, 'mtype' TEXT, 'name' TEXT, 'nature' TEXT, 'rcount' TEXT, 'tel' TEXT, 'url' TEXT, 'x' TEXT, 'y' TEXT, 'zipcode' TEXT, 'message' TEXT,'isFavourit' BOOLEAN);"];
-        
+//          天气表
+            [db executeUpdate:@"CREATE TABLE if not exists 'forcastWeatherTable' ('date' TEXT, 'dayTemp' TEXT, 'nightTemp' TEXT,'cityName'TEXT,'week' TEXT);"];
+        [db executeUpdate:@"CREATE TABLE if not exists 'liveWeatherTable' ('weather' TEXT,'temperature' TEXT,'windDirection' TEXT,'windPower' TEXT,'humidity' TEXT,'cityName' TEXT);"];
 //        诊断表
              [db executeUpdate:@"CREATE TABLE if not exists 'sicknessTable' ('desc' TEXT, 'causetext' TEXT, 'detailtext' TEXT, 'drug' TEXT, 'img' TEXT, 'name' TEXT);"];
+        
         
         if (db) {
             return ;
@@ -281,6 +286,101 @@ static  FMDatabase *db = nil;
 - (NSArray *)allHospitalArray{
     return [self.hospitalArray copy];
 }
+
+#pragma mark 天气
+
+- (void)insertForcastWeather:(AMapLocalWeatherForecast *)forecast{
+    [self openDB];
+    
+    FMResultSet *rs = [db executeQuery:@"SELECT cityName FROM forcastWeatherTable"];
+    
+    _count =0;
+    
+    while ([rs next]) {
+        
+        NSString *name = [rs stringForColumn:@"cityName"];
+        if ([name isEqualToString:forecast.city]) {
+            AMapLocalDayWeatherForecast *weatherForcast = forecast.casts[_count++];
+              
+                [db executeUpdate:@"UPDATE forcastWeatherTable SET date = ? ,dayTemp = ? ,nightTemp = ? ,week = ? WHERE cityName = ?",weatherForcast.date,weatherForcast.dayTemp,weatherForcast.nightTemp,weatherForcast.week,forecast.city];
+                
+            
+          
+        }
+       return;
+    }
+    
+    for (AMapLocalDayWeatherForecast *weatherForcast in forecast.casts) {
+              [db executeUpdate:@"INSERT INTO forcastWeatherTable(date,dayTemp,nightTemp,week,cityName)VALUES(?,?,?,?,?)",weatherForcast.date,weatherForcast.dayTemp,weatherForcast.nightTemp,weatherForcast.week,forecast.city] ;
+    }
+
+    [self closeDB];
+}
+
+- (NSMutableArray *)findForcastWeatherInDatabase{
+    [self openDB];
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:4];
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM forcastWeatherTable"];
+    while ([rs next]) {
+    NSString *name = [rs stringForColumn:@"cityName"];
+        
+        if (![HospitalHelper sharedHospitalHelper].currentCityName) {
+            [HospitalHelper sharedHospitalHelper].currentCityName = @"上海市";
+        }
+#warning 以定位的城市为基准
+        if ([name isEqualToString:[HospitalHelper sharedHospitalHelper].currentCityName]) {
+            NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[rs stringForColumn:@"date"],@"date",[rs stringForColumn:@"nightTemp"],@"nightTemp",[rs stringForColumn:@"week"],@"week",[rs stringForColumn:@"dayTemp"],@"dayTemp",nil];
+            [array addObject:dict];
+        }
+    }
+    
+    
+    
+    [self closeDB];
+    
+    return array;
+}
+
+- (void)insertLiveWeather:(AMapLocalWeatherLive *)liveInfo{
+    [self openDB];
+    
+    FMResultSet *rs = [db executeQuery:@"SELECT cityName FROM liveWeatherTable"];
+    while ([rs next]) {
+        NSString *name = [rs stringForColumn:@"cityName"];
+        if ([name isEqualToString: liveInfo.city]) {
+            [db executeUpdate:@"UPDATE liveWeatherTable SET weather = ?,temperature = ?,windDirection = ?,windPower = ?,humidity = ? WHERE cityName = ?",liveInfo.weather,liveInfo.temperature,liveInfo.windDirection,liveInfo.windPower,liveInfo.humidity,liveInfo.city];
+            return;
+        }
+    }
+    
+    [db executeUpdate:@"INSERT INTO liveWeatherTable(weather,temperature,windDirection,windPower,humidity,cityName)VALUES(?,?,?,?,?,?)",liveInfo.weather,liveInfo.temperature,liveInfo.windDirection,liveInfo.windPower,liveInfo.humidity,liveInfo.city] ;
+    
+    [self closeDB];
+}
+
+- (NSDictionary *)findLiveWeatherInformationInDatabase{
+    [self openDB];
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM liveWeatherTable"];
+    NSDictionary *dict =  [NSDictionary dictionary];
+    while ([rs next]){
+        NSString *name = [rs stringForColumn:@"cityName"];
+        
+#warning 以定位的城市为基准
+        if (![HospitalHelper sharedHospitalHelper].currentCityName) {
+            [HospitalHelper sharedHospitalHelper].currentCityName = @"上海市";
+        }
+        if ([name isEqualToString:[HospitalHelper sharedHospitalHelper].currentCityName]) {
+            dict = [NSDictionary dictionaryWithObjectsAndKeys:[rs stringForColumn:@"weather"],@"weather",[rs stringForColumn:@"temperature"],@"temperature",[rs stringForColumn:@"windDirection"],@"windDirection",[rs stringForColumn:@"windPower"],@"windPower",[rs stringForColumn:@"humidity"],@"humidity",[rs stringForColumn:@"cityName"],@"cityName", nil];
+        }
+         
+    }
+    
+    
+    [self closeDB];
+    
+    return dict;
+}
+
 
 #pragma mark - 诊断
 //插入病状
