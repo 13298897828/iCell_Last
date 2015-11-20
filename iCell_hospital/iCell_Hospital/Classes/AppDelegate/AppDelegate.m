@@ -129,9 +129,11 @@
     
     if ([shortcutItem.type isEqualToString:@"yaopin"]) {
         
-        MedicineViewController *medicineVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"medicineViewController"];
+        UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"na"];
         
-        [self.window setRootViewController:medicineVC];
+//        MedicineViewController *medicineVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"medicineViewController"];
+        
+        [self.window setRootViewController:nav];
 //        [self.window.rootViewController showViewController:medicineVC sender:nil];
 
     }

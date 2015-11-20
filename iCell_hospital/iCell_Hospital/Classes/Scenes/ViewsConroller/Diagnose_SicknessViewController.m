@@ -29,17 +29,28 @@
 
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"Diagnose_SicknessCell" bundle:nil] forCellReuseIdentifier:@"sicknessCellId"];
+
+    
+ 
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
     button.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 200, 80, 80);
     [button setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
     [self.view addSubview:button];
-    [self.view bringSubviewToFront:button];
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:button];
+    
+    //    [self.view addSubview:button];
+    
     button.tintColor = [UIColor whiteColor];
     
     [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     
- 
 }
+
 #pragma mark -跳转客服界面
 -(void)jumpToConsulting{
     
@@ -105,7 +116,20 @@
     }];
 }
 
-
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    
+    
+    for (UIView *view in [UIApplication sharedApplication].keyWindow.subviews) {
+        
+        if ([view isKindOfClass:[UIButton class]]) {
+            
+            [view removeFromSuperview];
+            
+        }
+    }
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
