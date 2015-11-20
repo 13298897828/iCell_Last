@@ -7,8 +7,9 @@
 //
 
 #import "DrugMapViewController.h"
-
+#import <WebKit/WebKit.h>
 @interface DrugMapViewController ()<UIWebViewDelegate>
+
 
 @end
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//   WKWebView *
     self.view.backgroundColor = [UIColor redColor];
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.111.com.cn"]]];

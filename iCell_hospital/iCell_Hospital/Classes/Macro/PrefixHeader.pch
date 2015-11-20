@@ -97,4 +97,8 @@
 #import "DKNightVersionManager.h"
 #import "DKNightVersion.h"
 
+//网络
+#import "AFNetworkingManager.h"
+
+
 #endif /* PrefixHeader_pch */

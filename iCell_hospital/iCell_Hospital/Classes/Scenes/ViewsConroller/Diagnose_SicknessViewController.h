@@ -10,4 +10,5 @@
 
 @interface Diagnose_SicknessViewController : UITableViewController
 @property(nonatomic,strong)Diagnose_SicknessCell *cell;
+@property (nonatomic,strong)Diagnose_Sickness *sick;
 @end

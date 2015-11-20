@@ -171,6 +171,124 @@
             </objects>
             <point key="canvasLocation" x="423" y="-925"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="62J-kw-fqn">
+            <objects>
+                <viewController id="72R-xj-hUB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Cv-5Z-IhX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ysM-F2-TUd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kbX-Mc-YND">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-Em-hg2">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abc-9V-jOF">
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" ambiguous="YES" misplaced="YES" image="sick" translatesAutoresizingMaskIntoConstraints="NO" id="v7d-AC-w9l">
+                                        <rect key="frame" x="132" y="132" width="105" height="137"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="aPZ-ZA-fY7"/>
+                                            <constraint firstAttribute="height" constant="137" id="qWX-wy-AQl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="发烧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNu-sd-ged">
+                                        <rect key="frame" x="252" y="132" width="227" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="病因" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgr-0G-0vW">
+                                        <rect key="frame" x="144" y="294" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="引起发热的疾病很多，根据致病原因不同可分为两类。一、感染性疾病  二、非感染性疾病" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-cN-AfK">
+                                        <rect key="frame" x="144" y="337" width="335" height="61"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H89-fK-659">
+                                        <rect key="frame" x="144" y="418" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="可服药品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-S3-ajL">
+                                        <rect key="frame" x="144" y="483" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" ambiguous="YES" misplaced="YES" text="连花清瘟胶囊,小儿感冒颗粒,通宣理肺丸,小儿氨酚烷胺颗粒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-KQ-gVM">
+                                        <rect key="frame" x="144" y="526" width="335" height="0.0"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="是指病理性体温升高，是人体对致热原的作用使体温调节中枢的调定点上移而引起，是临床上最常见的症状，是疾病进展过程中的重要临床表现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8M-BF-aqn">
+                                        <rect key="frame" x="252" y="175" width="227" height="102"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-im-COH">
+                                        <rect key="frame" x="144" y="461" width="335" height="2"/>
+                                        <animations/>
+                                        <string key="text">1、发热很少是单一病理过程，肿瘤与结缔组织病在发热过程中可夹杂感染因素，致使临床表现复杂，但绝大多数根据临床特点与全面检查后仍可明确诊断。了解原因不明发热病因分布的频率，有助于提供临床诊断的逻辑思维。根据热程、热型与临床特点，可分为急性发热(热程小于2周)、长期发热(热程超过2周，且多次体温在38℃以上)、和反复发热(周期热)。一般认为急性发热病因中感染占首位，其次为肿瘤、血管-结缔组织病。这三类病因概括了90%原因不明发热的病因诊断。感染性疾病在原因不明发热中占多数，以细菌引起的全身性感染、局限性脓肿、泌尿系感染、胆道感染为多见，结核病居第二位，其中肺外结核远多于肺结核。恶性肿瘤以发热为主要表现者，依次为淋巴瘤、恶性组织细胞瘤和各种实质性肿瘤，在原因不明发热中所占比例较既往增高。</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="tgr-0G-0vW" firstAttribute="top" secondItem="v7d-AC-w9l" secondAttribute="bottom" constant="25" id="0fE-JV-Gws"/>
+                                    <constraint firstItem="G8M-BF-aqn" firstAttribute="leading" secondItem="v7d-AC-w9l" secondAttribute="trailing" constant="15" id="5zX-Hk-rJX"/>
+                                    <constraint firstItem="G8M-BF-aqn" firstAttribute="top" secondItem="QNu-sd-ged" secondAttribute="bottom" constant="20" id="7y3-Rl-atk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Abc-9V-jOF" secondAttribute="bottom" id="INu-ch-8S3"/>
+                                    <constraint firstItem="Uzo-cN-AfK" firstAttribute="top" secondItem="tgr-0G-0vW" secondAttribute="bottom" constant="20" id="O8l-I4-07H"/>
+                                    <constraint firstItem="Abc-9V-jOF" firstAttribute="top" secondItem="gsW-Em-hg2" secondAttribute="top" id="OnC-GS-jdR"/>
+                                    <constraint firstItem="H89-fK-659" firstAttribute="top" secondItem="Uzo-cN-AfK" secondAttribute="bottom" constant="20" id="VpR-G7-nn2"/>
+                                    <constraint firstItem="Jkq-im-COH" firstAttribute="top" secondItem="H89-fK-659" secondAttribute="bottom" constant="20" id="aJG-DB-h25"/>
+                                    <constraint firstAttribute="trailing" secondItem="Abc-9V-jOF" secondAttribute="trailing" id="dol-se-KEm"/>
+                                    <constraint firstItem="Abc-9V-jOF" firstAttribute="centerX" secondItem="gsW-Em-hg2" secondAttribute="centerX" id="hDY-qS-hWs"/>
+                                    <constraint firstItem="pZ9-S3-ajL" firstAttribute="top" secondItem="Jkq-im-COH" secondAttribute="bottom" constant="20" id="lBh-Gh-Gyx"/>
+                                    <constraint firstItem="pTN-KQ-gVM" firstAttribute="top" secondItem="pZ9-S3-ajL" secondAttribute="bottom" constant="20" id="ljt-Sb-5Gc"/>
+                                    <constraint firstItem="Abc-9V-jOF" firstAttribute="leading" secondItem="gsW-Em-hg2" secondAttribute="leading" id="tmT-7Z-ytb"/>
+                                    <constraint firstItem="QNu-sd-ged" firstAttribute="leading" secondItem="v7d-AC-w9l" secondAttribute="trailing" constant="15" id="vxx-4M-s1p"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gsW-Em-hg2" firstAttribute="top" secondItem="2Cv-5Z-IhX" secondAttribute="bottom" id="BCY-et-pIZ"/>
+                            <constraint firstItem="ysM-F2-TUd" firstAttribute="top" secondItem="gsW-Em-hg2" secondAttribute="bottom" id="F35-cb-HCs"/>
+                            <constraint firstItem="gsW-Em-hg2" firstAttribute="leading" secondItem="kbX-Mc-YND" secondAttribute="leading" id="hBC-pY-P95"/>
+                            <constraint firstAttribute="trailing" secondItem="gsW-Em-hg2" secondAttribute="trailing" id="n4Z-VD-wHY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UhQ-Rn-Pgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-102"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="QE6-Kz-VWg">
             <objects>
@@ -193,5 +311,6 @@
     </scenes>
     <resources>
         <image name="doctor1" width="1000" height="699"/>
+        <image name="sick" width="500" height="350"/>
     </resources>
 </document>

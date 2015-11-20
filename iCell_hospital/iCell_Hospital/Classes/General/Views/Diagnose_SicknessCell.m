@@ -11,12 +11,12 @@
 @interface Diagnose_SicknessCell ()<UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *collectionButton;
 
-@end
+@end 
 
 @implementation Diagnose_SicknessCell
 
 - (void)setSickness:(Diagnose_Sickness *)sickness{
-    
+    NSLog(@"%@", sickness.name);
     _sickness = sickness;
     
     NSString *cause = [self filterHTML:sickness.causetext];
@@ -29,9 +29,11 @@
     _drugLabel.text = sickness.drug;
     [_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:kSicknessImgUrl,sickness.img]]];
     
-    self.del();
+//    self.del();
 
 }
+
+
 
 
 #pragma searchbar的代理方法
@@ -151,6 +153,12 @@
 
     self.searchBar.delegate = self;
     
+ 
+} 
+
+
+
+
     // 使得点击本身后不会变色
     self.selectedBackgroundView = ({
         
@@ -161,6 +169,7 @@
     });
 
 }
+ 
 
 
 

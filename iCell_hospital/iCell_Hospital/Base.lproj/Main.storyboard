@@ -138,6 +138,159 @@
             </objects>
             <point key="canvasLocation" x="9447" y="599"/>
         </scene>
+        <!--Collection Dignose View-->
+        <scene sceneID="2Fc-xs-P2g">
+            <objects>
+                <viewController storyboardIdentifier="dignose" id="2QE-Cq-Ccb" customClass="collectionDignoseView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WIu-lV-OYN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ACP-tJ-adp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rbC-CA-4oC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXQ-mw-Jl1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-OO-ZIv">
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" image="sick" translatesAutoresizingMaskIntoConstraints="NO" id="32A-FG-5mJ">
+                                        <rect key="frame" x="20" y="40" width="143" height="169"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="143" id="GcU-UG-IRV"/>
+                                            <constraint firstAttribute="height" constant="169" id="Q4t-k2-ZuS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发烧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHI-GI-ccf">
+                                        <rect key="frame" x="205" y="67" width="113" height="23"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="113" id="WuV-0f-PT9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="病因" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-6z-Yq5">
+                                        <rect key="frame" x="20" y="273" width="560" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="引起发热的疾病很多，根据致病原因不同可分为两类。一、感染性疾病  二、非感染性疾病" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJd-tf-VUP">
+                                        <rect key="frame" x="20" y="316" width="560" height="41"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHp-Ej-0Re">
+                                        <rect key="frame" x="20" y="377" width="560" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="可服药品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSI-NM-JpN">
+                                        <rect key="frame" x="20" y="460" width="560" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" misplaced="YES" text="连花清瘟胶囊,小儿感冒颗粒,通宣理肺丸,小儿氨酚烷胺颗粒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg0-ao-DbJ">
+                                        <rect key="frame" x="20" y="503" width="560" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是指病理性体温升高，是人体对致热原的作用使体温调节中枢的调定点上移而引起，是临床上最常见的症状，是疾病进展过程中的重要临床表现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-n1-tYH">
+                                        <rect key="frame" x="183" y="121" width="200" height="122"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ATq-CJ-qhr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hig-7t-t9g">
+                                        <rect key="frame" x="20" y="420" width="560" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="hg0-ao-DbJ" firstAttribute="top" secondItem="oSI-NM-JpN" secondAttribute="bottom" constant="20" id="09r-lo-5eN"/>
+                                    <constraint firstItem="aJd-tf-VUP" firstAttribute="top" secondItem="Ddk-6z-Yq5" secondAttribute="bottom" constant="20" id="0q2-aw-Nkq"/>
+                                    <constraint firstItem="32A-FG-5mJ" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="2hX-ag-fd2"/>
+                                    <constraint firstItem="cHI-GI-ccf" firstAttribute="top" secondItem="OXQ-mw-Jl1" secondAttribute="top" constant="67" id="3mD-P6-umg"/>
+                                    <constraint firstAttribute="trailing" secondItem="oSI-NM-JpN" secondAttribute="trailing" constant="20" id="9fD-C5-QoB"/>
+                                    <constraint firstItem="hg0-ao-DbJ" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="EVi-Sm-B9y"/>
+                                    <constraint firstAttribute="bottom" secondItem="hg0-ao-DbJ" secondAttribute="bottom" constant="20" id="HpK-Jb-snm"/>
+                                    <constraint firstAttribute="trailing" secondItem="aJd-tf-VUP" secondAttribute="trailing" constant="20" id="JIF-yr-MNr"/>
+                                    <constraint firstItem="I3K-OO-ZIv" firstAttribute="centerX" secondItem="OXQ-mw-Jl1" secondAttribute="centerX" id="KJL-m1-m3B"/>
+                                    <constraint firstAttribute="trailing" secondItem="I3K-OO-ZIv" secondAttribute="trailing" id="LiC-x5-DpW"/>
+                                    <constraint firstItem="I3K-OO-ZIv" firstAttribute="top" secondItem="OXQ-mw-Jl1" secondAttribute="top" id="Ljr-uY-tAO"/>
+                                    <constraint firstItem="YHp-Ej-0Re" firstAttribute="top" secondItem="aJd-tf-VUP" secondAttribute="bottom" constant="20" id="PoR-v1-cff"/>
+                                    <constraint firstItem="aJd-tf-VUP" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="QoY-TP-ds7"/>
+                                    <constraint firstItem="oO3-n1-tYH" firstAttribute="top" secondItem="cHI-GI-ccf" secondAttribute="bottom" constant="31" id="UuQ-tl-JYP"/>
+                                    <constraint firstItem="oSI-NM-JpN" firstAttribute="top" secondItem="hig-7t-t9g" secondAttribute="bottom" constant="20" id="Wi2-t1-Vqb"/>
+                                    <constraint firstAttribute="bottom" secondItem="I3K-OO-ZIv" secondAttribute="bottom" id="aj1-cI-1br"/>
+                                    <constraint firstItem="hig-7t-t9g" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="cGa-Zo-Ote"/>
+                                    <constraint firstItem="oO3-n1-tYH" firstAttribute="leading" secondItem="32A-FG-5mJ" secondAttribute="trailing" constant="20" id="cqT-aS-0N1"/>
+                                    <constraint firstItem="I3K-OO-ZIv" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" id="dEO-6x-a0k"/>
+                                    <constraint firstItem="Ddk-6z-Yq5" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="dLc-V3-xkc"/>
+                                    <constraint firstAttribute="trailing" secondItem="hg0-ao-DbJ" secondAttribute="trailing" constant="20" id="eAi-2u-1JT"/>
+                                    <constraint firstItem="YHp-Ej-0Re" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="fMd-Cx-XlU"/>
+                                    <constraint firstItem="32A-FG-5mJ" firstAttribute="top" secondItem="OXQ-mw-Jl1" secondAttribute="top" constant="40" id="gLO-NS-ImE"/>
+                                    <constraint firstItem="oSI-NM-JpN" firstAttribute="leading" secondItem="OXQ-mw-Jl1" secondAttribute="leading" constant="20" id="l4H-GU-Blt"/>
+                                    <constraint firstItem="hig-7t-t9g" firstAttribute="top" secondItem="YHp-Ej-0Re" secondAttribute="bottom" constant="20" id="nTC-Qg-FQo"/>
+                                    <constraint firstItem="cHI-GI-ccf" firstAttribute="leading" secondItem="32A-FG-5mJ" secondAttribute="trailing" constant="42" id="uFM-Dp-aPG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ddk-6z-Yq5" secondAttribute="trailing" constant="20" id="vWq-6f-cm8"/>
+                                    <constraint firstItem="Ddk-6z-Yq5" firstAttribute="top" secondItem="oO3-n1-tYH" secondAttribute="bottom" constant="30" id="wV0-Ge-4Xf"/>
+                                    <constraint firstAttribute="trailing" secondItem="YHp-Ej-0Re" secondAttribute="trailing" constant="20" id="yeU-J8-XlM"/>
+                                    <constraint firstAttribute="trailing" secondItem="hig-7t-t9g" secondAttribute="trailing" constant="20" id="z4H-Zb-FaR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OXQ-mw-Jl1" firstAttribute="top" secondItem="WIu-lV-OYN" secondAttribute="bottom" id="7Xh-Da-asp"/>
+                            <constraint firstAttribute="trailing" secondItem="OXQ-mw-Jl1" secondAttribute="trailing" id="82b-Ml-43J"/>
+                            <constraint firstItem="ACP-tJ-adp" firstAttribute="top" secondItem="OXQ-mw-Jl1" secondAttribute="bottom" id="Dv8-4y-7gN"/>
+                            <constraint firstItem="OXQ-mw-Jl1" firstAttribute="leading" secondItem="rbC-CA-4oC" secondAttribute="leading" id="lwW-eG-4GA"/>
+                            <constraint firstItem="I3K-OO-ZIv" firstAttribute="height" secondItem="rbC-CA-4oC" secondAttribute="height" id="p4D-7m-Jvr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="p4D-7m-Jvr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="firstLabel" destination="oO3-n1-tYH" id="5QM-6h-41p"/>
+                        <outlet property="fourthLabel" destination="hg0-ao-DbJ" id="EuB-2H-7PG"/>
+                        <outlet property="imgLabel" destination="32A-FG-5mJ" id="WWI-Rl-8jg"/>
+                        <outlet property="nameLabel" destination="cHI-GI-ccf" id="LZa-S6-tM9"/>
+                        <outlet property="secondLabel" destination="aJd-tf-VUP" id="BYY-ba-6ma"/>
+                        <outlet property="thirdLabel" destination="hig-7t-t9g" id="sJi-ch-fJe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6Q-wG-7f0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10186" y="298"/>
+        </scene>
         <!--Feedback View Controller-->
         <scene sceneID="bRC-M5-n90">
             <objects>
@@ -1339,12 +1492,249 @@
             </objects>
             <point key="canvasLocation" x="5586" y="-656"/>
         </scene>
+        <!--Collection Dignose View-->
+        <scene sceneID="gez-Dv-V6n">
+            <objects>
+                <viewController id="Aex-od-VVM" customClass="collectionDignoseView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ViH-qd-ASU"/>
+                        <viewControllerLayoutGuide type="bottom" id="9kK-i4-Gv2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZe-gd-Qmn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Awj-kg-SYO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ez9-84-bjJ">
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" ambiguous="YES" misplaced="YES" image="sick" translatesAutoresizingMaskIntoConstraints="NO" id="q4L-pe-cTZ">
+                                        <rect key="frame" x="132" y="132" width="105" height="137"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="LJ4-x7-HRa"/>
+                                            <constraint firstAttribute="height" constant="137" id="W4L-fa-dGF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="发烧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-ts-JMa">
+                                        <rect key="frame" x="252" y="132" width="227" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="病因" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogR-xi-nZ9">
+                                        <rect key="frame" x="144" y="294" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="引起发热的疾病很多，根据致病原因不同可分为两类。一、感染性疾病  二、非感染性疾病" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-o1-N7B">
+                                        <rect key="frame" x="144" y="337" width="335" height="61"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15T-Iv-YS6">
+                                        <rect key="frame" x="144" y="418" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="可服药品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-dY-ws0">
+                                        <rect key="frame" x="144" y="483" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" ambiguous="YES" misplaced="YES" text="连花清瘟胶囊,小儿感冒颗粒,通宣理肺丸,小儿氨酚烷胺颗粒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0G-AR-Jny">
+                                        <rect key="frame" x="144" y="526" width="335" height="0.0"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="是指病理性体温升高，是人体对致热原的作用使体温调节中枢的调定点上移而引起，是临床上最常见的症状，是疾病进展过程中的重要临床表现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-wW-zJy">
+                                        <rect key="frame" x="252" y="175" width="227" height="102"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHJ-AP-CEv">
+                                        <rect key="frame" x="144" y="461" width="335" height="2"/>
+                                        <animations/>
+                                        <string key="text">1、发热很少是单一病理过程，肿瘤与结缔组织病在发热过程中可夹杂感染因素，致使临床表现复杂，但绝大多数根据临床特点与全面检查后仍可明确诊断。了解原因不明发热病因分布的频率，有助于提供临床诊断的逻辑思维。根据热程、热型与临床特点，可分为急性发热(热程小于2周)、长期发热(热程超过2周，且多次体温在38℃以上)、和反复发热(周期热)。一般认为急性发热病因中感染占首位，其次为肿瘤、血管-结缔组织病。这三类病因概括了90%原因不明发热的病因诊断。感染性疾病在原因不明发热中占多数，以细菌引起的全身性感染、局限性脓肿、泌尿系感染、胆道感染为多见，结核病居第二位，其中肺外结核远多于肺结核。恶性肿瘤以发热为主要表现者，依次为淋巴瘤、恶性组织细胞瘤和各种实质性肿瘤，在原因不明发热中所占比例较既往增高。</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="cLK-dY-ws0" firstAttribute="top" secondItem="JHJ-AP-CEv" secondAttribute="bottom" constant="20" id="6P3-FK-W6J"/>
+                                    <constraint firstItem="PbZ-wW-zJy" firstAttribute="leading" secondItem="q4L-pe-cTZ" secondAttribute="trailing" constant="15" id="AXR-9n-Vig"/>
+                                    <constraint firstItem="Ez9-84-bjJ" firstAttribute="centerX" secondItem="Awj-kg-SYO" secondAttribute="centerX" id="BxR-fE-5St"/>
+                                    <constraint firstItem="ogR-xi-nZ9" firstAttribute="top" secondItem="q4L-pe-cTZ" secondAttribute="bottom" constant="25" id="LVL-75-bFn"/>
+                                    <constraint firstItem="PbZ-wW-zJy" firstAttribute="top" secondItem="aKq-ts-JMa" secondAttribute="bottom" constant="20" id="MiB-xf-7G7"/>
+                                    <constraint firstItem="15T-Iv-YS6" firstAttribute="top" secondItem="9w8-o1-N7B" secondAttribute="bottom" constant="20" id="QEg-sC-d4I"/>
+                                    <constraint firstItem="9w8-o1-N7B" firstAttribute="top" secondItem="ogR-xi-nZ9" secondAttribute="bottom" constant="20" id="Seo-XA-WDl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ez9-84-bjJ" secondAttribute="trailing" id="W6c-vw-46b"/>
+                                    <constraint firstItem="Ez9-84-bjJ" firstAttribute="leading" secondItem="Awj-kg-SYO" secondAttribute="leading" id="eOr-2q-jiq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ez9-84-bjJ" secondAttribute="bottom" id="fiQ-vQ-Dzw"/>
+                                    <constraint firstItem="j0G-AR-Jny" firstAttribute="top" secondItem="cLK-dY-ws0" secondAttribute="bottom" constant="20" id="gjO-0r-7Rf"/>
+                                    <constraint firstItem="JHJ-AP-CEv" firstAttribute="top" secondItem="15T-Iv-YS6" secondAttribute="bottom" constant="20" id="jjK-tv-m4l"/>
+                                    <constraint firstItem="Ez9-84-bjJ" firstAttribute="top" secondItem="Awj-kg-SYO" secondAttribute="top" id="obP-IR-qF2"/>
+                                    <constraint firstItem="aKq-ts-JMa" firstAttribute="leading" secondItem="q4L-pe-cTZ" secondAttribute="trailing" constant="15" id="rky-tB-0PX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Awj-kg-SYO" firstAttribute="leading" secondItem="oZe-gd-Qmn" secondAttribute="leading" id="VUL-YG-22f"/>
+                            <constraint firstItem="9kK-i4-Gv2" firstAttribute="top" secondItem="Awj-kg-SYO" secondAttribute="bottom" id="nr2-WU-0Pl"/>
+                            <constraint firstItem="Awj-kg-SYO" firstAttribute="top" secondItem="ViH-qd-ASU" secondAttribute="bottom" id="psU-Un-9ae"/>
+                            <constraint firstAttribute="trailing" secondItem="Awj-kg-SYO" secondAttribute="trailing" id="uxb-DR-RVX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0M-1O-Jq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-102"/>
+        </scene>
+        <!--Collection Dignose View-->
+        <scene sceneID="fF3-pd-Lt0">
+            <objects>
+                <viewController id="qjf-U9-gVd" customClass="collectionDignoseView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9uA-1X-O7W"/>
+                        <viewControllerLayoutGuide type="bottom" id="F5H-lq-dxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SSj-wi-BmV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJb-M9-2b9">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Dk-dx-jkT">
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" ambiguous="YES" misplaced="YES" image="sick" translatesAutoresizingMaskIntoConstraints="NO" id="rKL-1p-AtJ">
+                                        <rect key="frame" x="132" y="132" width="105" height="137"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="6Bc-8I-T4K"/>
+                                            <constraint firstAttribute="height" constant="137" id="cd6-xP-aO2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="发烧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-Vy-j71">
+                                        <rect key="frame" x="252" y="132" width="227" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="病因" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBH-bf-AhW">
+                                        <rect key="frame" x="144" y="294" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="引起发热的疾病很多，根据致病原因不同可分为两类。一、感染性疾病  二、非感染性疾病" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX6-kS-QyU">
+                                        <rect key="frame" x="144" y="337" width="335" height="61"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkd-ex-1vj">
+                                        <rect key="frame" x="144" y="418" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="可服药品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40n-3S-v7Z">
+                                        <rect key="frame" x="144" y="483" width="335" height="23"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" ambiguous="YES" misplaced="YES" text="连花清瘟胶囊,小儿感冒颗粒,通宣理肺丸,小儿氨酚烷胺颗粒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9Q-OZ-HKe">
+                                        <rect key="frame" x="144" y="526" width="335" height="0.0"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="是指病理性体温升高，是人体对致热原的作用使体温调节中枢的调定点上移而引起，是临床上最常见的症状，是疾病进展过程中的重要临床表现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neq-0Y-AeW">
+                                        <rect key="frame" x="252" y="175" width="227" height="102"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-f5-fzG">
+                                        <rect key="frame" x="144" y="461" width="335" height="2"/>
+                                        <animations/>
+                                        <string key="text">1、发热很少是单一病理过程，肿瘤与结缔组织病在发热过程中可夹杂感染因素，致使临床表现复杂，但绝大多数根据临床特点与全面检查后仍可明确诊断。了解原因不明发热病因分布的频率，有助于提供临床诊断的逻辑思维。根据热程、热型与临床特点，可分为急性发热(热程小于2周)、长期发热(热程超过2周，且多次体温在38℃以上)、和反复发热(周期热)。一般认为急性发热病因中感染占首位，其次为肿瘤、血管-结缔组织病。这三类病因概括了90%原因不明发热的病因诊断。感染性疾病在原因不明发热中占多数，以细菌引起的全身性感染、局限性脓肿、泌尿系感染、胆道感染为多见，结核病居第二位，其中肺外结核远多于肺结核。恶性肿瘤以发热为主要表现者，依次为淋巴瘤、恶性组织细胞瘤和各种实质性肿瘤，在原因不明发热中所占比例较既往增高。</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="zX6-kS-QyU" firstAttribute="top" secondItem="fBH-bf-AhW" secondAttribute="bottom" constant="20" id="ERy-t1-RVl"/>
+                                    <constraint firstItem="fBH-bf-AhW" firstAttribute="top" secondItem="rKL-1p-AtJ" secondAttribute="bottom" constant="25" id="VIv-Ap-kGf"/>
+                                    <constraint firstItem="1Dk-dx-jkT" firstAttribute="leading" secondItem="zJb-M9-2b9" secondAttribute="leading" id="W2z-C2-3al"/>
+                                    <constraint firstItem="bkl-f5-fzG" firstAttribute="top" secondItem="kkd-ex-1vj" secondAttribute="bottom" constant="20" id="Wyb-0Q-zh3"/>
+                                    <constraint firstItem="40n-3S-v7Z" firstAttribute="top" secondItem="bkl-f5-fzG" secondAttribute="bottom" constant="20" id="YPK-4n-iX8"/>
+                                    <constraint firstItem="1Dk-dx-jkT" firstAttribute="top" secondItem="zJb-M9-2b9" secondAttribute="top" id="bzo-cv-jkz"/>
+                                    <constraint firstItem="kkd-ex-1vj" firstAttribute="top" secondItem="zX6-kS-QyU" secondAttribute="bottom" constant="20" id="hQk-4Y-d6K"/>
+                                    <constraint firstItem="1Dk-dx-jkT" firstAttribute="centerX" secondItem="zJb-M9-2b9" secondAttribute="centerX" id="jVj-Oo-jcw"/>
+                                    <constraint firstItem="fqM-Vy-j71" firstAttribute="leading" secondItem="rKL-1p-AtJ" secondAttribute="trailing" constant="15" id="k98-Fh-x7O"/>
+                                    <constraint firstItem="Neq-0Y-AeW" firstAttribute="top" secondItem="fqM-Vy-j71" secondAttribute="bottom" constant="20" id="mpi-5p-F32"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Dk-dx-jkT" secondAttribute="bottom" id="pPP-ly-izk"/>
+                                    <constraint firstItem="W9Q-OZ-HKe" firstAttribute="top" secondItem="40n-3S-v7Z" secondAttribute="bottom" constant="20" id="unz-dF-Lzf"/>
+                                    <constraint firstItem="Neq-0Y-AeW" firstAttribute="leading" secondItem="rKL-1p-AtJ" secondAttribute="trailing" constant="15" id="xvG-Np-SGa"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Dk-dx-jkT" secondAttribute="trailing" id="yfa-Yv-wcI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zJb-M9-2b9" secondAttribute="trailing" id="4mq-Vt-mHU"/>
+                            <constraint firstItem="F5H-lq-dxx" firstAttribute="top" secondItem="zJb-M9-2b9" secondAttribute="bottom" id="97P-TB-dnP"/>
+                            <constraint firstItem="zJb-M9-2b9" firstAttribute="leading" secondItem="SSj-wi-BmV" secondAttribute="leading" id="TM9-Vv-XfO"/>
+                            <constraint firstItem="zJb-M9-2b9" firstAttribute="top" secondItem="9uA-1X-O7W" secondAttribute="bottom" id="Vhg-cl-yPz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ya5-sx-PYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-102"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dingwei (1)" width="26" height="26"/>
         <image name="guanbi" width="17" height="17"/>
         <image name="sao" width="30" height="30"/>
         <image name="shoucang" width="25" height="25"/>
+        <image name="sick" width="500" height="350"/>
         <image name="xiala" width="26" height="26"/>
         <image name="yisheng1" width="1000" height="699"/>
     </resources>
