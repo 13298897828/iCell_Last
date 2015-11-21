@@ -17,4 +17,26 @@
     }
 }
 
+//- (void)encodeWithCoder:(NSCoder *)aCoder{
+//    [aCoder encodeObject:self.name forKey:@"nameKey"];
+//    
+//    
+//}
+//
+//
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+//    if (self == [super init]) {
+//        self.name = [aDecoder decodeObjectForKey:@"nameKey"];
+//    }
+//    return self;
+//}
+//
+//- (id)copyWithZone:(NSZone *)zone{
+//    Hospital *copy = [[[self class] allocWithZone:zone] init];
+//    copy.name = [self.name copyWithZone:zone];
+//    
+//    
+//    return copy;
+//}
+
 @end

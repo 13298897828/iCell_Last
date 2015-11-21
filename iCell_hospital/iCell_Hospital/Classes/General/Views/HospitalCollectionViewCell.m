@@ -18,8 +18,24 @@
 @implementation HospitalCollectionViewCell
 
 - (void)setHospital:(Hospital *)hospital{
+    
     NSString *imgURl = [@"http://tnfs.tngou.net/img" stringByAppendingString:hospital.img];
+    
+    
+//    缓存图片
+    NSUserDefaults *user = [[NSUserDefaults alloc] init];
+    if ([HospitalHelper isExistenceNetwork]) {
+        
     [self.hosImageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
+    NSData *data = UIImageJPEGRepresentation(self.hosImageView.image, 1.0);
+    [user setObject:data forKey:hospital.img];   
+    
+    }else{
+        [self.hosImageView setImage:[UIImage imageWithData:[user objectForKey:hospital.img]]];
+   
+    }
+    
+    
     
     self.hosNameLabel.text = hospital.name;
     

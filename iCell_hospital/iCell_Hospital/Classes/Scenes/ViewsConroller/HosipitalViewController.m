@@ -46,10 +46,7 @@ static NSString *const searchTableID = @"searchTableID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
-    
-//    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSearchTableViewCell" bundle:nil] forCellReuseIdentifier:searchTableID];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalTableViewCell" bundle:nil] forCellReuseIdentifier:collectionCellID];
@@ -62,8 +59,14 @@ static NSString *const searchTableID = @"searchTableID";
     
 //    [self requestDataWithCityID:@"2"];
     //定位开始
+    if ([HospitalHelper isExistenceNetwork]) {
     self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
     [self.view addSubview:self.hosMapView];
+        
+    }else{
+        [self requestDataWithCityID:@"2"];
+    }
+    
     
 }
 
@@ -108,11 +111,16 @@ static NSString *const searchTableID = @"searchTableID";
             [self.hospitalListArray addObject:hos];
         }
         [self.dataArray addObject:self.hospitalListArray];
-
-        dispatch_async(dispatch_get_main_queue(), ^{
+        
+        if ([HospitalHelper isExistenceNetwork]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
             
             [self.tableView reloadData];
         });
+        }else{
+            [self.tableView reloadData];
+        }
+        
     }];
 }
 

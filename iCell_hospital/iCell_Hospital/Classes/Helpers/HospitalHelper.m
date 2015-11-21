@@ -30,16 +30,30 @@
 
 
       NSURLSession *session = [NSURLSession sharedSession];
-
+    if (![HospitalHelper isExistenceNetwork]) {
+        NSUserDefaults *getDataDefaults = [[NSUserDefaults alloc]init];
+        if ([httpUrl hasSuffix:@"list"]) {
+            NSData *data1 = [getDataDefaults valueForKey:@"hospitalNSData"];
+ 
+        success(data1);
+           
+        }
+                
+    }
+    
      NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
          if (error) {
              NSLog(@"Httperror: %@%ld", error.localizedDescription, error.code);
          } else {
-//             NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
-//             NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
              success(data);
-             
+             if ([httpUrl hasSuffix:@"list"]){
+                NSUserDefaults *defaults = [[NSUserDefaults alloc] init];
+             [defaults setObject:data forKey:@"hospitalNSData"];
+
+             }
+                          
          }
      }];
         [dataTask resume];
@@ -53,7 +67,7 @@
 + (BOOL)isExistenceNetwork
 {
     BOOL isExistenceNetwork;
-    Reachability *reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];  // 测试服务器状态
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];  // 测试服务器状态
     
     switch([reachability currentReachabilityStatus]) {
         case NotReachable:

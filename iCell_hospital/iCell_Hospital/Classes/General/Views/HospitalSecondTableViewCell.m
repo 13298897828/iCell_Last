@@ -28,7 +28,31 @@
 - (void)setHospital:(Hospital *)hospital{
     
     NSString *imgURl = [@"http://tnfs.tngou.net/img" stringByAppendingString:hospital.img];
-    [self.hosIMageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
+    //    缓存图片
+    NSUserDefaults *user = [[NSUserDefaults alloc] init];
+    if ([HospitalHelper isExistenceNetwork]) {
+        
+        [self.hosIMageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
+        NSData *data = UIImageJPEGRepresentation(self.hosIMageView.image, 0.5);
+        [user setObject:data forKey:hospital.img];
+        
+        MAMapPoint point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake([hospital.y doubleValue], [hospital.x doubleValue]));
+        
+        MAMapPoint point2 =[HospitalHelper sharedHospitalHelper].myPoint;
+        
+        if (MAMetersBetweenMapPoints(point1, point2)*0.001 >99) {
+            self.hosDistanceLabel.text = @"距离您99+km";
+        }else{
+            self.hosDistanceLabel.text = [NSString stringWithFormat:@"距离您%.1fkm",MAMetersBetweenMapPoints(point1, point2)*0.001];
+        }
+
+    }else{
+        
+        [self.hosIMageView setImage:[UIImage imageWithData:[user objectForKey:hospital.img]]];
+        
+        
+        self.hosDistanceLabel.text = @"距离您99+km";
+    }
     
     self.hosNameLabel.text =hospital.name;
     
@@ -100,16 +124,8 @@
     }
     self.hosMtypeLabel.text = hospital.mtype;
     
-    MAMapPoint point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake([hospital.y doubleValue], [hospital.x doubleValue]));
     
-    MAMapPoint point2 =[HospitalHelper sharedHospitalHelper].myPoint;
- 
-    if (MAMetersBetweenMapPoints(point1, point2)*0.001 >99) {
-        self.hosDistanceLabel.text = @"距离您99+km";
-    }else{
-        self.hosDistanceLabel.text = [NSString stringWithFormat:@"距离您%.1fkm",MAMetersBetweenMapPoints(point1, point2)*0.001];
-    }
-
+    
     
 }
 

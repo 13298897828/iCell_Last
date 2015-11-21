@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Hospital : NSObject
+@interface Hospital : NSObject<NSCoding,NSCopying>
 
 @property(nonatomic,strong)NSString  *address;
 @property(nonatomic,strong)NSString *area;
