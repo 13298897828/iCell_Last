@@ -17,6 +17,8 @@
 @property (strong, nonatomic) MedicineCollectList *v2;
 @property (strong, nonatomic) SicknessCollectList *v3;
 
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
 @end
 
 @implementation CollectionViewController
@@ -25,7 +27,7 @@
     [super viewDidLoad];
     
     [[DBManager sharedManager] openDB];
-    
+    _backButton.tintColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
     _segment.selectedSegmentIndex = 0;
     [_segment addTarget:self action:@selector(tapAction:) forControlEvents:(UIControlEventValueChanged)];
     
@@ -54,7 +56,11 @@
         _v2.view.nightBackgroundColor = UIColorFromRGB(0x343434);
         _v3.view.normalBackgroundColor = [UIColor whiteColor];
         _v3.view.nightBackgroundColor = UIColorFromRGB(0x343434);
- 
+        _segment.normalBackgroundColor = [UIColor whiteColor];
+        _segment.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.view.normalBackgroundColor = [UIColor whiteColor];
+        self.view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        
     
 
     }];

@@ -8,6 +8,7 @@
 
 #import "ScanViewController.h"
 #import "ZBarSDK.h"
+#import "nilViewController.h"
 @interface ScanViewController ()<ZBarReaderViewDelegate>
 @property (nonatomic,strong) ZBarReaderView* readerView;
 @end
@@ -100,34 +101,45 @@
     for (s in symbols)
     {
         NSString *data = s.data;
-        NSString *urlString = [NSString stringWithFormat:@"code=%@",data];
-        MedicineDetailViewController *detail = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"medicineDetailViewController"];
         
-        [[MedicineHelper sharedManager] requestMedicineWithCode:kScan withHttpArg:urlString];
-        [MedicineHelper sharedManager].result1 = ^(){
+ 
+        if ([data hasPrefix:@"69"]) {
             
-            if ([MedicineHelper sharedManager].medicine!= nil) {
-//                detail.medicine = [Medicine new];
-
-                detail.view.backgroundColor = [UIColor whiteColor];
+            NSString *urlString = [NSString stringWithFormat:@"code=%@",data];
+            MedicineDetailViewController *detail = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"medicineDetailViewController"];
+            
+            [[MedicineHelper sharedManager] requestMedicineWithCode:kScan withHttpArg:urlString];
+            [MedicineHelper sharedManager].result1 = ^(){
                 
-                detail.medicine = [MedicineHelper sharedManager].medicine;
-               
-                [self showViewController:detail sender:nil];
+                if ([MedicineHelper sharedManager].medicine!= nil) {
+                    //                detail.medicine = [Medicine new];
+                    
+                    detail.view.backgroundColor = [UIColor whiteColor];
+                    
+                    detail.medicine = [MedicineHelper sharedManager].medicine;
+                    
+                    [self showViewController:detail sender:nil];
+                    
+                }
+                else{
+                    
+                    //                NSLog(@"%@",[[MedicineHelper sharedManager] requestMedicineWithCode:httpUrls withHttpArg:urlString].name);
+                    NSLog(@"没有");
+                    return ;
+                    
+                }
+                
+            };
 
-            }
-            else{
-        
-//                NSLog(@"%@",[[MedicineHelper sharedManager] requestMedicineWithCode:httpUrls withHttpArg:urlString].name);
-                              NSLog(@"没有");
-                return ;
-               
-            }
             
-        };
+        }else {
+            
+            
+            nilViewController *nilVC = [nilViewController new];
+            [self showViewController:nilVC sender:nil];
+            
+        }
         
-
-
         break;
         
     }
