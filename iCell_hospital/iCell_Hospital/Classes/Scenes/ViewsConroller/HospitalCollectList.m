@@ -23,11 +23,12 @@ static NSString *const cellID = @"cellID";
     
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-
+  [[DBManager sharedManager] findAllHospitalInDataBase];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     
 //    [[DBManager sharedManager] findAllHospitalInDataBase];
     [self.tableView reloadData];
@@ -41,6 +42,7 @@ static NSString *const cellID = @"cellID";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     Hospital *hospital=[DBManager sharedManager].allHospitalArray[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     cell.textLabel.text = hospital.name;
@@ -81,7 +83,9 @@ static NSString *const cellID = @"cellID";
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
     [[HospitalDetailViewController sharedHospitalDetalVC].view addGestureRecognizer:tap];
     
-    [self showViewController:[HospitalDetailViewController sharedHospitalDetalVC] sender:nil];
+    [self presentViewController:[HospitalDetailViewController sharedHospitalDetalVC] animated:YES completion:^{
+        
+    }];
 }
 
 //轻拍返回

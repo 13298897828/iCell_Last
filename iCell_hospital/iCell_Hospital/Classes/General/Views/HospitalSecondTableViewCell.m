@@ -88,7 +88,7 @@
         self.levelImageView.hidden = YES;
     }
     if ([hospital.mtype rangeOfString:@"居民医保"].location !=NSNotFound) {
-        self.yibaoImageView.image = [UIImage imageNamed:@"yibao"];
+        self.yibaoImageView.image = [UIImage imageNamed:@"o"];
         self.yibaoImageView.hidden = NO;
         self.hosMtypeLabel.hidden = YES;
     }else{

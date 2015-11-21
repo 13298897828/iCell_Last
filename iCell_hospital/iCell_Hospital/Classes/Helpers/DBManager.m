@@ -10,9 +10,7 @@
 
 
 @interface DBManager ()
-{
-    NSInteger _count;
-}
+
 @property(nonatomic,strong)NSMutableArray *hospitalArray;
 
 @end
@@ -249,6 +247,7 @@ static  FMDatabase *db = nil;
     if ([self findHospitalInDataBase:hospital]) {
         [db executeUpdate:@"DELETE FROM hospitalTable WHERE name = ?",hospital.name];
         [self.hospitalArray removeObject:hospital];
+          [self closeDB];
         return;
     }
     
@@ -294,20 +293,15 @@ static  FMDatabase *db = nil;
     
     FMResultSet *rs = [db executeQuery:@"SELECT cityName FROM forcastWeatherTable"];
     
-    _count =0;
-    
     while ([rs next]) {
-        
         NSString *name = [rs stringForColumn:@"cityName"];
         if ([name isEqualToString:forecast.city]) {
-            AMapLocalDayWeatherForecast *weatherForcast = forecast.casts[_count++];
-              
-                [db executeUpdate:@"UPDATE forcastWeatherTable SET date = ? ,dayTemp = ? ,nightTemp = ? ,week = ? WHERE cityName = ?",weatherForcast.date,weatherForcast.dayTemp,weatherForcast.nightTemp,weatherForcast.week,forecast.city];
-                
-            
-          
+            for (AMapLocalDayWeatherForecast *weatherForcast in forecast.casts) {
+                  [db executeUpdate:@"UPDATE forcastWeatherTable SET dayTemp = ? ,nightTemp = ? ,week = ? WHERE date = ?",weatherForcast.dayTemp,weatherForcast.nightTemp,weatherForcast.week,weatherForcast.date];
+            }
+            [self closeDB];
+           return;
         }
-       return;
     }
     
     for (AMapLocalDayWeatherForecast *weatherForcast in forecast.casts) {
@@ -349,6 +343,7 @@ static  FMDatabase *db = nil;
         NSString *name = [rs stringForColumn:@"cityName"];
         if ([name isEqualToString: liveInfo.city]) {
             [db executeUpdate:@"UPDATE liveWeatherTable SET weather = ?,temperature = ?,windDirection = ?,windPower = ?,humidity = ? WHERE cityName = ?",liveInfo.weather,liveInfo.temperature,liveInfo.windDirection,liveInfo.windPower,liveInfo.humidity,liveInfo.city];
+            [self closeDB];
             return;
         }
     }
