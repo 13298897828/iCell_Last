@@ -140,6 +140,9 @@
 		14D3B2211BF0636200427765 /* iCell_Hospital.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B21F1BF0636200427765 /* iCell_Hospital.xcdatamodeld */; };
 		14D3B2231BF0636200427765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D3B2221BF0636200427765 /* Assets.xcassets */; };
 		14D3B2261BF0636200427765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D3B2241BF0636200427765 /* LaunchScreen.storyboard */; };
+		14D5C42E1BFFFF060026FBE5 /* ViewControllerForFirstStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D5C42D1BFFFF060026FBE5 /* ViewControllerForFirstStart.m */; };
+		14D5C4311C001C970026FBE5 /* nilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D5C4301C001C970026FBE5 /* nilViewController.m */; };
+		14D5C4331C001E360026FBE5 /* meiwang.gif in Resources */ = {isa = PBXBuildFile; fileRef = 14D5C4321C001E360026FBE5 /* meiwang.gif */; };
 		14E42ACA1BF064F2002EB1FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42ABD1BF064F2002EB1FB /* AppDelegate.m */; };
 		14E42AD31BF06553002EB1FB /* placeHoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AD21BF06553002EB1FB /* placeHoderViewController.m */; };
 		14E42ADB1BF06EBA002EB1FB /* Medicine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42ADA1BF06EBA002EB1FB /* Medicine.m */; };
@@ -360,6 +363,11 @@
 		14D3B2221BF0636200427765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14D3B2251BF0636200427765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14D3B2271BF0636200427765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D5C42C1BFFFF060026FBE5 /* ViewControllerForFirstStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerForFirstStart.h; sourceTree = "<group>"; };
+		14D5C42D1BFFFF060026FBE5 /* ViewControllerForFirstStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerForFirstStart.m; sourceTree = "<group>"; };
+		14D5C42F1C001C970026FBE5 /* nilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nilViewController.h; sourceTree = "<group>"; };
+		14D5C4301C001C970026FBE5 /* nilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nilViewController.m; sourceTree = "<group>"; };
+		14D5C4321C001E360026FBE5 /* meiwang.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = meiwang.gif; path = Classes/Scenes/ViewsConroller/meiwang.gif; sourceTree = "<group>"; };
 		14E42ABC1BF064F2002EB1FB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14E42ABD1BF064F2002EB1FB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14E42AD11BF06553002EB1FB /* placeHoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = placeHoderViewController.h; sourceTree = "<group>"; };
@@ -706,6 +714,7 @@
 			children = (
 				14E42ABA1BF064F2002EB1FB /* Classes */,
 				142EA4AA1BF1DABF00AC3607 /* Main.storyboard */,
+				14D5C4321C001E360026FBE5 /* meiwang.gif */,
 				14AF94231BFB42560042F388 /* HZJStoryboard.storyboard */,
 				141F42AD1BF9D9570063A185 /* WX.storyboard */,
 				14D3B2221BF0636200427765 /* Assets.xcassets */,
@@ -945,6 +954,10 @@
 				C28FB9D91BFDC8B6003669E0 /* SicknessCollectList.m */,
 				140C7F141BFF491A009E4B12 /* collectionDignoseView.h */,
 				140C7F151BFF491A009E4B12 /* collectionDignoseView.m */,
+				14D5C42C1BFFFF060026FBE5 /* ViewControllerForFirstStart.h */,
+				14D5C42D1BFFFF060026FBE5 /* ViewControllerForFirstStart.m */,
+				14D5C42F1C001C970026FBE5 /* nilViewController.h */,
+				14D5C4301C001C970026FBE5 /* nilViewController.m */,
 			);
 			path = ViewsConroller;
 			sourceTree = "<group>";
@@ -992,7 +1005,7 @@
 				TargetAttributes = {
 					14D3B20F1BF0636200427765 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 74MFVVWD9R;
+						DevelopmentTeam = 5833L3MQTV;
 					};
 				};
 			};
@@ -1056,6 +1069,7 @@
 				14406ECB1BFCBB5700C558C2 /* schedule_image_sun-high@2x.png in Resources */,
 				14406E741BFCB93700C558C2 /* Diagnose_OperationCell.xib in Resources */,
 				140C7F001BFEBCB0009E4B12 /* project.json in Resources */,
+				14D5C4331C001E360026FBE5 /* meiwang.gif in Resources */,
 				14406EC71BFCBB5700C558C2 /* round_backarrow_big@2x.png in Resources */,
 				140C7F0D1BFEBCB0009E4B12 /* LICENSE in Resources */,
 				140C7F041BFEBCB0009E4B12 /* parser.rb in Resources */,
@@ -1127,6 +1141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28FB9D71BFDC896003669E0 /* MedicineCollectList.m in Sources */,
+				14D5C4311C001C970026FBE5 /* nilViewController.m in Sources */,
 				C28FB9CD1BFDBFF5003669E0 /* CollectionViewController.m in Sources */,
 				14AF94391BFB42F10042F388 /* HospitalCity&ProvinceViewController.m in Sources */,
 				14AF946C1BFB54B40042F388 /* HospitalMapView.m in Sources */,
@@ -1150,6 +1165,7 @@
 				14E42ACA1BF064F2002EB1FB /* AppDelegate.m in Sources */,
 				14B5CFBB1BF350240019893C /* MedicineCollectionViewCell.m in Sources */,
 				148ECD271BF5847B00FDD691 /* ContantMedicineViewController.m in Sources */,
+				14D5C42E1BFFFF060026FBE5 /* ViewControllerForFirstStart.m in Sources */,
 				14406E9C1BFCB98200C558C2 /* Diagnose_CheckItemViewController.m in Sources */,
 				14E42AE91BF06FAE002EB1FB /* MedicineView.m in Sources */,
 				14AF94551BFB431F0042F388 /* HospitalSearchTableViewCell.m in Sources */,
@@ -1332,7 +1348,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1359,7 +1375,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

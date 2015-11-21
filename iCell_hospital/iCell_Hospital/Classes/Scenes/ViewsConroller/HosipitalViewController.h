@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <EAIntroView/EAIntroView.h>
+#import <SMPageControl/SMPageControl.h>
 @interface HosipitalViewController : UIViewController
 
 + (instancetype)sharedHospitalViewController;
