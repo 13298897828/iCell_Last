@@ -44,8 +44,13 @@ CATransform3D rotationTransform1[PHOTONUM];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_second"]];
     NSArray *dataArray = @[@"xinzang", @"naodai", @"ganmao", @"fei", @"yachi"];
+  
     
-    CGFloat centery = self.view.center.y  + 60;
+    CGFloat centery = self.view.center.y  + 40;
+    
+    
+   
+    
     CGFloat centerx = self.view.center.x;
     
     for (NSInteger i = 0;i < PHOTONUM;i++) {

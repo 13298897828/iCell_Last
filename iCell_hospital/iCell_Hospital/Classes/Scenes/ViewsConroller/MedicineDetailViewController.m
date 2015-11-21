@@ -7,7 +7,8 @@
 //
 
 #import "MedicineDetailViewController.h"
-
+#import "nilViewController.h"
+#import <UIImage+GIF.h>
 @interface MedicineDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
@@ -43,6 +44,33 @@
     _nameLabel.text = medicine.name;
     _typeLabel.text = medicine.type;
     _priceLabel.text = [NSString stringWithFormat:@"%d",medicine.price];
+    NSLog(@"%ld",medicine.messageArray.count);
+    if (medicine.messageArray.count == 0) {
+        
+        
+
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imgView.frame.origin.y + 180, self.view.frame.size.width, 35)];
+
+        label.textColor = [UIColor colorWithRed:0.102 green:0.000 blue:0.000 alpha:1.000];
+        label.font = [UIFont systemFontOfSize:22];
+        label.textAlignment = 1;
+        label.text = @"没有这种药品的信息...";
+
+//        imgView.image = [UIImage imageNamed:@"meiwang.gif"];
+        UIImage *image = [UIImage sd_animatedGIFNamed:@"meiwang"];
+        imgView.image = image;
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height - 80)];
+        imgView.center = view.center;
+        
+        [view addSubview:imgView];
+        [view addSubview:label];
+        view.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:view];
+    
+        
+        return;
+    }
     _introduceLabel1.text = medicine.messageArray[1];
     _introduceLabel2.text = medicine.messageArray[2];
     _introduceLabel3.text = medicine.messageArray[3];
@@ -64,7 +92,7 @@
     [button setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
     [self.view addSubview:button];
     [self.view bringSubviewToFront:button];
-    button.tintColor = [UIColor whiteColor];
+    button.tintColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
     
     [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     

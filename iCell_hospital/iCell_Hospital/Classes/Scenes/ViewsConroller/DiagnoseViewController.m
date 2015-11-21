@@ -8,10 +8,11 @@
 
 #import "DiagnoseViewController.h"
 #import "SDCycleScrollView.h"
-#import "sys/utsname.h"
+
 @interface DiagnoseViewController ()<SDCycleScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *cycleView;
+
 
 - (IBAction)sicknessInfoAction:(UIButton *)sender;
 - (IBAction)checkAction:(UIButton *)sender;
@@ -35,6 +36,7 @@
 
 @implementation DiagnoseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -51,46 +53,31 @@
         [self reloadViews];
     };
     
-    
-    if ([[self deviceString] isEqualToString:@"iPhone 4S"] ||[[self deviceString] isEqualToString:@"iPhone 4"]) {
+    if ([UIScreen mainScreen].bounds.size.width == 320.000000) {
         
-        _stackView.frame = CGRectMake(_stackView.frame.origin.x - 30, _stackView.frame.origin.y - 30, _stackView.frame.size.width, _stackView.frame.size.height);
+        _stackView.transform = CGAffineTransformMakeTranslation(-30, -30);
     }
+ 
     
+    UIView *view =[[UIView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        
+        view.normalBackgroundColor = [UIColor clearColor];
+        view.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:.2];
+        
+        view.userInteractionEnabled = NO;
+    }];
+    
+
     
 }
 
+ 
 
-
-
-
-- (NSString*)deviceString
-{
-    // 需要#import "sys/utsname.h"
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    
-    if ([deviceString isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
-    if ([deviceString isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
-    if ([deviceString isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
-    if ([deviceString isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
-    if ([deviceString isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
-    if ([deviceString isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
-    if ([deviceString isEqualToString:@"iPhone3,2"])    return @"Verizon iPhone 4";
-    if ([deviceString isEqualToString:@"iPod1,1"])      return @"iPod Touch 1G";
-    if ([deviceString isEqualToString:@"iPod2,1"])      return @"iPod Touch 2G";
-    if ([deviceString isEqualToString:@"iPod3,1"])      return @"iPod Touch 3G";
-    if ([deviceString isEqualToString:@"iPod4,1"])      return @"iPod Touch 4G";
-    if ([deviceString isEqualToString:@"iPad1,1"])      return @"iPad";
-    if ([deviceString isEqualToString:@"iPad2,1"])      return @"iPad 2 (WiFi)";
-    if ([deviceString isEqualToString:@"iPad2,2"])      return @"iPad 2 (GSM)";
-    if ([deviceString isEqualToString:@"iPad2,3"])      return @"iPad 2 (CDMA)";
-    if ([deviceString isEqualToString:@"i386"])         return @"Simulator";
-    if ([deviceString isEqualToString:@"x86_64"])       return @"Simulator";
-    NSLog(@"NOTE: Unknown device type: %@", deviceString);
-    return deviceString;
-}
 
 
 
