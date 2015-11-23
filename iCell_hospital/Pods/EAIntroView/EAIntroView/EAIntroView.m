@@ -254,7 +254,7 @@
 - (UIButton *)skipButton {
     if (!_skipButton) {
         _skipButton = [[UIButton alloc] init];
-        [_skipButton setTitle:NSLocalizedString(@"Skip", nil) forState:UIControlStateNormal];
+        [_skipButton setTitle:NSLocalizedString(@"立即体验", nil) forState:UIControlStateNormal];
         [self applyDefaultsToSkipButton];
     }
     return _skipButton;
@@ -892,6 +892,7 @@ CGFloat easeOutValue(CGFloat value) {
     CGFloat offset = currentPageIndex * self.scrollView.frame.size.width;
     CGRect pageRect = { .origin.x = offset, .origin.y = 0.0, .size.width = self.scrollView.frame.size.width, .size.height = self.scrollView.frame.size.height };
     [self.scrollView scrollRectToVisible:pageRect animated:animated];
+    
 }
 
 - (IBAction)goToNext:(id)sender {

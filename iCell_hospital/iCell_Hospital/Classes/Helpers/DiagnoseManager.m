@@ -61,6 +61,10 @@
 #pragma mark - 疾病资讯请求数据
 - (void)requstAllData{
     
+    if (![HospitalHelper isExistenceNetwork]) {
+        return;
+    }else{
+    
     dispatch_async(dispatch_get_global_queue(0, 0), ^
                 {
         NSString *typeString = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)@"健康",NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
@@ -92,6 +96,7 @@
         //执行
         [task resume];
     });
+    }
 }
 
 #pragma mark - 检查项目请求数据

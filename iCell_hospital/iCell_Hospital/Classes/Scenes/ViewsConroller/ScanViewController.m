@@ -117,6 +117,7 @@
                     detail.view.backgroundColor = [UIColor whiteColor];
                     
                     detail.medicine = [MedicineHelper sharedManager].medicine;
+                    detail.flag = NO;
                     
                     [self showViewController:detail sender:nil];
                     

@@ -10,4 +10,6 @@
 
 @interface SetAlertViewController : UIViewController
 
+@property BOOL flag;
+
 @end

@@ -945,7 +945,7 @@
         <scene sceneID="U9r-OZ-66p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T3k-Yo-VsJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="医院" id="bnB-mQ-FlR"/>
+                    <tabBarItem key="tabBarItem" title="医院" image="1" id="bnB-mQ-FlR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8CK-bf-fpD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1393,7 +1393,7 @@
         <!--Tab View Controller-->
         <scene sceneID="dOd-tc-jce">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DtA-OR-JlU" customClass="TabViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabViewController" automaticallyAdjustsScrollViewInsets="NO" id="DtA-OR-JlU" customClass="TabViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SNZ-dC-iSQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="H4t-Pq-5lF">
@@ -1437,7 +1437,7 @@
         <scene sceneID="weD-5b-STz">
             <objects>
                 <navigationController storyboardIdentifier="na" automaticallyAdjustsScrollViewInsets="NO" id="dHY-mq-3tk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="药品" id="3Pc-Ar-Mfv"/>
+                    <tabBarItem key="tabBarItem" title="药品" image="33" id="3Pc-Ar-Mfv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ks-yf-bOW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1457,7 +1457,7 @@
         <scene sceneID="lt4-hQ-FKo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zns-9J-PoV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="诊断" id="Nvu-bd-Llp"/>
+                    <tabBarItem key="tabBarItem" title="诊断" image="22" id="Nvu-bd-Llp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AZM-nz-baM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1477,7 +1477,7 @@
         <scene sceneID="US9-Tn-oPT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jGF-w2-gyv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="药店" id="axI-hw-bab"/>
+                    <tabBarItem key="tabBarItem" title="药店" image="4-1" id="axI-hw-bab"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CCJ-ah-Lu8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1731,6 +1731,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="20" height="20"/>
+        <image name="22" width="20" height="20"/>
+        <image name="33" width="20" height="20"/>
+        <image name="4-1" width="20" height="20"/>
         <image name="dingwei (1)" width="26" height="26"/>
         <image name="guanbi" width="17" height="17"/>
         <image name="sao" width="30" height="30"/>

@@ -126,6 +126,7 @@ static  NSString  * const headerReuseId = @"aaa";
     
     medicineDetail.view.backgroundColor = [UIColor whiteColor];
     medicineDetail.medicine = medicine;
+    medicineDetail.flag = YES;
 
     [self showViewController:medicineDetail sender:nil];
     

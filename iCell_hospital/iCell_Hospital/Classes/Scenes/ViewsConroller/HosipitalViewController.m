@@ -63,6 +63,8 @@ static NSString *const searchTableID = @"searchTableID";
         [self showIntroWithCrossDissolve];
         
         
+        
+        
     }else{
  
         
@@ -83,13 +85,13 @@ static NSString *const searchTableID = @"searchTableID";
     
 //    [self requestDataWithCityID:@"2"];
     //定位开始
-    if ([HospitalHelper isExistenceNetwork]) {
-    self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
-    [self.view addSubview:self.hosMapView];
-        
-    }else{
-        [self requestDataWithCityID:@"2"];
-    }
+//    if ([HospitalHelper isExistenceNetwork]) {
+//    self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
+//    [self.view addSubview:self.hosMapView];
+//        
+//    }else{
+//        [self requestDataWithCityID:@"2"];
+//    }
     
     
     
@@ -154,9 +156,55 @@ static NSString *const searchTableID = @"searchTableID";
     [intro setDelegate:self];
     
     [intro showInView:self.tabBarController.view animateDuration:0.3];
+    [intro.skipButton addTarget:self action:@selector(showAction) forControlEvents:(UIControlEventTouchUpInside)];
+   
+   
+}
+- (void)intro:(EAIntroView *)introView pageEndScrolling:(EAIntroPage *)page withIndex:(NSUInteger)pageIndex{
+    
+    
+    if (introView.currentPageIndex == 2) {
+        
+        introView.scrollingEnabled = NO;
+    }
 }
 
 
+- (void)showAction{
+    
+    //    //注册推送
+    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound) categories:nil];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+    
+    
+    
+    if ([[UIApplication sharedApplication]
+         respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings
+                                                settingsForTypes:(UIUserNotificationTypeBadge |
+                                                                  UIUserNotificationTypeSound |
+                                                                  UIUserNotificationTypeAlert)
+                                                categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    } else {
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge |
+        UIRemoteNotificationTypeAlert |
+        UIRemoteNotificationTypeSound;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+    }
+    
+    if ([HospitalHelper isExistenceNetwork]) {
+        self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
+        [self.view addSubview:self.hosMapView];
+        
+    }else{
+        [self requestDataWithCityID:@"2"];
+    }
+
+ }
+
+ 
 
 
 

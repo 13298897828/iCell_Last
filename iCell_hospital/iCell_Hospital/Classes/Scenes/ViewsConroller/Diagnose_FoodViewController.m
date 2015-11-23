@@ -30,6 +30,7 @@
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"Diagnose_FoodCell" bundle:nil] forCellReuseIdentifier:@"foodCellId"];
+    self.tableView.backgroundColor = [UIColor colorWithRed:185/255. green:211/255. blue:236/255. alpha:1];
     
 }
 

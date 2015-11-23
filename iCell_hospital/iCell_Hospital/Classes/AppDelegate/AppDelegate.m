@@ -11,6 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "ViewControllerForFirstStart.h"
 #import "sys/utsname.h"
+#import "TabViewController.h"
+#import "AFNetworkingManager.h"
 
 @interface AppDelegate ()
 
@@ -25,39 +27,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
- 
-    
-    
-    
-    
     //userDefault
     appDelegate.appDefault = [NSUserDefaults standardUserDefaults];
     [appDelegate.appDefault setObject:NULL forKey:@"one"];
     
-    //注册推送
-    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound) categories:nil];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+//    //注册推送
+//    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound) categories:nil];
+//    [[UIApplication sharedApplication] registerForRemoteNotifications];
+//    [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
     
     //初始化融云SDK。
     [[RCIM sharedRCIM] initWithAppKey:RONGCLOUD_IM_USER_TOKEN];
     
-    if ([application
-         respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings
-                                                settingsForTypes:(UIUserNotificationTypeBadge |
-                                                                  UIUserNotificationTypeSound |
-                                                                  UIUserNotificationTypeAlert)
-                                                categories:nil];
-        [application registerUserNotificationSettings:settings];
-    } else {
-        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge |
-        UIRemoteNotificationTypeAlert |
-        UIRemoteNotificationTypeSound;
-        [application registerForRemoteNotificationTypes:myTypes];
-    }
-    
+//    if ([application
+//         respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+//        UIUserNotificationSettings *settings = [UIUserNotificationSettings
+//                                                settingsForTypes:(UIUserNotificationTypeBadge |
+//                                                                  UIUserNotificationTypeSound |
+//                                                                  UIUserNotificationTypeAlert)
+//                                                categories:nil];
+//        [application registerUserNotificationSettings:settings];
+//    } else {
+//        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge |
+//        UIRemoteNotificationTypeAlert |
+//        UIRemoteNotificationTypeSound;
+//        [application registerForRemoteNotificationTypes:myTypes];
+//    }
+//    
  
     
     NSUUID *str = [UIDevice currentDevice].identifierForVendor;
@@ -93,18 +89,18 @@
     [task resume];
     
     
-    UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"imageName"];
-    UIMutableApplicationShortcutItem *item = [[UIMutableApplicationShortcutItem alloc] initWithType:@"yiyuan" localizedTitle:@"搜索医院" localizedSubtitle:@"记录此刻" icon:icon userInfo:@{@"key": @"value"}];
+    UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"1"];
+    UIMutableApplicationShortcutItem *item = [[UIMutableApplicationShortcutItem alloc] initWithType:@"yiyuan" localizedTitle:@"搜索医院" localizedSubtitle:@"" icon:icon userInfo:@{@"key": @"value"}];
     
     
     
-    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"imageName"];
-    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc] initWithType:@"yaopin" localizedTitle:@"搜索药品" localizedSubtitle:@"添加提醒" icon:icon1 userInfo:@{@"key": @"value"}];
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"22"];
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc] initWithType:@"yaopin" localizedTitle:@"搜索药品" localizedSubtitle:@"" icon:icon1 userInfo:@{@"key": @"value"}];
     
     
     
-    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"imageName"];
-    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc] initWithType:@"tixing" localizedTitle:@"添加提醒" localizedSubtitle:@"添加提醒" icon:icon2 userInfo:@{@"key": @"value"}];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"ling1"];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc] initWithType:@"tixing" localizedTitle:@"添加提醒" localizedSubtitle:@"" icon:icon2 userInfo:@{@"key": @"value"}];
     
     
     [UIApplication sharedApplication].shortcutItems = @[item,item1,item2];
@@ -112,46 +108,6 @@
     
     return YES;
 }
-
-
-
-
-
-
-
-
-+ (NSString*)deviceString
-{
-    // 需要#import "sys/utsname.h"
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    
-    if ([deviceString isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
-    if ([deviceString isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
-    if ([deviceString isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
-    if ([deviceString isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
-    if ([deviceString isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
-    if ([deviceString isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
-    if ([deviceString isEqualToString:@"iPhone6,2"])    return @"iPhone 5S";
-    if ([deviceString isEqualToString:@"iPhone3,2"])    return @"Verizon iPhone 4";
-    if ([deviceString isEqualToString:@"iPod1,1"])      return @"iPod Touch 1G";
-    if ([deviceString isEqualToString:@"iPod2,1"])      return @"iPod Touch 2G";
-    if ([deviceString isEqualToString:@"iPod3,1"])      return @"iPod Touch 3G";
-    if ([deviceString isEqualToString:@"iPod4,1"])      return @"iPod Touch 4G";
-    if ([deviceString isEqualToString:@"iPad1,1"])      return @"iPad";
-    if ([deviceString isEqualToString:@"iPad2,1"])      return @"iPad 2 (WiFi)";
-    if ([deviceString isEqualToString:@"iPad2,2"])      return @"iPad 2 (GSM)";
-    if ([deviceString isEqualToString:@"iPad2,3"])      return @"iPad 2 (CDMA)";
-    if ([deviceString isEqualToString:@"i386"])         return @"Simulator";
-    if ([deviceString isEqualToString:@"x86_64"])       return @"Simulator";
-    NSLog(@"NOTE: Unknown device type: %@", deviceString);
-    return deviceString;
-}
-
-
-
-
 
 
 //func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
@@ -164,24 +120,25 @@
         
         HosipitalViewController *hospitalVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HosipitalViewController"];
         
-//        [self.window.rootViewController showViewController:hospitalVC sender:nil];
+        TabViewController *tabViewController =[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"tabViewController"];
+        self.window.rootViewController = tabViewController;
+        tabViewController.selectedIndex = 0;
         
-        [self.window setRootViewController:hospitalVC];
     }
     
     if ([shortcutItem.type isEqualToString:@"yaopin"]) {
         
         UINavigationController *nav = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"na"];
-        
-//        MedicineViewController *medicineVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"medicineViewController"];
-        
-        [self.window setRootViewController:nav];
-//        [self.window.rootViewController showViewController:medicineVC sender:nil];
+ 
+        TabViewController *tabViewController =[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"tabViewController"];
+        self.window.rootViewController = tabViewController;
+        tabViewController.selectedIndex = 3;
 
     }
     if ([shortcutItem.type isEqualToString:@"tixing"]) {
         
         SetAlertViewController *setAlertVC = [SetAlertViewController new];
+        setAlertVC.flag = YES;
         
         [self.window setRootViewController:setAlertVC];
     }

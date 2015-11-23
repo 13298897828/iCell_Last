@@ -10,4 +10,5 @@
 
 @interface MedicineDetailViewController : UIViewController
 @property (nonatomic,strong)Medicine *medicine;
+@property BOOL flag;
 @end

@@ -59,19 +59,19 @@
     }
  
     
-    UIView *view =[[UIView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:view];
-    @weakify(self);
-    [self addColorChangedBlock:^{
-        @strongify(self);
-        
-        
-        view.normalBackgroundColor = [UIColor clearColor];
-        view.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:.2];
-        
-        view.userInteractionEnabled = NO;
-    }];
-    
+//    UIView *view =[[UIView alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:view];
+//    @weakify(self);
+//    [self addColorChangedBlock:^{
+//        @strongify(self);
+//        
+//        
+//        view.normalBackgroundColor = [UIColor clearColor];
+//        view.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:.2];
+//        
+//        view.userInteractionEnabled = NO;
+//    }];
+//    
 
     
 }
@@ -104,7 +104,7 @@
     _cycleScrollView.delegate = self;
     _cycleScrollView.titlesGroup = _titles;
 //    _cycleScrollView.dotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
-    _cycleScrollView.placeholderImage = [UIImage imageNamed:@"doctor1.jpg"];
+    _cycleScrollView.placeholderImage = [UIImage imageNamed:@"zhenduan1.jpg"];
     [self.cycleView addSubview:_cycleScrollView];
     
     // --- 模拟加载延迟
