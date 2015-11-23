@@ -86,8 +86,12 @@
                                    //       主线程刷新
                                    dispatch_async(dispatch_get_main_queue(), ^{
                                        
+                                       if (![HospitalHelper isExistenceNetwork]) {
+                                           return ;
+                                       }else{
                                        
                                        self.result();
+                                       }
                                        
                                    });
                                }];

@@ -23,7 +23,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
   
     _seguement =[[UISegmentedControl alloc]initWithItems:@[@"网上购药",@"附近药店"]];
-    _seguement.frame = CGRectMake(self.view.frame.size.width / 3, 5, self.view.frame.size.width / 3, 35);
+    _seguement.frame = CGRectMake(self.view.frame.size.width / 4, 5, self.view.frame.size.width / 2, 35);
+ 
     _seguement.selectedSegmentIndex = 0;
    [self.navigationController.navigationBar addSubview: _seguement];
     [_seguement addTarget:self action:@selector(tapAction:) forControlEvents:(UIControlEventValueChanged)];
@@ -36,7 +37,23 @@
       [self addChildViewController:v1];
     v2.view.frame = CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height );
     [self.view addSubview:v2.view];
-//    [self.view addSubview:_seguement];
+
+    UIView *view =[[UIView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        
+        v1.view.normalBackgroundColor = [UIColor whiteColor];
+        v1.view.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:.2];
+        v2.view.normalBackgroundColor = [UIColor whiteColor];
+        v2.view.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:.2];
+ 
+        
+        view.userInteractionEnabled = NO;
+    }];
+    
 }
 
 -(void)tapAction:(UISegmentedControl *)sender{

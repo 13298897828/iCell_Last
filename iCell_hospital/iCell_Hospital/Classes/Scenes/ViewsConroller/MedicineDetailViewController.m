@@ -7,6 +7,9 @@
 //
 
 #import "MedicineDetailViewController.h"
+#import "nilViewController.h"
+#import <UIImage+GIF.h>
+#import "AFNetworkingManager.h"
 
 @interface MedicineDetailViewController ()
 
@@ -27,12 +30,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *introduceLabel6;
 @property (weak, nonatomic) IBOutlet UILabel *introduceLabel7;
 @property (weak, nonatomic) IBOutlet UIButton *collectionMedicineButton;
+@property (nonatomic,strong)UIButton *talkButton;
 
 @end
 
 @implementation MedicineDetailViewController
 -(void)setMedicine:(Medicine *)medicine{
     
+    
+    if (![HospitalHelper isExistenceNetwork]) {
+        
+     
+        return;
+        
+    }
     
     [_imgView sd_setImageWithURL:[NSURL URLWithString:medicine.img]];
     
@@ -43,6 +54,33 @@
     _nameLabel.text = medicine.name;
     _typeLabel.text = medicine.type;
     _priceLabel.text = [NSString stringWithFormat:@"%d",medicine.price];
+    NSLog(@"%ld",medicine.messageArray.count);
+    if (medicine.messageArray.count == 0) {
+        
+
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imgView.frame.origin.y + 180, self.view.frame.size.width, 35)];
+
+        label.textColor = [UIColor colorWithRed:0.102 green:0.000 blue:0.000 alpha:1.000];
+        label.font = [UIFont systemFontOfSize:22];
+        label.textAlignment = 1;
+        label.text = @"没有这种药品的信息...";
+
+//        imgView.image = [UIImage imageNamed:@"meiwang.gif"];
+        UIImage *image = [UIImage sd_animatedGIFNamed:@"meiwang"];
+        imgView.image = image;
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height - 80)];
+        imgView.center = view.center;
+        
+        [view addSubview:imgView];
+        [view addSubview:label];
+        view.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:view];
+        _talkButton.hidden = YES;
+        _collectionMedicineButton.hidden = YES;
+        
+        return;
+    }
     _introduceLabel1.text = medicine.messageArray[1];
     _introduceLabel2.text = medicine.messageArray[2];
     _introduceLabel3.text = medicine.messageArray[3];
@@ -58,16 +96,17 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    button.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 200, 80, 80);
+    _talkButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    _talkButton.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 200, 80, 80);
     //    [button setTitle:@"哇哈哈" forState:(UIControlStateNormal)];
-    [button setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
-    [self.view addSubview:button];
-    [self.view bringSubviewToFront:button];
-    button.tintColor = [UIColor whiteColor];
+    [_talkButton setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
+    [self.view addSubview:_talkButton];
+    [self.view bringSubviewToFront:_talkButton];
+    _talkButton.tintColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
     
-    [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
+    [_talkButton addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     
+    _talkButton.tintColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1.000];
     UIView *view = [[UIView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:view];
     
@@ -79,10 +118,10 @@
 //        self.contantView.normalBackgroundColor = [UIColor whiteColor];
 //        self.contantView.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:.7];
          view.normalBackgroundColor = [UIColor clearColor];
-         view.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:.3];
+         view.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:0.177];
         view.userInteractionEnabled = NO;
 
- 
+        
     }];
     
 }
@@ -197,6 +236,15 @@
 //        设置图标空心
         [_collectionMedicineButton setImage:[UIImage imageNamed:@"shoucang"] forState:UIControlStateNormal];
         
+    }
+    
+    if (!_flag) {
+        
+        _talkButton.hidden = YES;
+        
+    }else{
+        
+        _talkButton.hidden = NO;
     }
     
 }

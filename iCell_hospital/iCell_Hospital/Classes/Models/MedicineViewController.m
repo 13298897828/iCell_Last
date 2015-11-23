@@ -49,6 +49,20 @@
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
     button.frame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 200, 80, 80);
 //    [button setTitle:@"哇哈哈" forState:(UIControlStateNormal)];
+ 
+        
+    
+        
+ 
+    if ([UIScreen mainScreen].bounds.size.width == 320.000000) {
+        
+        
+        button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y + 40, button.frame.size.width, button.frame.size.height);
+        _MedicineSearchBar.transform = CGAffineTransformMakeTranslation(1, -15);
+        
+    }
+    
+    
     [button setImage:[UIImage imageNamed:@"fu"] forState:(UIControlStateNormal)];
     [self.view addSubview:button];
     [self.view bringSubviewToFront:button];
@@ -57,7 +71,22 @@
     [button addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     
     
+  
      [self.view bringSubviewToFront:_DButton];
+    
+    
+    UIView *view =[[UIView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+ 
+        view.normalBackgroundColor = [UIColor clearColor];
+        view.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:.2];
+        
+        view.userInteractionEnabled = NO;
+    }];
 
 }
 #pragma mark -跳转客服界面

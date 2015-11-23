@@ -34,7 +34,12 @@
     }];
     self.tabBar.tintColor = [UIColor colorWithRed:0.166 green:0.716 blue:1.000 alpha:1.000];
     self.delegate = self;
-    // Do any additional setup after loading the view.
+    
+
+
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -205,6 +210,8 @@
 
         if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
             [DKNightVersionManager nightFalling];
+            
+            
         } else {
             [DKNightVersionManager dawnComing];
         }

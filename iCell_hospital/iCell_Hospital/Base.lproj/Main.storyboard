@@ -399,17 +399,17 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rde-D3-ZKn">
                                                 <rect key="frame" x="189" y="0.0" width="170" height="194"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YeQ-13-kFE">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YeQ-13-kFE">
                                                         <rect key="frame" x="0.0" y="0.0" width="170" height="52"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="药品名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-Ep-Fxh">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="药品名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-Ep-Fxh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="170" height="22"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="药名名字名字名字名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DT-7J-IEE">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="药名名字名字名字名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DT-7J-IEE">
                                                                 <rect key="frame" x="0.0" y="32" width="170" height="21"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -419,7 +419,7 @@
                                                         </subviews>
                                                         <animations/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-er-MdK">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-er-MdK">
                                                         <rect key="frame" x="0.0" y="72" width="68" height="51"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="药品类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yu-kL-aon">
@@ -439,7 +439,7 @@
                                                         </subviews>
                                                         <animations/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSi-9V-0HT">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSi-9V-0HT">
                                                         <rect key="frame" x="0.0" y="143" width="83" height="51"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUN-VG-Asv">
@@ -945,7 +945,7 @@
         <scene sceneID="U9r-OZ-66p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T3k-Yo-VsJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="医院" id="bnB-mQ-FlR"/>
+                    <tabBarItem key="tabBarItem" title="医院" image="1" id="bnB-mQ-FlR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8CK-bf-fpD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1224,8 +1224,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="zFJ-pq-l8F"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="yisheng1" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-wY-QI7">
-                                <rect key="frame" x="0.0" y="230" width="600" height="370"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yisheng1" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-wY-QI7">
+                                <rect key="frame" x="0.0" y="230" width="600" height="321"/>
                                 <animations/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vNn-C7-4j2">
@@ -1393,7 +1393,7 @@
         <!--Tab View Controller-->
         <scene sceneID="dOd-tc-jce">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DtA-OR-JlU" customClass="TabViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabViewController" automaticallyAdjustsScrollViewInsets="NO" id="DtA-OR-JlU" customClass="TabViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SNZ-dC-iSQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="H4t-Pq-5lF">
@@ -1437,7 +1437,7 @@
         <scene sceneID="weD-5b-STz">
             <objects>
                 <navigationController storyboardIdentifier="na" automaticallyAdjustsScrollViewInsets="NO" id="dHY-mq-3tk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="药品" id="3Pc-Ar-Mfv"/>
+                    <tabBarItem key="tabBarItem" title="药品" image="33" id="3Pc-Ar-Mfv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ks-yf-bOW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1457,7 +1457,7 @@
         <scene sceneID="lt4-hQ-FKo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zns-9J-PoV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="诊断" id="Nvu-bd-Llp"/>
+                    <tabBarItem key="tabBarItem" title="诊断" image="22" id="Nvu-bd-Llp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AZM-nz-baM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1477,7 +1477,7 @@
         <scene sceneID="US9-Tn-oPT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jGF-w2-gyv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="药店" id="axI-hw-bab"/>
+                    <tabBarItem key="tabBarItem" title="药店" image="4-1" id="axI-hw-bab"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CCJ-ah-Lu8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1731,6 +1731,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="20" height="20"/>
+        <image name="22" width="20" height="20"/>
+        <image name="33" width="20" height="20"/>
+        <image name="4-1" width="20" height="20"/>
         <image name="dingwei (1)" width="26" height="26"/>
         <image name="guanbi" width="17" height="17"/>
         <image name="sao" width="30" height="30"/>

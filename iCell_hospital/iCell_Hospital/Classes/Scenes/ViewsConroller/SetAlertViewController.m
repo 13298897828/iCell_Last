@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setTimeBtn;
 - (IBAction)setTime:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @property (nonatomic,strong) KPTimePicker *timePicker;
 
@@ -141,6 +142,7 @@
 
 - (IBAction)backAction:(UIButton *)sender {
     
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
@@ -149,6 +151,20 @@
        [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    if (_flag) {
+        
+        _backButton.hidden = YES;
+        
+    }else {
+        
+        
+        _backButton.hidden = NO;
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

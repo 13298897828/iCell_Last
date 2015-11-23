@@ -22,7 +22,7 @@
     self.infoImg.contentMode = UIViewContentModeScaleAspectFit;
     [self.infoImg sd_setImageWithURL:[NSURL URLWithString:info.img]];
     
-    NSLog(@"%f",_messageLabel.frame.size.height);
+//    NSLog(@"%f",_messageLabel.frame.size.height);
     _height =  _messageLabel.frame.size.height;
 }
 
@@ -51,13 +51,6 @@
     
     self.toInterest();
 }
-
-
-
-
-
-
-
 
 
 
