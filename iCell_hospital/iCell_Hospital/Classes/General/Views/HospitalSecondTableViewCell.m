@@ -31,10 +31,14 @@
     //    缓存图片
     NSUserDefaults *user = [[NSUserDefaults alloc] init];
     if ([HospitalHelper isExistenceNetwork]) {
-        
+        if ([user objectForKey:hospital.img]) {
+            
+        }else{
         [self.hosIMageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
         NSData *data = UIImageJPEGRepresentation(self.hosIMageView.image, 0.5);
-        [user setObject:data forKey:hospital.img];
+        [user setObject:data forKey:hospital.img];  
+        }
+
         
         MAMapPoint point1 = MAMapPointForCoordinate(CLLocationCoordinate2DMake([hospital.y doubleValue], [hospital.x doubleValue]));
         
@@ -127,9 +131,6 @@
 
     }
     self.hosMtypeLabel.text = hospital.mtype;
-    
-    
-    
     
 }
 

@@ -10,3 +10,6 @@ pod 'Reachability', '~> 3.2'
 pod 'AFNetworking'
 pod 'EAIntroView'
 pod 'SMPageControl'
+pod 'MJRefresh'
+pod 'AMapLocation'
+

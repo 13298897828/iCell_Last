@@ -59,6 +59,7 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "AMap2DMap/MAMapKit.framework/Versions/3.1.0.56231a5/Resources/AMap.bundle"
+  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable/RongCloud.bundle"
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable/en.lproj"
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable/zh-Hans.lproj"
@@ -70,6 +71,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AMap2DMap/MAMapKit.framework/Versions/3.1.0.56231a5/Resources/AMap.bundle"
+  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable/RongCloud.bundle"
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable/en.lproj"
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_SDK_v2_3_6_stable/zh-Hans.lproj"

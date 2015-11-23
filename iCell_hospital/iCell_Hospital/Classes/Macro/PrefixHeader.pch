@@ -13,6 +13,8 @@
 #import <MAMapKit/MAMapKit.h>
 #import <UIImageView+WebCache.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+#import <MJRefresh.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 #import "Reachability.h"
 #pragma mark - Hosptial
 //controller

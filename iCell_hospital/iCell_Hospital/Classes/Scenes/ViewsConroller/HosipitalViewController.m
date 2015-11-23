@@ -15,7 +15,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 {
     UIView *rootView;
     EAIntroView *_intro;
-    
+    NSInteger page ;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -64,12 +64,7 @@ static NSString *const searchTableID = @"searchTableID";
         
     }else{
         NSLog(@"不是第一次启动");
-        
-        
-        
     }
-    
-
 
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSearchTableViewCell" bundle:nil] forCellReuseIdentifier:searchTableID];
     
@@ -80,16 +75,24 @@ static NSString *const searchTableID = @"searchTableID";
     //注册通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi:) name:@"tongzhi" object:nil];
 
-    
-//    [self requestDataWithCityID:@"2"];
+    [self requestDataWithCityID:@"2" page:@"1"];
     //定位开始
     if ([HospitalHelper isExistenceNetwork]) {
+        
     self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
     [self.view addSubview:self.hosMapView];
-        
-    }else{
-        [self requestDataWithCityID:@"2"];
+         page = 2;
     }
+//    else{
+//        [self requestDataWithCityID:@"2"];
+//    }
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+        if (![HospitalHelper sharedHospitalHelper].currentCityID) {
+            [HospitalHelper sharedHospitalHelper].currentCityID =@"2";
+        }
+        [self requestDataWithCityID:[NSString stringWithFormat:@"%@",[HospitalHelper sharedHospitalHelper].currentCityID] page:[NSString stringWithFormat:@"%ld",page++]];
+    }];
     
     
 }
@@ -142,11 +145,10 @@ static NSString *const searchTableID = @"searchTableID";
     
     if (text.userInfo[@"cityID"]) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-         [self requestDataWithCityID:text.userInfo[@"cityID"]];
+            [HospitalHelper sharedHospitalHelper].currentCityID =text.userInfo[@"cityID"];
+         [self requestDataWithCityID:text.userInfo[@"cityID"] page:@"1"];
     });
 }
-
-   
     if (text.userInfo[@"cityName"]) {
          [self.hospitalCity_ProvinceButton setTitle:text.userInfo[@"cityName"]  forState:UIControlStateNormal];
     }
@@ -158,15 +160,17 @@ static NSString *const searchTableID = @"searchTableID";
 
 }
 
-- (void)requestDataWithCityID:(NSString *)cityID{
+- (void)requestDataWithCityID:(NSString *)cityID page:(NSString *)page{
     
-    NSString *httpArg = [NSString stringWithFormat:@"id=%@&page=1&rows=20",cityID];
+    NSString *httpArg = [NSString stringWithFormat:@"id=%@&page=%@&rows=20",cityID,page];
 //    NSLog(@"ID==%@",cityID);
     [[HospitalHelper sharedHospitalHelper] requestHttpUrl:kListhttpUrl withHttpArg:httpArg success:^(id data) {
-        
+        if ([page isEqualToString:@"1"]) {
         [self.hospitalListArray removeAllObjects];
-        [self.dataArray removeAllObjects];
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
+        }
+      [self.dataArray removeAllObjects];
+         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
         NSArray *array = dict[@"tngou"];
      
@@ -181,6 +185,7 @@ static NSString *const searchTableID = @"searchTableID";
             dispatch_async(dispatch_get_main_queue(), ^{
             
             [self.tableView reloadData];
+                [self.tableView.mj_footer endRefreshing];
         });
         }else{
             [self.tableView reloadData];

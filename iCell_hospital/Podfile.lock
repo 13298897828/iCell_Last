@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - AMap2DMap (3.1.0)
+  - AMapLocation (1.0.1)
   - EAIntroView (2.7.4):
     - EARestrictedScrollView (~> 0.2.0)
   - EARestrictedScrollView (0.2.0)
@@ -29,6 +30,7 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - MJRefresh (3.0.4)
   - pop (1.0.8)
   - Reachability (3.2)
   - RongCloudIMKit (2.3.6)
@@ -42,8 +44,10 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - AMap2DMap
+  - AMapLocation
   - EAIntroView
   - FMDB
+  - MJRefresh
   - pop (~> 1.0.8)
   - Reachability (~> 3.2)
   - RongCloudIMKit
@@ -55,9 +59,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AMap2DMap: a6741139dd16d237713c4fd6cae9a0399ca1fe25
+  AMapLocation: d33782bd102563aae1824cb4fae8b4495376f016
   EAIntroView: 50b85eedf414260e61330070ffe5947e72493a62
   EARestrictedScrollView: f86d61e16c61d3e93c84f8e96e83122a2a3b7631
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  MJRefresh: c95f0d541606ef584dab3fbeda28f4f32b4aca6e
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RongCloudIMKit: 3ae5f93c8688ad1948472033f475f51650316f13

@@ -27,8 +27,8 @@
     if ([HospitalHelper isExistenceNetwork]) {
         
     [self.hosImageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
-    NSData *data = UIImageJPEGRepresentation(self.hosImageView.image, 1.0);
-    [user setObject:data forKey:hospital.img];   
+//    NSData *data = UIImageJPEGRepresentation(self.hosImageView.image, 1.0);
+//    [user setObject:data forKey:hospital.img];   
     
     }else{
         [self.hosImageView setImage:[UIImage imageWithData:[user objectForKey:hospital.img]]];
