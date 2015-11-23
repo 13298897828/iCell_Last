@@ -127,7 +127,6 @@
 		14AF94681BFB43430042F388 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF94611BFB43430042F388 /* NSArray+PureLayout.m */; };
 		14AF94691BFB43430042F388 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF94631BFB43430042F388 /* NSLayoutConstraint+PureLayout.m */; };
 		14AF946C1BFB54B40042F388 /* HospitalMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF946B1BFB54B40042F388 /* HospitalMapView.m */; };
-		14AF946F1BFB54C10042F388 /* HosipitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF946E1BFB54C10042F388 /* HosipitalViewController.m */; };
 		14B5CFB71BF34C040019893C /* MedicineSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5CFB61BF34C040019893C /* MedicineSearchResultViewController.m */; };
 		14B5CFBB1BF350240019893C /* MedicineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5CFB91BF350240019893C /* MedicineCollectionViewCell.m */; };
 		14B5CFBC1BF350240019893C /* MedicineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B5CFBA1BF350240019893C /* MedicineCollectionViewCell.xib */; };
@@ -145,6 +144,7 @@
 		14E42AD31BF06553002EB1FB /* placeHoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AD21BF06553002EB1FB /* placeHoderViewController.m */; };
 		14E42ADB1BF06EBA002EB1FB /* Medicine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42ADA1BF06EBA002EB1FB /* Medicine.m */; };
 		14E42AE91BF06FAE002EB1FB /* MedicineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AE81BF06FAE002EB1FB /* MedicineView.m */; };
+		C27CBDB41C03002400C3D33D /* HosipitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CBDB21C03002400C3D33D /* HosipitalViewController.m */; };
 		C28FB9CD1BFDBFF5003669E0 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9CB1BFDBFF5003669E0 /* CollectionViewController.m */; };
 		C28FB9CE1BFDBFF5003669E0 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28FB9CC1BFDBFF5003669E0 /* CollectionViewController.xib */; };
 		C28FB9D11BFDC76C003669E0 /* HospitalCollectList.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9D01BFDC76C003669E0 /* HospitalCollectList.m */; };
@@ -341,8 +341,6 @@
 		14AF94661BFB43430042F388 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		14AF946A1BFB54B40042F388 /* HospitalMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalMapView.h; sourceTree = "<group>"; };
 		14AF946B1BFB54B40042F388 /* HospitalMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalMapView.m; sourceTree = "<group>"; };
-		14AF946D1BFB54C10042F388 /* HosipitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HosipitalViewController.h; sourceTree = "<group>"; };
-		14AF946E1BFB54C10042F388 /* HosipitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HosipitalViewController.m; sourceTree = "<group>"; };
 		14B5CFB51BF34C040019893C /* MedicineSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicineSearchResultViewController.h; sourceTree = "<group>"; };
 		14B5CFB61BF34C040019893C /* MedicineSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicineSearchResultViewController.m; sourceTree = "<group>"; };
 		14B5CFB81BF350240019893C /* MedicineCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicineCollectionViewCell.h; sourceTree = "<group>"; };
@@ -378,6 +376,8 @@
 		5ED8326586D56D9C8DF6C476 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C9D77D63179C042504AF449 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C20F237E1BFEAD1900A32F35 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C27CBDB21C03002400C3D33D /* HosipitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HosipitalViewController.m; sourceTree = "<group>"; };
+		C27CBDB31C03002400C3D33D /* HosipitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HosipitalViewController.h; sourceTree = "<group>"; };
 		C28FB9CA1BFDBFF5003669E0 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		C28FB9CB1BFDBFF5003669E0 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		C28FB9CC1BFDBFF5003669E0 /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
@@ -904,8 +904,8 @@
 				14406E9B1BFCB98200C558C2 /* DiagnoseViewController.m */,
 				14AF943D1BFB42FA0042F388 /* WeatherViewController.h */,
 				14AF943E1BFB42FA0042F388 /* WeatherViewController.m */,
-				14AF946D1BFB54C10042F388 /* HosipitalViewController.h */,
-				14AF946E1BFB54C10042F388 /* HosipitalViewController.m */,
+				C27CBDB31C03002400C3D33D /* HosipitalViewController.h */,
+				C27CBDB21C03002400C3D33D /* HosipitalViewController.m */,
 				14C1EC631BFC90C1009DEE04 /* HospitalDetailViewController.h */,
 				14C1EC641BFC90C1009DEE04 /* HospitalDetailViewController.m */,
 				14AF94301BFB42F10042F388 /* HospitalCity&ProvinceViewController.h */,
@@ -1152,7 +1152,6 @@
 				14406E9E1BFCB98200C558C2 /* Diagnose_InterestViewController.m in Sources */,
 				1414CF041BF177CF0071E2D8 /* MedicineViewController.m in Sources */,
 				140C7EFB1BFEBCB0009E4B12 /* UITableView+SeparatorColor.m in Sources */,
-				14AF946F1BFB54C10042F388 /* HosipitalViewController.m in Sources */,
 				14AF941F1BFAD1A50042F388 /* ChatViewController.m in Sources */,
 				14E42ACA1BF064F2002EB1FB /* AppDelegate.m in Sources */,
 				14B5CFBB1BF350240019893C /* MedicineCollectionViewCell.m in Sources */,
@@ -1197,6 +1196,7 @@
 				14AF94681BFB43430042F388 /* NSArray+PureLayout.m in Sources */,
 				14406E7B1BFCB94B00C558C2 /* DiagnoseManager.m in Sources */,
 				14AF942D1BFB428C0042F388 /* HospitalHelper.m in Sources */,
+				C27CBDB41C03002400C3D33D /* HosipitalViewController.m in Sources */,
 				140C7EF61BFEBCB0009E4B12 /* UIButton+TitleColor.m in Sources */,
 				140C7EF21BFEBCB0009E4B12 /* DKNightVersionManager.m in Sources */,
 				14406E751BFCB93700C558C2 /* Diagnose_SicknessCell.m in Sources */,

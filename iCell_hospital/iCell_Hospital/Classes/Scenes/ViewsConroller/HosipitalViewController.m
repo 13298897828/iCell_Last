@@ -15,12 +15,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 {
     UIView *rootView;
     EAIntroView *_intro;
-
     NSInteger page ;
-
-    
-    
-
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -63,21 +58,12 @@ static NSString *const searchTableID = @"searchTableID";
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstStart"]){
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstStart"];
         
+        NSLog(@"第一次启动");
+            [self showIntroWithCrossDissolve];
         
-        [self showIntroWithCrossDissolve];
         
-        
-
     }else{
         NSLog(@"不是第一次启动");
-
-        
-        
-    }else{
- 
-        
-    
-
     }
 
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSearchTableViewCell" bundle:nil] forCellReuseIdentifier:searchTableID];
@@ -91,7 +77,6 @@ static NSString *const searchTableID = @"searchTableID";
 
     [self requestDataWithCityID:@"2" page:@"1"];
     //定位开始
-
     if ([HospitalHelper isExistenceNetwork]) {
         
     self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
@@ -107,36 +92,6 @@ static NSString *const searchTableID = @"searchTableID";
             [HospitalHelper sharedHospitalHelper].currentCityID =@"2";
         }
         [self requestDataWithCityID:[NSString stringWithFormat:@"%@",[HospitalHelper sharedHospitalHelper].currentCityID] page:[NSString stringWithFormat:@"%ld",page++]];
-
-//    if ([HospitalHelper isExistenceNetwork]) {
-//    self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
-//    [self.view addSubview:self.hosMapView];
-//        
-//    }else{
-//        [self requestDataWithCityID:@"2"];
-//    }
-    
-    
-    
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 49)];
-    backView.backgroundColor = [UIColor blackColor];
-    [self.tabBarController.tabBar insertSubview:backView atIndex:0];
-    self.tabBarController.tabBar.opaque = YES;
- 
-
-    
-    @weakify(self);
-    [self addColorChangedBlock:^{
-        @strongify(self);
-        
-        
-       self.tableView.normalBackgroundColor = [UIColor whiteColor];
-      
-        self.tableView.nightBackgroundColor = [UIColor colorWithWhite:0.098 alpha:1.000];
-        
-     
-        
-
     }];
     
     
@@ -147,7 +102,7 @@ static NSString *const searchTableID = @"searchTableID";
 
 
 
-//引导页
+///引导页
 - (void)showIntroWithCrossDissolve {
     EAIntroPage *page1 = [EAIntroPage page];
     page1.title = @"头痛脑热,不知怎么办?";
@@ -157,7 +112,7 @@ static NSString *const searchTableID = @"searchTableID";
     
     EAIntroPage *page2 = [EAIntroPage page];
     page2.title = @"专业医生在线解答";
-
+    
     page2.desc = sampleDescription2;
     page2.bgImage = [UIImage imageNamed:@"yindao.jpg"];
     page2.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title2"]];
@@ -169,20 +124,20 @@ static NSString *const searchTableID = @"searchTableID";
     page3.descColor = [UIColor colorWithRed:0.000 green:0.502 blue:1.000 alpha:1.000];
     page3.bgImage = [UIImage imageNamed:@"yindao3.jpg"];
     page3.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title3"]];
-//    
-//    EAIntroPage *page4 = [EAIntroPage page];
-//    page4.title = @"不得不去医院,又怕找不到专家?";
-//    page4.desc = sampleDescription4;
-//    page4.bgImage = [UIImage imageNamed:@"yiyuan"];
-//    page4.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title4"]];
+    //
+    //    EAIntroPage *page4 = [EAIntroPage page];
+    //    page4.title = @"不得不去医院,又怕找不到专家?";
+    //    page4.desc = sampleDescription4;
+    //    page4.bgImage = [UIImage imageNamed:@"yiyuan"];
+    //    page4.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title4"]];
     
     EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds andPages:@[page1,page2,page3]];
     [intro setDelegate:self];
     
     [intro showInView:self.tabBarController.view animateDuration:0.3];
     [intro.skipButton addTarget:self action:@selector(showAction) forControlEvents:(UIControlEventTouchUpInside)];
-   
-   
+    
+    
 }
 - (void)intro:(EAIntroView *)introView pageEndScrolling:(EAIntroPage *)page withIndex:(NSUInteger)pageIndex{
     
@@ -222,14 +177,9 @@ static NSString *const searchTableID = @"searchTableID";
         self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
         [self.view addSubview:self.hosMapView];
         
-    }else{
-        [self requestDataWithCityID:@"2"];
     }
-
- }
-
- 
-
+    
+}
 
 
 
