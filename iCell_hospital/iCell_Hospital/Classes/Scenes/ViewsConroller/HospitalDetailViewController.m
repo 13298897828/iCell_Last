@@ -110,7 +110,7 @@ static NSString *const cellID = @"CellID";
 //计算cell高度
 - (CGFloat)calcHeightWithlabel:(UILabel *)label{
     
-    CGSize maxSize=CGSizeMake(label.frame.size.width, 1000);
+    CGSize maxSize=CGSizeMake(label.frame.size.width, 1500);
     
     NSDictionary *dict=@{
                          NSFontAttributeName:label.font

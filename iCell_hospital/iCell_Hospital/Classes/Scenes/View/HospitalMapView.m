@@ -114,10 +114,15 @@
                 }
 //    当前城市名
                  [HospitalHelper sharedHospitalHelper].currentCityName = city;
-#warning 根据定位所得城市取得城市ID
+
                  //添加 字典，将label的值通过key值设置传递
-                 NSDictionary *dic =[[NSDictionary alloc] initWithObjectsAndKeys:@"2",@"cityID" ,city,@"city",nil];
+            if ([HospitalHelper sharedHospitalHelper].currentCityName) {
+         [self requestData];
+    }
+                NSDictionary *dic = [NSDictionary dictionary];
     
+                dic =[[NSDictionary alloc] initWithObjectsAndKeys:@"2",@"cityID" ,city,@"city",nil];
+
                  //创建通知
                  NSNotification *notification =[NSNotification notificationWithName:@"tongzhi" object:nil userInfo:dic];
                  //通过通知中心发送通知
@@ -125,8 +130,32 @@
 
 }
 
+#warning 根据定位所得城市取得城市ID
+- (void)requestData{
+    
+    [[HospitalHelper sharedHospitalHelper] requestHttpUrl:kCityhttpUrl withHttpArg:@"type=all" success:^(id data) {
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
+        for (NSDictionary *dic in array) {
+            NSArray *citiesOfProvince = dic[@"citys"];
+            for (NSDictionary *dict in citiesOfProvince) {
+                if ( [[HospitalHelper sharedHospitalHelper].currentCityName hasPrefix:dict[@"city"]]) {
+                    [HospitalHelper sharedHospitalHelper].currentCityID = dict[@"id"];
+                NSDictionary*  dic =[[NSDictionary alloc] initWithObjectsAndKeys:[HospitalHelper sharedHospitalHelper].currentCityID,@"cityID" ,nil];
+                    //创建通知
+                    NSNotification *notification =[NSNotification notificationWithName:@"tongzhi" object:nil userInfo:dic];
+                    //通过通知中心发送通知
+                    [[NSNotificationCenter defaultCenter] postNotification:notification];
 
+                    return ;
+                }
+            }
+        }
+        
 
+        
+    }];
+}
 
 
 

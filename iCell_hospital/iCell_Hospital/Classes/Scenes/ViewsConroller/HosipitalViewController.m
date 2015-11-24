@@ -78,17 +78,18 @@ static NSString *const searchTableID = @"searchTableID";
     //注册通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi:) name:@"tongzhi" object:nil];
 
-    [self requestDataWithCityID:@"2" page:@"1"];
+
     //定位开始
     if ([HospitalHelper isExistenceNetwork]) {
         
+        [self requestDataWithCityID:@"2" page:@"1"];
     self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
     [self.view addSubview:self.hosMapView];
          page = 2;
     }
-//    else{
-//        [self requestDataWithCityID:@"2"];
-//    }
+    else{
+       [self requestDataWithCityID:@"2" page:@"1"];
+    }
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         
         if (![HospitalHelper sharedHospitalHelper].currentCityID) {

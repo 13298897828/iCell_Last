@@ -39,8 +39,7 @@ static NSString *const cellID = @"cellID";
 
     [self.provinceTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     [self.cityTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-    
-    
+
     self.provinceTableView.tag = 100;
     self.cityTableView.tag = 200;
     
@@ -95,7 +94,6 @@ static NSString *const cellID = @"cellID";
             [province setValuesForKeysWithDictionary:dic];
             [self.provinceArray addObject:province];
             [self.cityArray addObject:province.citys];
-//             NSLog(@"citys==%@",province.citys);
         }
        
          self.citys = self.cityArray[index];
