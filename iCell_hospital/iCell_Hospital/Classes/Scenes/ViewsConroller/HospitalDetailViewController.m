@@ -169,27 +169,21 @@ static NSString *const cellID = @"CellID";
     layer.opacity = 1;
     [self.view.layer addSublayer:layer];
     
-    //动画 终点 都以sel.view为参考系
-    CGPoint endpoint = CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height);
+
+
 
     //动画起点
     CGPoint startPoint = CGPointMake(self.view.bounds.size.width-50, 60);
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:startPoint];
     //贝塞尔曲线控制点
-    float sx = startPoint.x;
-    float sy = startPoint.y;
-    float ex = endpoint.x;
-    float ey = endpoint.y;
-    float x = sx + (ex - sx) / 3 ;
-    float y = sy + (ey - sy) * 0.5 - 400;
-    CGPoint centerPoint=CGPointMake(x, y);
-   
 
+   
+//动画 终点 都以sel.view为参考系
 //    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
-    [path addCurveToPoint:CGPointMake(300,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
+    [path addCurveToPoint:CGPointMake(self.view.frame.size.width-10,360) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
     
-    [path moveToPoint:CGPointMake(300, 340)];
+    [path moveToPoint:CGPointMake(self.view.frame.size.width-10, 360)];
 
     [path addCurveToPoint:CGPointMake(self.view.frame.size.width*0.5,self.view.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
     

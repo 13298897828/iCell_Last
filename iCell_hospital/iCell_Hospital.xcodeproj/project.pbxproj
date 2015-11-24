@@ -999,7 +999,7 @@
 				TargetAttributes = {
 					14D3B20F1BF0636200427765 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5833L3MQTV;
+						DevelopmentTeam = 74MFVVWD9R;
 					};
 				};
 			};
@@ -1340,7 +1340,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1367,7 +1367,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

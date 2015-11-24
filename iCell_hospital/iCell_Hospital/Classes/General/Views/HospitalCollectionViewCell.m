@@ -21,7 +21,6 @@
     
     NSString *imgURl = [@"http://tnfs.tngou.net/img" stringByAppendingString:hospital.img];
     
-    
 //    缓存图片
     NSUserDefaults *user = [[NSUserDefaults alloc] init];
     if ([HospitalHelper isExistenceNetwork]) {
