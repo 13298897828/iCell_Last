@@ -272,7 +272,8 @@ static NSString *const cellID = @"CellID";
         });
     }
     if (sender.selectedSegmentIndex == 2) {
-        if (![_feature isEqualToString:@""] || !_feature ) {
+
+        if ([_feature isEqualToString:@"<p> </p>"]|| !_feature  ) {
             _message = @"未查找到乘车路线";
         }else{
             _feature = [self filterHTML:_feature];
@@ -292,10 +293,10 @@ static NSString *const cellID = @"CellID";
         NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         if (array.count) {
              NSDictionary *dic = array[0];
-            _message =[dic[@"name"] stringByAppendingFormat:@"\n%@",dic[@"message"]];
+            _message =[@"科室:" stringByAppendingString: [dic[@"name"] stringByAppendingFormat:@"\n%@",dic[@"message"]]];
             if (array.count>1) {
                 NSDictionary *dic2 = array[1];
-                _message =[_message stringByAppendingString:[NSString stringWithFormat:@"%@\n%@",dic2[@"name"],dic2[@"message"]]];
+                _message =[_message stringByAppendingString:[NSString stringWithFormat:@"\n科室：%@\n%@",dic2[@"name"],dic2[@"message"]]];
             }
             
         }else{
