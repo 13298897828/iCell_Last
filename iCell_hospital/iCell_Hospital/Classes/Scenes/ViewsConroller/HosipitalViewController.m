@@ -15,7 +15,7 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 {
     UIView *rootView;
     EAIntroView *_intro;
-    NSInteger page ;
+    NSInteger _page ;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -31,9 +31,6 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 @property(nonatomic,strong)NSString *cityName;
 
 @property(nonatomic,strong)HospitalMapView *hosMapView;
-
-
-
 
 @end
 
@@ -85,7 +82,7 @@ static NSString *const searchTableID = @"searchTableID";
         [self requestDataWithCityID:@"2" page:@"1"];
     self.hosMapView = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
     [self.view addSubview:self.hosMapView];
-         page = 2;
+         _page = 2;
     }
     else{
        [self requestDataWithCityID:@"2" page:@"1"];
@@ -95,7 +92,7 @@ static NSString *const searchTableID = @"searchTableID";
 //        if (![HospitalHelper sharedHospitalHelper].currentCityID) {
 //            [HospitalHelper sharedHospitalHelper].currentCityID =@"2";
 //        }
-        [self requestDataWithCityID:[NSString stringWithFormat:@"%@",[HospitalHelper sharedHospitalHelper].currentCityID] page:[NSString stringWithFormat:@"%ld",page++]];
+        [self requestDataWithCityID:[NSString stringWithFormat:@"%@",[HospitalHelper sharedHospitalHelper].currentCityID] page:[NSString stringWithFormat:@"%ld",_page++]];
     }];
     
     _addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 50, 40)];

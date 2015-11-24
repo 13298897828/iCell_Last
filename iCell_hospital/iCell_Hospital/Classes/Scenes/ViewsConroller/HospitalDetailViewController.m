@@ -292,10 +292,10 @@ static NSString *const cellID = @"CellID";
         NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         if (array.count) {
              NSDictionary *dic = array[0];
-            _message = dic[@"message"];
+            _message =[dic[@"name"] stringByAppendingFormat:@"\n%@",dic[@"message"]];
             if (array.count>1) {
                 NSDictionary *dic2 = array[1];
-                _message =[_message stringByAppendingString:[NSString stringWithFormat:@"\n    %@",dic2[@"message"]]];
+                _message =[_message stringByAppendingString:[NSString stringWithFormat:@"%@\n%@",dic2[@"name"],dic2[@"message"]]];
             }
             
         }else{
