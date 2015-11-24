@@ -88,10 +88,14 @@
     
 //    判断网络状态
     if (![HospitalHelper isExistenceNetwork]) {
-      NSDictionary* dic=[[DBManager sharedManager] findForcastWeatherInDatabase][indexPath.row];
+        
+        if ([[DBManager sharedManager] findForcastWeatherInDatabase].count) {
+         NSDictionary* dic=[[DBManager sharedManager] findForcastWeatherInDatabase][indexPath.row];
         title = [[dic[@"date"] substringFromIndex:5]stringByAppendingString:_weekDict[dic[@"week"]]];
         
-        subTitle = [NSString stringWithFormat:@"%@/%@",dic[@"dayTemp"] ?:@"",dic[@"nightTemp"]?:@""];
+        subTitle = [NSString stringWithFormat:@"%@/%@",dic[@"dayTemp"] ?:@"",dic[@"nightTemp"]?:@""];   
+        }
+      
     }
     else{
         title =[title stringByAppendingString:_weekDict[dayForecast.week]];

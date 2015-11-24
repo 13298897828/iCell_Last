@@ -92,9 +92,9 @@ static NSString *const searchTableID = @"searchTableID";
     }
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         
-        if (![HospitalHelper sharedHospitalHelper].currentCityID) {
-            [HospitalHelper sharedHospitalHelper].currentCityID =@"2";
-        }
+//        if (![HospitalHelper sharedHospitalHelper].currentCityID) {
+//            [HospitalHelper sharedHospitalHelper].currentCityID =@"2";
+//        }
         [self requestDataWithCityID:[NSString stringWithFormat:@"%@",[HospitalHelper sharedHospitalHelper].currentCityID] page:[NSString stringWithFormat:@"%ld",page++]];
     }];
     
@@ -217,7 +217,6 @@ static NSString *const searchTableID = @"searchTableID";
     });
 }
     if (text.userInfo[@"cityName"]) {
-//         [self.hospitalCity_ProvinceButton setTitle:text.userInfo[@"cityName"]  forState:UIControlStateNormal];
         _addressLabel.text = [text.userInfo[@"cityName"]stringByReplacingOccurrencesOfString:@"市" withString:@""];
     }
    

@@ -48,27 +48,27 @@ static NSString *const cellID = @"cellID";
          [self requestData];
     });
     
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] init];
-    [gesture addTarget:self action:@selector(gestureAction)];
-    self.currentCityLabel.userInteractionEnabled = YES;
-    [self.currentCityLabel addGestureRecognizer:gesture];
+//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] init];
+//    [gesture addTarget:self action:@selector(gestureAction)];
+//    self.currentCityLabel.userInteractionEnabled = YES;
+//    [self.currentCityLabel addGestureRecognizer:gesture];
    
 }
 
-- (void)gestureAction{
-    
-#warning 当前城市的cityID 存储在helper
-    //添加 字典，将label的值通过key值设置传递
-    NSDictionary *dic =[[NSDictionary alloc] initWithObjectsAndKeys:[HospitalHelper sharedHospitalHelper].currentCityName,@"cityName",@"2",@"cityID", nil];
-    //创建通知
-    NSNotification *notification =[NSNotification notificationWithName:@"tongzhi" object:nil userInfo:dic];
-    //通过通知中心发送通知
-    [[NSNotificationCenter defaultCenter] postNotification:notification];
-    
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
+//- (void)gestureAction{
+
+//#warning 当前城市的cityID 存储在helper
+//    //添加 字典，将label的值通过key值设置传递
+//    NSDictionary *dic =[[NSDictionary alloc] initWithObjectsAndKeys:[HospitalHelper sharedHospitalHelper].currentCityName,@"cityName",[HospitalHelper sharedHospitalHelper].currentCityID,@"cityID", nil];
+//    //创建通知
+//    NSNotification *notification =[NSNotification notificationWithName:@"tongzhi" object:nil userInfo:dic];
+//    //通过通知中心发送通知
+//    [[NSNotificationCenter defaultCenter] postNotification:notification];
+//    
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        
+//    }];
+//}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
