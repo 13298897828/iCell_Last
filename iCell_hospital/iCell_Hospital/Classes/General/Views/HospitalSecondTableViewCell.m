@@ -28,15 +28,15 @@
 - (void)setHospital:(Hospital *)hospital{
     
     NSString *imgURl = [@"http://tnfs.tngou.net/img" stringByAppendingString:hospital.img];
+    [self.hosIMageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
     //    缓存图片
     NSUserDefaults *user = [[NSUserDefaults alloc] init];
     if ([HospitalHelper isExistenceNetwork]) {
         if ([user objectForKey:hospital.img]) {
             
         }else{
-        [self.hosIMageView sd_setImageWithURL:[NSURL URLWithString:imgURl]];
         NSData *data = UIImageJPEGRepresentation(self.hosIMageView.image, 0.5);
-        [user setObject:data forKey:hospital.img];  
+        [user setObject:data forKey:hospital.img];
         }
 
         
@@ -133,6 +133,7 @@
     self.hosMtypeLabel.text = hospital.mtype;
     
 }
+
 
 
 - (void)awakeFromNib {

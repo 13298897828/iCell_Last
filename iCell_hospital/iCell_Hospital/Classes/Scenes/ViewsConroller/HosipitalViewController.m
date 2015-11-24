@@ -23,6 +23,9 @@ static NSString * const sampleDescription4 = @"Nam libero tempore, cum soluta no
 
 @property(nonatomic,strong)NSMutableArray *dataArray;
 
+@property (nonatomic,strong)UILabel *addressLabel;
+@property (nonatomic,strong)UIButton *addressButton;
+
 @property (strong, nonatomic) IBOutlet UIButton *hospitalCity_ProvinceButton;
 
 @property(nonatomic,strong)NSString *cityName;
@@ -94,11 +97,27 @@ static NSString *const searchTableID = @"searchTableID";
         [self requestDataWithCityID:[NSString stringWithFormat:@"%@",[HospitalHelper sharedHospitalHelper].currentCityID] page:[NSString stringWithFormat:@"%ld",page++]];
     }];
     
+    _addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 50, 40)];
+    
+    _addressLabel.text = @"地域";
+    
+    _addressButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 1, 50, 40)];
+    
+    [self.navigationController.navigationBar addSubview:_addressLabel];
+    [self.navigationController.navigationBar addSubview: _addressButton];
+    
+    [_addressButton addTarget:self action:@selector(addressButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [_addressButton setImage:[UIImage imageNamed:@"xiala"] forState:(UIControlStateNormal)];
     
 }
 
-
-
+-(void)addressButtonAction{
+    
+    [self presentViewController:[HospitalCity_ProvinceViewController sharedHospitalCity_ProvinceVC] animated:YES completion:^{
+        
+    }];
+    
+}
 
 
 
@@ -136,6 +155,9 @@ static NSString *const searchTableID = @"searchTableID";
     
     [intro showInView:self.tabBarController.view animateDuration:0.3];
     [intro.skipButton addTarget:self action:@selector(showAction) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
+    
     
     
 }
@@ -194,11 +216,13 @@ static NSString *const searchTableID = @"searchTableID";
     });
 }
     if (text.userInfo[@"cityName"]) {
-         [self.hospitalCity_ProvinceButton setTitle:text.userInfo[@"cityName"]  forState:UIControlStateNormal];
+//         [self.hospitalCity_ProvinceButton setTitle:text.userInfo[@"cityName"]  forState:UIControlStateNormal];
+        _addressLabel.text = [text.userInfo[@"cityName"]stringByReplacingOccurrencesOfString:@"市" withString:@""];
     }
    
     if (text.userInfo[@"city"] ) {
-        [self.hospitalCity_ProvinceButton setTitle:[text.userInfo[@"city"] stringByReplacingOccurrencesOfString:@"市" withString:@""]forState:UIControlStateNormal];
+//        [self.hospitalCity_ProvinceButton setTitle:[text.userInfo[@"city"] stringByReplacingOccurrencesOfString:@"市" withString:@""]forState:UIControlStateNormal];
+        _addressLabel.text = [text.userInfo[@"city"]stringByReplacingOccurrencesOfString:@"市" withString:@""];
     }
     
 
@@ -318,12 +342,29 @@ static NSString *const searchTableID = @"searchTableID";
     
 }
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    cell.layer.transform = CATransform3DMakeScale(-.01, .1, 1);
+//    [UIView animateWithDuration:.70 animations:^{
+//        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+//    }];
+//}
+
+
+
+-(void)viewWillAppear:(BOOL)animated{
     
-    cell.layer.transform = CATransform3DMakeScale(-.01, .1, 1);
-    [UIView animateWithDuration:.70 animations:^{
-        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-    }];
+    _addressButton.hidden = NO;
+    _addressLabel.hidden = NO;
+    
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    _addressLabel.hidden = YES;
+    _addressButton.hidden = YES;
+    
 }
 
 #pragma marki 手势方法

@@ -711,18 +711,6 @@
                     <tabBarItem key="tabBarItem" title="Item" id="I4J-Ys-J45"/>
                     <navigationItem key="navigationItem" id="P4w-Lz-nVH">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="J6b-zE-LDe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pJK-F7-d5e">
-                                <rect key="frame" x="20" y="11" width="71" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="地域" image="xiala"/>
-                                <connections>
-                                    <action selector="showHospitalCity_ProvinceAction:" destination="GRb-em-UhD" eventType="touchUpInside" id="0ra-rk-cC1"/>
-                                </connections>
-                            </button>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="SDp-4g-ayF">
                             <rect key="frame" x="249" y="5.5" width="102" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -757,7 +745,6 @@
                         </view>
                     </navigationItem>
                     <connections>
-                        <outlet property="hospitalCity_ProvinceButton" destination="pJK-F7-d5e" id="SRX-sM-BvM"/>
                         <outlet property="tableView" destination="8md-au-Z5t" id="9y5-AO-3fr"/>
                         <segue destination="kM3-fP-6la" kind="push" identifier="toDetailViewController" id="WE3-eH-lyR"/>
                         <segue destination="ZyM-8b-PKE" kind="show" id="v6s-1D-yN3">
@@ -1740,7 +1727,6 @@
         <image name="sao" width="30" height="30"/>
         <image name="shoucang" width="25" height="25"/>
         <image name="sick" width="500" height="350"/>
-        <image name="xiala" width="26" height="26"/>
         <image name="yisheng1" width="1000" height="699"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="426" height="95"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="426" height="94"/>
+                <rect key="frame" x="0.0" y="0.0" width="426" height="94.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nm-CY-RB4">
@@ -20,17 +20,20 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yiyuan2" translatesAutoresizingMaskIntoConstraints="NO" id="ILv-gB-YZA">
                                 <rect key="frame" x="10" y="10" width="74" height="74"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ILv-gB-YZA" secondAttribute="height" id="tJl-o8-5SA"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索医院" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD2-kh-La6">
                                 <rect key="frame" x="94" y="36" width="68" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ILv-gB-YZA" secondAttribute="bottom" constant="10" id="0Sp-G6-8hg"/>
                             <constraint firstItem="PD2-kh-La6" firstAttribute="centerY" secondItem="ILv-gB-YZA" secondAttribute="centerY" id="7ow-W3-71u"/>
@@ -41,6 +44,7 @@
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xian" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-TS-JEY">
                         <rect key="frame" x="212" y="0.0" width="2" height="94"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.58999999999999997" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="2" id="f3D-nN-JVI"/>
@@ -51,17 +55,20 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yiyuan1" translatesAutoresizingMaskIntoConstraints="NO" id="ENQ-3Q-syi">
                                 <rect key="frame" x="10" y="10" width="74" height="74"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ENQ-3Q-syi" secondAttribute="height" id="v72-kX-kFj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="附近医院" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-3C-kg7">
                                 <rect key="frame" x="94" y="36" width="68" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ENQ-3Q-syi" secondAttribute="bottom" constant="10" id="4jC-Zd-ivI"/>
                             <constraint firstItem="Ms8-3C-kg7" firstAttribute="centerY" secondItem="ENQ-3Q-syi" secondAttribute="centerY" id="Atv-lU-Kyj"/>
@@ -71,6 +78,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="7nm-CY-RB4" secondAttribute="bottom" id="3Eg-pt-J7R"/>
                     <constraint firstAttribute="bottom" secondItem="JHe-TS-JEY" secondAttribute="bottom" id="Gx5-Gr-PY0"/>
@@ -86,6 +94,7 @@
                     <constraint firstItem="7nm-CY-RB4" firstAttribute="width" secondItem="Swe-Y5-Qxf" secondAttribute="width" id="zjc-UP-knz"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="nearHospitalView" destination="Swe-Y5-Qxf" id="F5J-pU-m9n"/>
                 <outlet property="searchHospitalView" destination="7nm-CY-RB4" id="rQG-TH-uf8"/>

@@ -88,6 +88,9 @@
         view.userInteractionEnabled = NO;
     }];
 
+    
+
+    
 }
 #pragma mark -跳转客服界面
 -(void)jumpToConsulting{
