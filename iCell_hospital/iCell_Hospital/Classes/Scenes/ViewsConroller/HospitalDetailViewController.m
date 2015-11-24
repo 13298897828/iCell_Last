@@ -311,5 +311,9 @@ static NSString *const cellID = @"CellID";
     }];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    _feature = @"<p> </p>";
+    _message = @"";
+}
 
 @end

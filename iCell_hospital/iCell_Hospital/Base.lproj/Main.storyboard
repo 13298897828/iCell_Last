@@ -1158,14 +1158,12 @@
                                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="X6W-G5-NP0">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="33"/>
                                     <animations/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="barTintColor" red="0.14141132360398723" green="0.42009341717477333" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 </searchBar>
                             </subviews>
                             <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="X6W-G5-NP0" firstAttribute="top" secondItem="Z8u-NA-5SH" secondAttribute="top" id="8cU-nE-7b6"/>

@@ -230,6 +230,9 @@ static NSString *const searchTableID = @"searchTableID";
     NSString *httpArg = [NSString stringWithFormat:@"id=%@&page=%@&rows=20",cityID,page];
 //    NSLog(@"ID==%@",cityID);
     [[HospitalHelper sharedHospitalHelper] requestHttpUrl:kListhttpUrl withHttpArg:httpArg success:^(id data) {
+        if (data == nil) {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
         if ([page isEqualToString:@"1"]) {
         [self.hospitalListArray removeAllObjects];
         
