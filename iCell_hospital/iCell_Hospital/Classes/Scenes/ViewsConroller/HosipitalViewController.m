@@ -65,6 +65,19 @@ static NSString *const searchTableID = @"searchTableID";
     }else{
         NSLog(@"不是第一次启动");
     }
+    
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        
+        self.view.normalBackgroundColor = [UIColor whiteColor];
+        self.view.nightBackgroundColor = [UIColor lightGrayColor];
+    }];
+
+    
+    
+    
 
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSearchTableViewCell" bundle:nil] forCellReuseIdentifier:searchTableID];
     
@@ -230,19 +243,31 @@ static NSString *const searchTableID = @"searchTableID";
     NSString *httpArg = [NSString stringWithFormat:@"id=%@&page=%@&rows=20",cityID,page];
 //    NSLog(@"ID==%@",cityID);
     [[HospitalHelper sharedHospitalHelper] requestHttpUrl:kListhttpUrl withHttpArg:httpArg success:^(id data) {
-        if (data == nil) {
-            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-        }
+        
         if ([page isEqualToString:@"1"]) {
         [self.hospitalListArray removeAllObjects];
-        
         }
+        
       [self.dataArray removeAllObjects];
          NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
         NSArray *array = dict[@"tngou"];
+        if (!array.count) {
      
+                
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+//                [self.tableView.mj_footer endRefreshing];
+                return;
+
+            
+        }
         for (NSDictionary *dic in array) {
+            for (Hospital *tempHospital in self.hospitalListArray) {
+                if( [tempHospital.name isEqualToString:dic[@"name"]]){
+                    [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                    return ;
+                }
+            }
             Hospital *hos = [Hospital new];
             [hos setValuesForKeysWithDictionary:dic];
             [self.hospitalListArray addObject:hos];
