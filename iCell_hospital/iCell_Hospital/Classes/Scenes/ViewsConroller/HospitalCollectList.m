@@ -47,6 +47,20 @@ static NSString *const cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     cell.textLabel.text = hospital.name;
     
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        cell.contentView.nightBackgroundColor = UIColorFromRGB(0x343434);
+        cell.contentView.normalBackgroundColor = [UIColor whiteColor];
+        cell.textLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        cell.textLabel.normalBackgroundColor = [UIColor whiteColor];
+        cell.textLabel.normalTextColor  = [UIColor blackColor];
+        cell.textLabel.nightTextColor = [UIColor lightTextColor];
+        
+        
+    }];
+
     
     return cell;
 }

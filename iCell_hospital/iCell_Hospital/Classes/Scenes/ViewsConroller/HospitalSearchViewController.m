@@ -36,10 +36,24 @@ static NSString *const cell2 = @"ID";
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSecondTableViewCell" bundle:nil] forCellReuseIdentifier:cellID];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cell2];
     self.searchBar.delegate = self;
+    
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        self.tableView.subviews[0].nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.tableView.subviews[0].normalBackgroundColor = [UIColor whiteColor];
+        
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     self.navigationController.hidesBarsOnSwipe = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    self.searchBar.text = @"";
+    [self.hosArray removeAllObjects];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -55,6 +69,7 @@ static NSString *const cell2 = @"ID";
     if (hospital.name == nil) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell2];
         cell.textLabel.text = @"未搜索到相关医院";
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -91,7 +106,8 @@ static NSString *const cell2 = @"ID";
 }
 
 - (void)requestData:(NSString *)hosName{
-    if ([hosName isEqualToString:currentHosName] || [hosName isEqualToString:@""]) {
+//    [hosName isEqualToString:currentHosName] || 
+    if ([hosName isEqualToString:@""]) {
         return;
     }
     currentHosName = hosName;
@@ -124,7 +140,10 @@ static NSString *const cell2 = @"ID";
 
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-  
+    self.searchBar.text = @"";
+    [self.hosArray removeAllObjects];
+    [self.tableView reloadData];
+    
     [searchBar resignFirstResponder]; // 丢弃第一使用者
 }
 

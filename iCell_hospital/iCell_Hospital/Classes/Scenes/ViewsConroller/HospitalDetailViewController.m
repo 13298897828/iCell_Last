@@ -61,13 +61,13 @@ static NSString *const cellID = @"CellID";
         
         for (UIView *view in self.segmentControl.subviews) {
             view.normalBackgroundColor = [UIColor whiteColor];
-            view.nightBackgroundColor = [UIColor blackColor];
+            view.nightBackgroundColor = UIColorFromRGB(0x343434);
         }
         
-        self.tableView.nightBackgroundColor = [UIColor blackColor];
+        self.tableView.nightBackgroundColor = UIColorFromRGB(0x343434);
         self.tableView.normalBackgroundColor = [UIColor whiteColor];
         
-        self.topView.nightBackgroundColor = [UIColor blackColor];
+        self.topView.nightBackgroundColor = UIColorFromRGB(0x343434);
         self.topView.normalBackgroundColor = [UIColor whiteColor];
         
         self.hosNameLabel.normalTextColor = [UIColor blackColor];
@@ -129,13 +129,13 @@ static NSString *const cellID = @"CellID";
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
-        self.messageLabel.nightBackgroundColor = [UIColor blackColor];
+        self.messageLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
         self.messageLabel.normalBackgroundColor = [UIColor whiteColor];
         
         self.messageLabel.normalTextColor = [UIColor blackColor];
         self.messageLabel.nightTextColor = [UIColor lightTextColor];
         
-        cell.contentView.nightBackgroundColor = [UIColor blackColor];
+        cell.contentView.nightBackgroundColor = UIColorFromRGB(0x343434);
         cell.contentView.normalBackgroundColor = [UIColor whiteColor];
     }];
     

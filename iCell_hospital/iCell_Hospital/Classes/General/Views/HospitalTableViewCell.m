@@ -50,7 +50,7 @@ static NSString *const kheaderIdentifier = @"kheaderIdentifierID";
         @strongify(self);
         
         self.collectionView.normalBackgroundColor = [UIColor whiteColor];
-        self.collectionView.nightBackgroundColor = [UIColor blackColor];
+        self.collectionView.nightBackgroundColor = UIColorFromRGB(0x343434);
     }];
     
 }

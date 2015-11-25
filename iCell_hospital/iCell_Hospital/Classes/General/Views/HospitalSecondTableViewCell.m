@@ -144,7 +144,7 @@
     [self addColorChangedBlock:^{
         @strongify(self);
         
-        self.contentView.nightBackgroundColor = [UIColor blackColor];
+        self.contentView.nightBackgroundColor = UIColorFromRGB(0x343434);
         self.contentView.normalBackgroundColor = [UIColor whiteColor];
         
         self.hosNameLabel.normalTextColor  = [UIColor blackColor];

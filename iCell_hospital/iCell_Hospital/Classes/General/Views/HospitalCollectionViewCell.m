@@ -45,7 +45,7 @@
     [self addColorChangedBlock:^{
         @strongify(self);
 
-        self.hosNameLabel.normalTextColor = [UIColor blackColor];
+        self.hosNameLabel.normalTextColor = UIColorFromRGB(0x343434);
         self.hosNameLabel.nightTextColor = [UIColor lightTextColor];
     }];
 }

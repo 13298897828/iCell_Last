@@ -13,7 +13,6 @@
 @end
 
 @implementation Diagnose_SicknessViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     

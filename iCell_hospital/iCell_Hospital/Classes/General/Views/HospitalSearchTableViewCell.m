@@ -24,14 +24,14 @@
     [self addColorChangedBlock:^{
         @strongify(self);
         
-        self.nearHosLabel.normalTextColor= [UIColor blackColor];;
-        self.searchHosLabel.normalTextColor=  [UIColor blackColor];;
+        self.nearHosLabel.normalTextColor= [UIColor blackColor];
+        self.searchHosLabel.normalTextColor=  [UIColor blackColor];
         
         self.nearHosLabel.nightTextColor= [UIColor lightTextColor];
         self.searchHosLabel.nightTextColor= [UIColor lightTextColor];
         
         self.contentView.normalBackgroundColor = [UIColor whiteColor];
-        self.contentView.nightBackgroundColor = [UIColor blackColor];
+        self.contentView.nightBackgroundColor = UIColorFromRGB(0x343434);
     }];
 
     
