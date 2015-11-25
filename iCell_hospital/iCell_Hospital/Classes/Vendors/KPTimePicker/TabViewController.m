@@ -210,10 +210,11 @@
 
         if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNormal) {
             [DKNightVersionManager nightFalling];
-            
+            [self hideMenus];
             
         } else {
             [DKNightVersionManager dawnComing];
+            [self hideMenus];
         }
      
         
