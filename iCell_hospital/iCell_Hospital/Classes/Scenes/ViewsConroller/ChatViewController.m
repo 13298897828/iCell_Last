@@ -41,6 +41,7 @@
               
               dispatch_async(dispatch_get_main_queue(), ^{
                   
+                  
                   [[RCIM sharedRCIM] connectWithToken:_token success:^(NSString *userId) {
                       // Connect 成功
                       NSLog(@"链接成功");
