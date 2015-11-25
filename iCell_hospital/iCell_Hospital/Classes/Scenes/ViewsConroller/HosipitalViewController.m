@@ -66,18 +66,6 @@ static NSString *const searchTableID = @"searchTableID";
         NSLog(@"不是第一次启动");
     }
     
-//    @weakify(self);
-//    [self addColorChangedBlock:^{
-//        @strongify(self);
-//        
-//        
-//        self.tableView.subviews[0].normalBackgroundColor = [UIColor whiteColor];
-//        self.tableView.subviews[0].nightBackgroundColor = [UIColor darkGrayColor];
-//    }];
-
-    
-    
-    
 
     [self.tableView registerNib:[UINib nibWithNibName:@"HospitalSearchTableViewCell" bundle:nil] forCellReuseIdentifier:searchTableID];
     

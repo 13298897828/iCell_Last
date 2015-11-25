@@ -13,6 +13,7 @@
 {
     NSString *_message;
     NSString *_feature;
+    NSInteger _count;
 }
 @property (strong, nonatomic) IBOutlet UIImageView *hosImageView;
 @property (strong, nonatomic) IBOutlet UILabel *hosNameLabel;
@@ -24,6 +25,10 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *favouritButton;
+
+@property(nonatomic,strong)iCellQQView *paoPaoView;
+
+
 
 @property(nonatomic,strong)UILabel *messageLabel;
 
@@ -58,7 +63,6 @@ static NSString *const cellID = @"CellID";
             view.normalBackgroundColor = [UIColor whiteColor];
             view.nightBackgroundColor = [UIColor blackColor];
         }
-        
         
         self.tableView.nightBackgroundColor = [UIColor blackColor];
         self.tableView.normalBackgroundColor = [UIColor whiteColor];
@@ -109,6 +113,7 @@ static NSString *const cellID = @"CellID";
     [self segmentControlAction:self.segmentControl];
     
 }
+
 
 #pragma mark tableView 协议
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -178,10 +183,40 @@ static NSString *const cellID = @"CellID";
 //收藏键的方法
 - (IBAction)favouriteAction:(UIBarButtonItem *)sender {
     
+
+    
     if (self.hospital.isFavourit) {
-        self.hospital.isFavourit = NO;
+    
     [sender setImage: [UIImage imageNamed:@"shoucang"]];
+        
+        for (UIView *view in self.tabBarController.view.subviews) {
+                    if( [view isKindOfClass:[iCellQQView class]]){
+                        if ([_paoPaoView.bubbleLabel.text isEqualToString:@"1"]) {
+                             ((iCellQQView *)view).frontView.hidden = YES;
+                        }
+        }
+    }
+        
+        _count--;
+        _paoPaoView.bubbleLabel.text = [NSString stringWithFormat:@"%ld",_count];
+        
+            self.hospital.isFavourit = NO;
     }else{
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            self.paoPaoView = [[iCellQQView alloc] initWithPoint:CGPointMake(self.view.center.x+10, self.view.frame.size.height-55) superView:self.tabBarController.view];
+            _paoPaoView.viscosity = 20;
+            _paoPaoView.bubbleWidth = 20;
+            _paoPaoView.bubbleColor = [UIColor colorWithRed:0 green:0.722 blue:1 alpha:1];
+            [_paoPaoView setUp];
+        });
+        _paoPaoView.bubbleLabel.text =[NSString stringWithFormat:@"%ld",++_count];
+        for (UIView *view in self.tabBarController.view.subviews) {
+            if( [view isKindOfClass:[iCellQQView class]]){
+                ((iCellQQView *)view).frontView.hidden = NO;
+            }
+        }
+        
         self.hospital.isFavourit = YES;
         [sender setImage: [UIImage imageNamed:@"yishoucang"]];
          [self showAnimation];
@@ -190,7 +225,6 @@ static NSString *const cellID = @"CellID";
 
 //   取得数据库中的所有模型 ,实时更新数据库中的存储模型的数组
     [[DBManager sharedManager] findAllHospitalInDataBase];
-    
     
 }
 

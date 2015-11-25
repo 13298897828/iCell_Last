@@ -90,7 +90,7 @@ static NSString *const cellID = @"cellID";
 
 //轻拍返回
 - (void)back{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [[HospitalDetailViewController sharedHospitalDetalVC] dismissViewControllerAnimated:YES completion:nil];
 }
 
 

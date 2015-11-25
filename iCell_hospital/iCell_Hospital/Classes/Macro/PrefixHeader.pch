@@ -16,6 +16,9 @@
 #import <MJRefresh.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "Reachability.h"
+
+#import "iCellQQView.h"
+
 #pragma mark - Hosptial
 //controller
 #import "WeatherViewController.h"

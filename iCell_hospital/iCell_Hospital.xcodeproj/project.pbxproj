@@ -144,6 +144,7 @@
 		14E42AD31BF06553002EB1FB /* placeHoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AD21BF06553002EB1FB /* placeHoderViewController.m */; };
 		14E42ADB1BF06EBA002EB1FB /* Medicine.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42ADA1BF06EBA002EB1FB /* Medicine.m */; };
 		14E42AE91BF06FAE002EB1FB /* MedicineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E42AE81BF06FAE002EB1FB /* MedicineView.m */; };
+		C2158B601C05565900CE7B84 /* iCellQQView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2158B5F1C05565900CE7B84 /* iCellQQView.m */; };
 		C27CBDB41C03002400C3D33D /* HosipitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27CBDB21C03002400C3D33D /* HosipitalViewController.m */; };
 		C28FB9CD1BFDBFF5003669E0 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FB9CB1BFDBFF5003669E0 /* CollectionViewController.m */; };
 		C28FB9CE1BFDBFF5003669E0 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28FB9CC1BFDBFF5003669E0 /* CollectionViewController.xib */; };
@@ -376,6 +377,8 @@
 		5ED8326586D56D9C8DF6C476 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C9D77D63179C042504AF449 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C20F237E1BFEAD1900A32F35 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C2158B5E1C05565900CE7B84 /* iCellQQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCellQQView.h; sourceTree = "<group>"; };
+		C2158B5F1C05565900CE7B84 /* iCellQQView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCellQQView.m; sourceTree = "<group>"; };
 		C27CBDB21C03002400C3D33D /* HosipitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HosipitalViewController.m; sourceTree = "<group>"; };
 		C27CBDB31C03002400C3D33D /* HosipitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HosipitalViewController.h; sourceTree = "<group>"; };
 		C28FB9CA1BFDBFF5003669E0 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -959,6 +962,8 @@
 				14D5C4321C001E360026FBE5 /* meiwang.gif */,
 				1484A95A1BFD706600191F36 /* TabViewController.h */,
 				1484A95B1BFD706600191F36 /* TabViewController.m */,
+				C2158B5E1C05565900CE7B84 /* iCellQQView.h */,
+				C2158B5F1C05565900CE7B84 /* iCellQQView.m */,
 				140C7EB51BFEBCB0009E4B12 /* DKNightVersion */,
 				14406EAB1BFCBB5700C558C2 /* KPTimePicker */,
 			);
@@ -999,7 +1004,7 @@
 				TargetAttributes = {
 					14D3B20F1BF0636200427765 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5833L3MQTV;
+						DevelopmentTeam = 74MFVVWD9R;
 					};
 				};
 			};
@@ -1154,6 +1159,7 @@
 				140C7EFB1BFEBCB0009E4B12 /* UITableView+SeparatorColor.m in Sources */,
 				14AF941F1BFAD1A50042F388 /* ChatViewController.m in Sources */,
 				14E42ACA1BF064F2002EB1FB /* AppDelegate.m in Sources */,
+				C2158B601C05565900CE7B84 /* iCellQQView.m in Sources */,
 				14B5CFBB1BF350240019893C /* MedicineCollectionViewCell.m in Sources */,
 				148ECD271BF5847B00FDD691 /* ContantMedicineViewController.m in Sources */,
 				14D5C42E1BFFFF060026FBE5 /* ViewControllerForFirstStart.m in Sources */,
@@ -1340,7 +1346,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1367,7 +1373,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiqnqi-Zhang.iCell-Hospital";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
