@@ -319,7 +319,7 @@ static  FMDatabase *db = nil;
     NSString *name = [rs stringForColumn:@"cityName"];
         
         if (![HospitalHelper sharedHospitalHelper].currentCityName) {
-            [HospitalHelper sharedHospitalHelper].currentCityName = @"上海市";
+            [HospitalHelper sharedHospitalHelper].currentCityName = @"北京市";
         }
 #warning 以定位的城市为基准
         if ([name isEqualToString:[HospitalHelper sharedHospitalHelper].currentCityName]) {
@@ -362,7 +362,7 @@ static  FMDatabase *db = nil;
         
 #warning 以定位的城市为基准
         if (![HospitalHelper sharedHospitalHelper].currentCityName) {
-            [HospitalHelper sharedHospitalHelper].currentCityName = @"上海市";
+            [HospitalHelper sharedHospitalHelper].currentCityName = @"北京市";
         }
         if ([name isEqualToString:[HospitalHelper sharedHospitalHelper].currentCityName]) {
             dict = [NSDictionary dictionaryWithObjectsAndKeys:[rs stringForColumn:@"weather"],@"weather",[rs stringForColumn:@"temperature"],@"temperature",[rs stringForColumn:@"windDirection"],@"windDirection",[rs stringForColumn:@"windPower"],@"windPower",[rs stringForColumn:@"humidity"],@"humidity",[rs stringForColumn:@"cityName"],@"cityName", nil];

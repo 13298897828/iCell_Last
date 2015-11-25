@@ -66,7 +66,7 @@
     if ([HospitalHelper sharedHospitalHelper].currentCityName) {
         request.city                      =   [HospitalHelper sharedHospitalHelper].currentCityName;
     }else{
-        request.city                      =  @"上海";
+        request.city                      =  @"北京";
     }
     
 
@@ -81,7 +81,7 @@
     if ([HospitalHelper sharedHospitalHelper].currentCityName ) {
         request.city                      =   [HospitalHelper sharedHospitalHelper].currentCityName;
     }else{
-        request.city                      =  @"上海";
+        request.city                      =  @"北京";
     }
 
     request.type                      = AMapWeatherTypeForecast;

@@ -29,8 +29,6 @@
     _drugLabel.text = sickness.drug;
     [_imgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:kSicknessImgUrl,sickness.img]]];
     
-//    self.del();
-
 }
 
 
@@ -113,7 +111,7 @@
     [self.layer addSublayer:layer];
     
     //动画 终点 都以sel.view为参考系
-    CGPoint endpoint = CGPointMake(self.frame.size.width*0.5, self.frame.size.height);
+    CGPoint endpoint = CGPointMake(self.frame.size.width*0.5-40, self.frame.size.height-20);
     
     //动画起点
     CGPoint startPoint = CGPointMake(self.bounds.size.width-50, 60);
@@ -129,12 +127,12 @@
     CGPoint centerPoint=CGPointMake(x, y);
     
     
-    //    [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
-    [path addCurveToPoint:CGPointMake(300,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
-    
-    [path moveToPoint:CGPointMake(300, 340)];
-    
-    [path addCurveToPoint:CGPointMake(self.frame.size.width*0.5,self.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
+        [path addQuadCurveToPoint:endpoint controlPoint:centerPoint];
+//    [path addCurveToPoint:CGPointMake(300,340) controlPoint1:CGPointMake(100, 300) controlPoint2:CGPointMake(229, 280)];
+//    
+//    [path moveToPoint:CGPointMake(300, 340)];
+//    
+//    [path addCurveToPoint:CGPointMake(self.frame.size.width*0.5,self.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
     
     //key frame animation to show the bezier path animation
     CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];

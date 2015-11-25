@@ -18,9 +18,16 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *DetailScrollView;
 @property (weak, nonatomic) IBOutlet UIView *contantView;
 
+@property (strong, nonatomic) IBOutlet UILabel *yaoPinMingChengLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *yaoPinLeiXingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *yaoPinJiaGe;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+@property (strong, nonatomic) IBOutlet UIButton *fanHuiButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *introduceLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *introduceLabel2;
@@ -107,19 +114,56 @@
     [_talkButton addTarget:self action:@selector(jumpToConsulting) forControlEvents:(UIControlEventTouchUpInside)];
     
     _talkButton.tintColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:1.000];
-    UIView *view = [[UIView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:view];
     
     @weakify(self);
     [self addColorChangedBlock:^{
         @strongify(self);
-  
-  
 //        self.contantView.normalBackgroundColor = [UIColor whiteColor];
 //        self.contantView.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:.7];
-         view.normalBackgroundColor = [UIColor clearColor];
-         view.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:0.177];
-        view.userInteractionEnabled = NO;
+//         view.normalBackgroundColor = [UIColor clearColor];
+//         view.nightBackgroundColor = [UIColor colorWithRed:0.400 green:0.800 blue:1.000 alpha:0.177];
+        self.DetailScrollView.subviews[0].nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.DetailScrollView.subviews[0].normalBackgroundColor = [UIColor whiteColor];
+        
+        self.yaoPinMingChengLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.yaoPinMingChengLabel.normalBackgroundColor = [UIColor whiteColor];
+        self.yaoPinMingChengLabel.normalTextColor  = [UIColor blackColor];
+        self.yaoPinMingChengLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.nameLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.nameLabel.normalBackgroundColor = [UIColor whiteColor];
+        self.nameLabel.normalTextColor  = [UIColor blackColor];
+        self.nameLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.yaoPinLeiXingLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.yaoPinLeiXingLabel.normalBackgroundColor = [UIColor whiteColor];
+        self.yaoPinLeiXingLabel.normalTextColor  = [UIColor blackColor];
+        self.yaoPinLeiXingLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.typeLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.typeLabel.normalBackgroundColor = [UIColor whiteColor];
+        self.typeLabel.normalTextColor  = [UIColor blackColor];
+        self.typeLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.yaoPinJiaGe.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.yaoPinJiaGe.normalBackgroundColor = [UIColor whiteColor];
+        self.yaoPinJiaGe.normalTextColor  = [UIColor blackColor];
+        self.yaoPinJiaGe.nightTextColor = [UIColor lightTextColor];
+        
+        self.priceLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        self.priceLabel.normalBackgroundColor = [UIColor whiteColor];
+        self.priceLabel.normalTextColor  = [UIColor blackColor];
+        self.priceLabel.nightTextColor = [UIColor lightTextColor];
+        
+        for (UIView *label in self.DetailScrollView.subviews) {
+            if ([label isKindOfClass:[UILabel class]]) {
+            label.nightBackgroundColor = UIColorFromRGB(0x343434);
+            label.normalBackgroundColor = [UIColor whiteColor];
+            ((UILabel *)label).normalTextColor  = [UIColor blackColor];
+            ((UILabel *)label).nightTextColor = [UIColor lightTextColor];
+            }
+ 
+        }
 
         
     }];

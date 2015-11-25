@@ -33,7 +33,18 @@
     Diagnose_Sickness *sickness = [[DBManager sharedManager] selectAllSickness][indexPath.row];
     cell.textLabel.text = sickness.name;
  
-    
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        cell.contentView.nightBackgroundColor = UIColorFromRGB(0x343434);
+        cell.contentView.normalBackgroundColor = [UIColor whiteColor];
+        cell.textLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        cell.textLabel.normalBackgroundColor = [UIColor whiteColor];
+        cell.textLabel.normalTextColor  = [UIColor blackColor];
+        cell.textLabel.nightTextColor = [UIColor lightTextColor];
+    }];
+
 
     return cell;
 }

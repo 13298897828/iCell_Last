@@ -228,7 +228,7 @@
         annotationView.canShowCallout               = YES;
         annotationView.animatesDrop                 = YES;
         annotationView.draggable                    = YES;
-        annotationView.rightCalloutAccessoryView    = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        annotationView.rightCalloutAccessoryView    = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         annotationView.pinColor                         =MAPinAnnotationColorPurple;
        
         return annotationView;

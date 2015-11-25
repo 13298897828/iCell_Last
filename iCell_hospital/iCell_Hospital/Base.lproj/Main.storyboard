@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6Q-wG-7f0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10186" y="298"/>
+            <point key="canvasLocation" x="10130" y="302"/>
         </scene>
         <!--Feedback View Controller-->
         <scene sceneID="bRC-M5-n90">
@@ -379,9 +379,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0o-A9-vFP">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-ho-f8z">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-ho-f8z">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="545"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -472,50 +473,50 @@
                                             <constraint firstItem="Zm1-uW-rxv" firstAttribute="top" secondItem="OHb-oP-q5d" secondAttribute="top" constant="29" id="i4i-VY-auw"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmT-wr-NT8">
-                                        <rect key="frame" x="20" y="319" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmT-wr-NT8">
+                                        <rect key="frame" x="20" y="258" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-4o-VWQ">
-                                        <rect key="frame" x="20" y="359" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-4o-VWQ">
+                                        <rect key="frame" x="20" y="299" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzQ-Kt-FH2">
-                                        <rect key="frame" x="20" y="439" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzQ-Kt-FH2">
+                                        <rect key="frame" x="20" y="381" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMP-tF-Xse">
-                                        <rect key="frame" x="20" y="399" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMP-tF-Xse">
+                                        <rect key="frame" x="20" y="340" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kes-PW-s4n">
-                                        <rect key="frame" x="20" y="519" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kes-PW-s4n">
+                                        <rect key="frame" x="20" y="463" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNk-ee-h2v">
-                                        <rect key="frame" x="20" y="559" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNk-ee-h2v">
+                                        <rect key="frame" x="20" y="504" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-30-otw">
-                                        <rect key="frame" x="20" y="479" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-30-otw">
+                                        <rect key="frame" x="20" y="422" width="560" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -530,7 +531,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkS-pa-ytO">
-                                        <rect key="frame" x="510" y="17" width="30" height="30"/>
+                                        <rect key="frame" x="550" y="17" width="30" height="30"/>
                                         <animations/>
                                         <connections>
                                             <action selector="collectionMedicineButton:" destination="V4m-Bx-9my" eventType="touchUpInside" id="eRI-eA-kpB"/>
@@ -578,22 +579,17 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n0o-A9-vFP" firstAttribute="leading" secondItem="YEM-Hr-fyl" secondAttribute="leadingMargin" id="9LX-Wg-UsY"/>
-                            <constraint firstItem="n0o-A9-vFP" firstAttribute="top" secondItem="xYy-sv-2R4" secondAttribute="bottom" id="IDf-ue-r0X"/>
-                            <constraint firstItem="mfs-ho-f8z" firstAttribute="height" secondItem="YEM-Hr-fyl" secondAttribute="height" id="b6Q-y3-O63"/>
+                            <constraint firstAttribute="trailing" secondItem="n0o-A9-vFP" secondAttribute="trailing" id="NQu-cy-NEP"/>
                             <constraint firstItem="CDe-va-acO" firstAttribute="top" secondItem="n0o-A9-vFP" secondAttribute="bottom" id="pbg-ZQ-jT0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n0o-A9-vFP" secondAttribute="trailing" id="qtP-nL-Bb1"/>
+                            <constraint firstItem="n0o-A9-vFP" firstAttribute="top" secondItem="YEM-Hr-fyl" secondAttribute="top" id="sRs-pV-n1J"/>
+                            <constraint firstItem="n0o-A9-vFP" firstAttribute="leading" secondItem="YEM-Hr-fyl" secondAttribute="leading" id="tdJ-yz-84q"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="b6Q-y3-O63"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="DetailScrollView" destination="n0o-A9-vFP" id="5cn-QG-DSL"/>
                         <outlet property="collectionMedicineButton" destination="lkS-pa-ytO" id="QtB-DQ-7nq"/>
                         <outlet property="contantView" destination="mfs-ho-f8z" id="Ksh-4Y-eqF"/>
+                        <outlet property="fanHuiButton" destination="z5O-2H-U2y" id="J2d-W6-ZhN"/>
                         <outlet property="imgView" destination="Zm1-uW-rxv" id="Duv-Iy-Vpg"/>
                         <outlet property="introduceLabel1" destination="WmT-wr-NT8" id="OaA-Pm-bzj"/>
                         <outlet property="introduceLabel2" destination="RaM-4o-VWQ" id="ZSt-XZ-J54"/>
@@ -605,11 +601,14 @@
                         <outlet property="nameLabel" destination="0DT-7J-IEE" id="mFs-lW-cr5"/>
                         <outlet property="priceLabel" destination="X5N-Mc-BMJ" id="Kpb-bm-dbD"/>
                         <outlet property="typeLabel" destination="tjl-gy-U74" id="cxQ-Zo-EQi"/>
+                        <outlet property="yaoPinJiaGe" destination="bUN-VG-Asv" id="qiR-YN-qaU"/>
+                        <outlet property="yaoPinLeiXingLabel" destination="2Yu-kL-aon" id="IIJ-nI-OQv"/>
+                        <outlet property="yaoPinMingChengLabel" destination="Jau-Ep-Fxh" id="3Zw-Zk-eQO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0O-03-1uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11019" y="-369"/>
+            <point key="canvasLocation" x="10763" y="-312"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="oyS-WN-DqE">
@@ -858,9 +857,10 @@
                                     <segment title="特色科室"/>
                                     <segment title="乘车路线"/>
                                 </segments>
+                                <color key="tintColor" red="0.10980392160000001" green="0.31764705879999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="415-eU-k7z">
-                                <rect key="frame" x="0.0" y="194" width="600" height="357"/>
+                                <rect key="frame" x="0.0" y="195" width="600" height="356"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -881,7 +881,7 @@
                             <constraint firstAttribute="trailing" secondItem="415-eU-k7z" secondAttribute="trailing" id="fon-js-XDc"/>
                             <constraint firstAttribute="trailing" secondItem="pee-oJ-XAe" secondAttribute="trailing" id="tbz-mI-WxV"/>
                             <constraint firstItem="zTF-La-uyY" firstAttribute="top" secondItem="415-eU-k7z" secondAttribute="bottom" id="uaw-zO-EqB"/>
-                            <constraint firstItem="415-eU-k7z" firstAttribute="top" secondItem="pee-oJ-XAe" secondAttribute="bottom" id="zlG-Cj-4u3"/>
+                            <constraint firstItem="415-eU-k7z" firstAttribute="top" secondItem="pee-oJ-XAe" secondAttribute="bottom" constant="1" id="zlG-Cj-4u3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1s7-TY-DAJ">
@@ -1478,242 +1478,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BR-Wk-deB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5586" y="-656"/>
-        </scene>
-        <!--Collection Dignose View-->
-        <scene sceneID="gez-Dv-V6n">
-            <objects>
-                <viewController id="Aex-od-VVM" customClass="collectionDignoseView" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ViH-qd-ASU"/>
-                        <viewControllerLayoutGuide type="bottom" id="9kK-i4-Gv2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oZe-gd-Qmn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Awj-kg-SYO">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ez9-84-bjJ">
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" ambiguous="YES" misplaced="YES" image="sick" translatesAutoresizingMaskIntoConstraints="NO" id="q4L-pe-cTZ">
-                                        <rect key="frame" x="132" y="132" width="105" height="137"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="LJ4-x7-HRa"/>
-                                            <constraint firstAttribute="height" constant="137" id="W4L-fa-dGF"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="发烧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-ts-JMa">
-                                        <rect key="frame" x="252" y="132" width="227" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="病因" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogR-xi-nZ9">
-                                        <rect key="frame" x="144" y="294" width="335" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="引起发热的疾病很多，根据致病原因不同可分为两类。一、感染性疾病  二、非感染性疾病" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-o1-N7B">
-                                        <rect key="frame" x="144" y="337" width="335" height="61"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15T-Iv-YS6">
-                                        <rect key="frame" x="144" y="418" width="335" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="可服药品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-dY-ws0">
-                                        <rect key="frame" x="144" y="483" width="335" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" ambiguous="YES" misplaced="YES" text="连花清瘟胶囊,小儿感冒颗粒,通宣理肺丸,小儿氨酚烷胺颗粒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0G-AR-Jny">
-                                        <rect key="frame" x="144" y="526" width="335" height="0.0"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="是指病理性体温升高，是人体对致热原的作用使体温调节中枢的调定点上移而引起，是临床上最常见的症状，是疾病进展过程中的重要临床表现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbZ-wW-zJy">
-                                        <rect key="frame" x="252" y="175" width="227" height="102"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHJ-AP-CEv">
-                                        <rect key="frame" x="144" y="461" width="335" height="2"/>
-                                        <animations/>
-                                        <string key="text">1、发热很少是单一病理过程，肿瘤与结缔组织病在发热过程中可夹杂感染因素，致使临床表现复杂，但绝大多数根据临床特点与全面检查后仍可明确诊断。了解原因不明发热病因分布的频率，有助于提供临床诊断的逻辑思维。根据热程、热型与临床特点，可分为急性发热(热程小于2周)、长期发热(热程超过2周，且多次体温在38℃以上)、和反复发热(周期热)。一般认为急性发热病因中感染占首位，其次为肿瘤、血管-结缔组织病。这三类病因概括了90%原因不明发热的病因诊断。感染性疾病在原因不明发热中占多数，以细菌引起的全身性感染、局限性脓肿、泌尿系感染、胆道感染为多见，结核病居第二位，其中肺外结核远多于肺结核。恶性肿瘤以发热为主要表现者，依次为淋巴瘤、恶性组织细胞瘤和各种实质性肿瘤，在原因不明发热中所占比例较既往增高。</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstItem="cLK-dY-ws0" firstAttribute="top" secondItem="JHJ-AP-CEv" secondAttribute="bottom" constant="20" id="6P3-FK-W6J"/>
-                                    <constraint firstItem="PbZ-wW-zJy" firstAttribute="leading" secondItem="q4L-pe-cTZ" secondAttribute="trailing" constant="15" id="AXR-9n-Vig"/>
-                                    <constraint firstItem="Ez9-84-bjJ" firstAttribute="centerX" secondItem="Awj-kg-SYO" secondAttribute="centerX" id="BxR-fE-5St"/>
-                                    <constraint firstItem="ogR-xi-nZ9" firstAttribute="top" secondItem="q4L-pe-cTZ" secondAttribute="bottom" constant="25" id="LVL-75-bFn"/>
-                                    <constraint firstItem="PbZ-wW-zJy" firstAttribute="top" secondItem="aKq-ts-JMa" secondAttribute="bottom" constant="20" id="MiB-xf-7G7"/>
-                                    <constraint firstItem="15T-Iv-YS6" firstAttribute="top" secondItem="9w8-o1-N7B" secondAttribute="bottom" constant="20" id="QEg-sC-d4I"/>
-                                    <constraint firstItem="9w8-o1-N7B" firstAttribute="top" secondItem="ogR-xi-nZ9" secondAttribute="bottom" constant="20" id="Seo-XA-WDl"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ez9-84-bjJ" secondAttribute="trailing" id="W6c-vw-46b"/>
-                                    <constraint firstItem="Ez9-84-bjJ" firstAttribute="leading" secondItem="Awj-kg-SYO" secondAttribute="leading" id="eOr-2q-jiq"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ez9-84-bjJ" secondAttribute="bottom" id="fiQ-vQ-Dzw"/>
-                                    <constraint firstItem="j0G-AR-Jny" firstAttribute="top" secondItem="cLK-dY-ws0" secondAttribute="bottom" constant="20" id="gjO-0r-7Rf"/>
-                                    <constraint firstItem="JHJ-AP-CEv" firstAttribute="top" secondItem="15T-Iv-YS6" secondAttribute="bottom" constant="20" id="jjK-tv-m4l"/>
-                                    <constraint firstItem="Ez9-84-bjJ" firstAttribute="top" secondItem="Awj-kg-SYO" secondAttribute="top" id="obP-IR-qF2"/>
-                                    <constraint firstItem="aKq-ts-JMa" firstAttribute="leading" secondItem="q4L-pe-cTZ" secondAttribute="trailing" constant="15" id="rky-tB-0PX"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Awj-kg-SYO" firstAttribute="leading" secondItem="oZe-gd-Qmn" secondAttribute="leading" id="VUL-YG-22f"/>
-                            <constraint firstItem="9kK-i4-Gv2" firstAttribute="top" secondItem="Awj-kg-SYO" secondAttribute="bottom" id="nr2-WU-0Pl"/>
-                            <constraint firstItem="Awj-kg-SYO" firstAttribute="top" secondItem="ViH-qd-ASU" secondAttribute="bottom" id="psU-Un-9ae"/>
-                            <constraint firstAttribute="trailing" secondItem="Awj-kg-SYO" secondAttribute="trailing" id="uxb-DR-RVX"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J0M-1O-Jq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="628" y="-102"/>
-        </scene>
-        <!--Collection Dignose View-->
-        <scene sceneID="fF3-pd-Lt0">
-            <objects>
-                <viewController id="qjf-U9-gVd" customClass="collectionDignoseView" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9uA-1X-O7W"/>
-                        <viewControllerLayoutGuide type="bottom" id="F5H-lq-dxx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SSj-wi-BmV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJb-M9-2b9">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Dk-dx-jkT">
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="240" ambiguous="YES" misplaced="YES" image="sick" translatesAutoresizingMaskIntoConstraints="NO" id="rKL-1p-AtJ">
-                                        <rect key="frame" x="132" y="132" width="105" height="137"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="6Bc-8I-T4K"/>
-                                            <constraint firstAttribute="height" constant="137" id="cd6-xP-aO2"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="发烧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-Vy-j71">
-                                        <rect key="frame" x="252" y="132" width="227" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="病因" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBH-bf-AhW">
-                                        <rect key="frame" x="144" y="294" width="335" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="引起发热的疾病很多，根据致病原因不同可分为两类。一、感染性疾病  二、非感染性疾病" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX6-kS-QyU">
-                                        <rect key="frame" x="144" y="337" width="335" height="61"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="详细介绍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkd-ex-1vj">
-                                        <rect key="frame" x="144" y="418" width="335" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="可服药品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40n-3S-v7Z">
-                                        <rect key="frame" x="144" y="483" width="335" height="23"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" ambiguous="YES" misplaced="YES" text="连花清瘟胶囊,小儿感冒颗粒,通宣理肺丸,小儿氨酚烷胺颗粒" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9Q-OZ-HKe">
-                                        <rect key="frame" x="144" y="526" width="335" height="0.0"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="是指病理性体温升高，是人体对致热原的作用使体温调节中枢的调定点上移而引起，是临床上最常见的症状，是疾病进展过程中的重要临床表现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neq-0Y-AeW">
-                                        <rect key="frame" x="252" y="175" width="227" height="102"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkl-f5-fzG">
-                                        <rect key="frame" x="144" y="461" width="335" height="2"/>
-                                        <animations/>
-                                        <string key="text">1、发热很少是单一病理过程，肿瘤与结缔组织病在发热过程中可夹杂感染因素，致使临床表现复杂，但绝大多数根据临床特点与全面检查后仍可明确诊断。了解原因不明发热病因分布的频率，有助于提供临床诊断的逻辑思维。根据热程、热型与临床特点，可分为急性发热(热程小于2周)、长期发热(热程超过2周，且多次体温在38℃以上)、和反复发热(周期热)。一般认为急性发热病因中感染占首位，其次为肿瘤、血管-结缔组织病。这三类病因概括了90%原因不明发热的病因诊断。感染性疾病在原因不明发热中占多数，以细菌引起的全身性感染、局限性脓肿、泌尿系感染、胆道感染为多见，结核病居第二位，其中肺外结核远多于肺结核。恶性肿瘤以发热为主要表现者，依次为淋巴瘤、恶性组织细胞瘤和各种实质性肿瘤，在原因不明发热中所占比例较既往增高。</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstItem="zX6-kS-QyU" firstAttribute="top" secondItem="fBH-bf-AhW" secondAttribute="bottom" constant="20" id="ERy-t1-RVl"/>
-                                    <constraint firstItem="fBH-bf-AhW" firstAttribute="top" secondItem="rKL-1p-AtJ" secondAttribute="bottom" constant="25" id="VIv-Ap-kGf"/>
-                                    <constraint firstItem="1Dk-dx-jkT" firstAttribute="leading" secondItem="zJb-M9-2b9" secondAttribute="leading" id="W2z-C2-3al"/>
-                                    <constraint firstItem="bkl-f5-fzG" firstAttribute="top" secondItem="kkd-ex-1vj" secondAttribute="bottom" constant="20" id="Wyb-0Q-zh3"/>
-                                    <constraint firstItem="40n-3S-v7Z" firstAttribute="top" secondItem="bkl-f5-fzG" secondAttribute="bottom" constant="20" id="YPK-4n-iX8"/>
-                                    <constraint firstItem="1Dk-dx-jkT" firstAttribute="top" secondItem="zJb-M9-2b9" secondAttribute="top" id="bzo-cv-jkz"/>
-                                    <constraint firstItem="kkd-ex-1vj" firstAttribute="top" secondItem="zX6-kS-QyU" secondAttribute="bottom" constant="20" id="hQk-4Y-d6K"/>
-                                    <constraint firstItem="1Dk-dx-jkT" firstAttribute="centerX" secondItem="zJb-M9-2b9" secondAttribute="centerX" id="jVj-Oo-jcw"/>
-                                    <constraint firstItem="fqM-Vy-j71" firstAttribute="leading" secondItem="rKL-1p-AtJ" secondAttribute="trailing" constant="15" id="k98-Fh-x7O"/>
-                                    <constraint firstItem="Neq-0Y-AeW" firstAttribute="top" secondItem="fqM-Vy-j71" secondAttribute="bottom" constant="20" id="mpi-5p-F32"/>
-                                    <constraint firstAttribute="bottom" secondItem="1Dk-dx-jkT" secondAttribute="bottom" id="pPP-ly-izk"/>
-                                    <constraint firstItem="W9Q-OZ-HKe" firstAttribute="top" secondItem="40n-3S-v7Z" secondAttribute="bottom" constant="20" id="unz-dF-Lzf"/>
-                                    <constraint firstItem="Neq-0Y-AeW" firstAttribute="leading" secondItem="rKL-1p-AtJ" secondAttribute="trailing" constant="15" id="xvG-Np-SGa"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Dk-dx-jkT" secondAttribute="trailing" id="yfa-Yv-wcI"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zJb-M9-2b9" secondAttribute="trailing" id="4mq-Vt-mHU"/>
-                            <constraint firstItem="F5H-lq-dxx" firstAttribute="top" secondItem="zJb-M9-2b9" secondAttribute="bottom" id="97P-TB-dnP"/>
-                            <constraint firstItem="zJb-M9-2b9" firstAttribute="leading" secondItem="SSj-wi-BmV" secondAttribute="leading" id="TM9-Vv-XfO"/>
-                            <constraint firstItem="zJb-M9-2b9" firstAttribute="top" secondItem="9uA-1X-O7W" secondAttribute="bottom" id="Vhg-cl-yPz"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ya5-sx-PYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="628" y="-102"/>
         </scene>
     </scenes>
     <resources>
