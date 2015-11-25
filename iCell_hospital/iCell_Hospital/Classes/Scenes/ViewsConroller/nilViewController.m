@@ -7,6 +7,7 @@
 //
 
 #import "nilViewController.h"
+#import <UIImage+GIF.h>
 
 @interface nilViewController ()
 
@@ -16,17 +17,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     
     imgView.center = self.view.center;
+   imgView.image = [UIImage sd_animatedGIFNamed:@"meiwang.gif"];
+ 
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:imgView];
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    button.frame = CGRectMake(10, 10, 100, 100);
+    [button setTitle:@"返回" forState:(UIControlStateNormal)];
     
-    imgView.image = [UIImage imageNamed:@"meiwang.gif"];
+    [button addTarget:self action:@selector(backAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:button];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 70)];
+    label.textAlignment = 1;
+    label.text = @"对不起,没有找到你查找的药品";
+    [self.view bringSubviewToFront:label];
+    [self.view addSubview:label];
+}
+
+-(void)backAction{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+
     
     
 //    NSURL *url = [NSURL URLWithString:URLQ];
