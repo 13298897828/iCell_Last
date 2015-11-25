@@ -31,7 +31,6 @@
     
     }else{
         [self.hosImageView setImage:[UIImage imageWithData:[user objectForKey:hospital.img]]];
-   
     }
     
     
@@ -41,7 +40,14 @@
 }
 
 - (void)awakeFromNib {
-    // Initialization code
+
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+
+        self.hosNameLabel.normalTextColor = [UIColor blackColor];
+        self.hosNameLabel.nightTextColor = [UIColor lightTextColor];
+    }];
 }
 
 @end

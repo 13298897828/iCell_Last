@@ -44,6 +44,15 @@ static NSString *const kheaderIdentifier = @"kheaderIdentifierID";
     self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
+//    夜间模式
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        self.collectionView.normalBackgroundColor = [UIColor whiteColor];
+        self.collectionView.nightBackgroundColor = [UIColor blackColor];
+    }];
+    
 }
 
 #pragma mark collectionView协议方法
@@ -79,6 +88,14 @@ static NSString *const kheaderIdentifier = @"kheaderIdentifierID";
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]){
         label.text = @"热门医院";
+        @weakify(self);
+        [self addColorChangedBlock:^{
+            @strongify(self);
+            
+            label.normalTextColor = [UIColor blackColor];
+            label.nightTextColor = [UIColor lightTextColor];
+        }];
+
         [view addSubview:label];
     }
     return view;

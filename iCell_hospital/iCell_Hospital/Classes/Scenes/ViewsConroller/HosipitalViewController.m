@@ -66,14 +66,14 @@ static NSString *const searchTableID = @"searchTableID";
         NSLog(@"不是第一次启动");
     }
     
-    @weakify(self);
-    [self addColorChangedBlock:^{
-        @strongify(self);
-        
-        
-        self.view.normalBackgroundColor = [UIColor whiteColor];
-        self.view.nightBackgroundColor = [UIColor lightGrayColor];
-    }];
+//    @weakify(self);
+//    [self addColorChangedBlock:^{
+//        @strongify(self);
+//        
+//        
+//        self.tableView.subviews[0].normalBackgroundColor = [UIColor whiteColor];
+//        self.tableView.subviews[0].nightBackgroundColor = [UIColor darkGrayColor];
+//    }];
 
     
     
@@ -304,6 +304,8 @@ static NSString *const searchTableID = @"searchTableID";
         HospitalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:collectionCellID forIndexPath:indexPath];
         cell.dataArray = self.hospitalListArray;
         cell.fatherViewController =self;
+        
+
         
         return cell;
     }

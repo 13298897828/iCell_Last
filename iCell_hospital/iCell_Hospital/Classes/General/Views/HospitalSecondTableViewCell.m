@@ -139,6 +139,21 @@
 - (void)awakeFromNib {
     self.map = [[HospitalMapView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) Hospital:nil];
     [self.contentView addSubview: self.map];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        self.contentView.nightBackgroundColor = [UIColor blackColor];
+        self.contentView.normalBackgroundColor = [UIColor whiteColor];
+        
+        self.hosNameLabel.normalTextColor  = [UIColor blackColor];
+        self.hosNameLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.hosDistanceLabel.normalTextColor = [UIColor blackColor];
+        self.hosDistanceLabel.nightTextColor = [UIColor lightTextColor];
+        
+    }];
 
 }
 
