@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *hosMtype;
 @property (strong, nonatomic) IBOutlet UILabel *hosAddressLabel;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property (strong, nonatomic) IBOutlet UIView *topView;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *favouritButton;
@@ -49,7 +50,35 @@ static NSString *const cellID = @"CellID";
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
-    
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        for (UIView *view in self.segmentControl.subviews) {
+            view.normalBackgroundColor = [UIColor whiteColor];
+            view.nightBackgroundColor = [UIColor blackColor];
+        }
+        
+        
+        self.tableView.nightBackgroundColor = [UIColor blackColor];
+        self.tableView.normalBackgroundColor = [UIColor whiteColor];
+        
+        self.topView.nightBackgroundColor = [UIColor blackColor];
+        self.topView.normalBackgroundColor = [UIColor whiteColor];
+        
+        self.hosNameLabel.normalTextColor = [UIColor blackColor];
+        self.hosNameLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.hosLevelLabel.normalTextColor = [UIColor blackColor];
+        self.hosLevelLabel.nightTextColor = [UIColor lightTextColor];
+        
+        self.hosMtype.normalTextColor = [UIColor blackColor];
+        self.hosMtype.nightTextColor = [UIColor lightTextColor];
+        
+        self.hosAddressLabel.normalTextColor = [UIColor blackColor];
+        self.hosAddressLabel.nightTextColor = [UIColor lightTextColor];
+    }];
+
     
 }
 
@@ -90,6 +119,20 @@ static NSString *const cellID = @"CellID";
     if (cell.contentView.subviews.count>1) {
         [cell.contentView.subviews[1] removeFromSuperview];
     }
+    
+
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        self.messageLabel.nightBackgroundColor = [UIColor blackColor];
+        self.messageLabel.normalBackgroundColor = [UIColor whiteColor];
+        
+        self.messageLabel.normalTextColor = [UIColor blackColor];
+        self.messageLabel.nightTextColor = [UIColor lightTextColor];
+        
+        cell.contentView.nightBackgroundColor = [UIColor blackColor];
+        cell.contentView.normalBackgroundColor = [UIColor whiteColor];
+    }];
     
     self.messageLabel.text = _message;
     self.messageLabel.numberOfLines = 0;
