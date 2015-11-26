@@ -36,13 +36,15 @@
     self.delegate = self;
     
 
-//    UIView *view = [[UIView alloc] initWithFrame:self.tabBar.frame];
-//    @weakify(self);
-//    [self addColorChangedBlock:^{
-//        @strongify(self);
-//        
-//        
-//    }];
+    UIView *view = [[UIView alloc] initWithFrame:self.tabBar.frame];
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        view.nightBackgroundColor = UIColorFromRGB(0x343434);
+        view.normalBackgroundColor = [UIColor clearColor];
+        
+        NSLog(@"%@",self.tabBar.subviews[0].subviews[0]);
+    }];
 
     
     
