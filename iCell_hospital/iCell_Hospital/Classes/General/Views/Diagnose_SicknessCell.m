@@ -151,6 +151,26 @@
 
     self.searchBar.delegate = self;
     
+    @weakify(self);
+    [self addColorChangedBlock:^{
+        @strongify(self);
+        
+        self.contentView.normalBackgroundColor = [UIColor whiteColor];
+        self.contentView.nightBackgroundColor = UIColorFromRGB(0x343434);
+//        self.nameLabel.normalBackgroundColor = [UIColor whiteColor];
+//        self.nameLabel.nightBackgroundColor = UIColorFromRGB(0x343434);
+        for (UIView *label in self.contentView.subviews) {
+            if ([label isKindOfClass:[UILabel class]]) {
+            label.normalBackgroundColor = [UIColor whiteColor];
+            label.nightBackgroundColor = UIColorFromRGB(0x343434);
+            ((UILabel *)label).normalTextColor = [UIColor blackColor];
+            ((UILabel *)label).nightTextColor = [UIColor lightTextColor];
+            }
+
+        }
+        
+    }];
+
  
 } 
 

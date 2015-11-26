@@ -106,8 +106,8 @@ static NSString *const cell2 = @"ID";
 }
 
 - (void)requestData:(NSString *)hosName{
-//    [hosName isEqualToString:currentHosName] || 
-    if ([hosName isEqualToString:@""]) {
+
+    if ( [hosName isEqualToString:currentHosName] || [hosName isEqualToString:@""]) {
         return;
     }
     currentHosName = hosName;

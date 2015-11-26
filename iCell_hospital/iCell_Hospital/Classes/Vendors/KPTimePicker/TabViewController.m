@@ -36,6 +36,13 @@
     self.delegate = self;
     
 
+//    UIView *view = [[UIView alloc] initWithFrame:self.tabBar.frame];
+//    @weakify(self);
+//    [self addColorChangedBlock:^{
+//        @strongify(self);
+//        
+//        
+//    }];
 
     
     

@@ -196,10 +196,12 @@ static NSString *const cellID = @"CellID";
                         }
         }
     }
-        
-        _count--;
-        _paoPaoView.bubbleLabel.text = [NSString stringWithFormat:@"%ld",_count];
-        
+        [[DBManager sharedManager] openDB];
+        if (![[DBManager sharedManager] findHospitalInDataBase:self.hospital]) {
+            _count--;
+             _paoPaoView.bubbleLabel.text = [NSString stringWithFormat:@"%ld",_count];
+        }
+        [[DBManager sharedManager] closeDB];
             self.hospital.isFavourit = NO;
     }else{
         static dispatch_once_t onceToken;
@@ -262,7 +264,7 @@ static NSString *const cellID = @"CellID";
     
     [path moveToPoint:CGPointMake(self.view.frame.size.width-10, 360)];
 
-    [path addCurveToPoint:CGPointMake(self.view.frame.size.width*0.5,self.view.frame.size.height) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
+    [path addCurveToPoint:CGPointMake(self.view.frame.size.width*0.5,self.view.frame.size.height+10) controlPoint1:CGPointMake(230, 360) controlPoint2:CGPointMake(250, 340)];
     
     //key frame animation to show the bezier path animation
     CAKeyframeAnimation *animation=[CAKeyframeAnimation animationWithKeyPath:@"position"];
